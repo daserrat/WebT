@@ -1,0 +1,10 @@
+New log file opened at Fri Sep 18 18:40:00 CEST 2015 by 7532@wl-2047.wlan.uni-konstanz.de
+Taking next connection to: 59918
+New client attempting to connect on port: 59919-59918
+  Address = /134.34.215.255:59918
+This client on port 59919 has uuid 85ffc12c-e32c-4bb6-b470-bfa51194b7d0 configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
+Connected Clients: activator-85ffc12c-e32c-4bb6-b470-bfa51194b7d0
+Taking next connection to: 59918
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 59918
