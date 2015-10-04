@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/Users/keremuyanik/Documents/WebTech/conf/routes
-// @DATE:Fri Sep 18 18:38:56 CEST 2015
+// @SOURCE:/Users/keremuyanik/Documents/WebT/play-java/conf/routes
+// @DATE:Sun Oct 04 22:25:16 CEST 2015
 
 package router
 
@@ -43,7 +43,7 @@ class Routes(
   }
 
   def documentation = List(
-    ("""GET""", this.prefix, """controllers.Application.index()"""),
+    ("""GET""", this.prefix, """controllers.Application.startseite()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""", """controllers.Assets.versioned(path:String = "/public", file:Asset)"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
@@ -53,15 +53,15 @@ class Routes(
 
 
   // @LINE:6
-  private[this] lazy val controllers_Application_index0_route = Route("GET",
+  private[this] lazy val controllers_Application_startseite0_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix)))
   )
-  private[this] lazy val controllers_Application_index0_invoker = createInvoker(
-    Application_1.index(),
+  private[this] lazy val controllers_Application_startseite0_invoker = createInvoker(
+    Application_1.startseite(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.Application",
-      "index",
+      "startseite",
       Nil,
       "GET",
       """ Home page""",
@@ -90,9 +90,9 @@ class Routes(
   def routes: PartialFunction[RequestHeader, Handler] = {
   
     // @LINE:6
-    case controllers_Application_index0_route(params) =>
+    case controllers_Application_startseite0_route(params) =>
       call { 
-        controllers_Application_index0_invoker.call(Application_1.index())
+        controllers_Application_startseite0_invoker.call(Application_1.startseite())
       }
   
     // @LINE:9

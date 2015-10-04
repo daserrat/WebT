@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/Users/keremuyanik/Documents/WebTech/conf/routes
-// @DATE:Fri Sep 18 18:38:56 CEST 2015
+// @SOURCE:/Users/keremuyanik/Documents/WebT/play-java/conf/routes
+// @DATE:Sun Oct 04 22:25:16 CEST 2015
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -44,8 +44,8 @@ package controllers.javascript {
 
   
     // @LINE:6
-    def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.Application.index",
+    def startseite: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Application.startseite",
       """
         function() {
           return _wA({method:"GET", url:"""" + _prefix + """"})

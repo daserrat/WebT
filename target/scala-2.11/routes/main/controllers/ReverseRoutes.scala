@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/Users/keremuyanik/Documents/WebTech/conf/routes
-// @DATE:Fri Sep 18 18:38:56 CEST 2015
+// @SOURCE:/Users/keremuyanik/Documents/WebT/play-java/conf/routes
+// @DATE:Sun Oct 04 22:25:16 CEST 2015
 
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
 import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamicString }
@@ -36,7 +36,7 @@ package controllers {
 
   
     // @LINE:6
-    def index(): Call = {
+    def startseite(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix)
     }

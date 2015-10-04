@@ -1,4 +1,4 @@
-[0m[[0minfo[0m] [0mUpdating {file:/Users/keremuyanik/Documents/WebTech/}root...[0m
+[0m[[0minfo[0m] [0mUpdating {file:/Users/keremuyanik/Documents/WebT/play-java/}root...[0m
 [0m[[0mdebug[0m] [0m:: resolving dependencies :: play-java#play-java_2.11;1.0-SNAPSHOT[0m
 [0m[[0mdebug[0m] [0m	confs: [compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool, fork-run][0m
 [0m[[0mdebug[0m] [0m	validate = true[0m
@@ -7,7 +7,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for play-java#play-java_2.11;1.0-SNAPSHOT [compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies play-java#play-java_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.11.6 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@65efdbd8[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@d79e1dc[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.11.6[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.11.6 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m	[2.11.6] org.scala-lang#scala-library;2.11.6[0m
@@ -433,8 +433,6 @@
 [0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: com.google.inject.extensions#guice-assistedinject;4.0 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0m		tried /Users/keremuyanik/.ivy2/local/com.google.inject.extensions/guice-assistedinject/4.0/ivys/ivy.xml[0m
 [0m[[0mdebug[0m] [0m	local: no ivy file found for com.google.inject.extensions#guice-assistedinject;4.0[0m
-[0m[[0mdebug[0m] [0m		tried /Users/keremuyanik/Documents/WebTech/activator-1.3.5-minimal/repository/com.google.inject.extensions/guice-assistedinject/4.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	activator-launcher-local: no ivy file found for com.google.inject.extensions#guice-assistedinject;4.0[0m
 [0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/google/inject/extensions/guice-assistedinject/4.0/guice-assistedinject-4.0.pom[0m
 [0m[[0mdebug[0m] [0m	public: found md file for com.google.inject.extensions#guice-assistedinject;4.0[0m
 [0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/com/google/inject/extensions/guice-assistedinject/4.0/guice-assistedinject-4.0.pom (4.0)[0m
@@ -442,7 +440,7 @@
 [0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/google/inject/extensions/guice-assistedinject/4.0/guice-assistedinject-4.0.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/google/inject/extensions/guice-assistedinject/4.0/guice-assistedinject-4.0.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/com/google/inject/extensions/guice-assistedinject/4.0/guice-assistedinject-4.0.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.google.inject.extensions#guice-assistedinject;4.0!guice-assistedinject.pom(pom.original) (67ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.google.inject.extensions#guice-assistedinject;4.0!guice-assistedinject.pom(pom.original) (92ms)[0m
 [0m[[0minfo[0m] [0mResolving com.google.inject.extensions#extensions-parent;4.0 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.google.inject.extensions#extensions-parent;4.0 {}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.google.inject.extensions#extensions-parent;4.0[0m
@@ -7884,20 +7882,20 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#control_2.11;0.13.8-M3!control_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.akka#akka-actor_2.11;2.3.8!akka-actor_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.akka#akka-testkit_2.11;2.3.8!akka-testkit_2.11.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 4066ms :: artifacts dl 62ms[0m
-[0m[[0mdebug[0m] [0m	report for play-java#play-java_2.11;1.0-SNAPSHOT compile produced in /Users/keremuyanik/Documents/WebTech/target/resolution-cache/reports/play-java-play-java_2.11-compile.xml[0m
-[0m[[0mdebug[0m] [0m	report for play-java#play-java_2.11;1.0-SNAPSHOT runtime produced in /Users/keremuyanik/Documents/WebTech/target/resolution-cache/reports/play-java-play-java_2.11-runtime.xml[0m
-[0m[[0mdebug[0m] [0m	report for play-java#play-java_2.11;1.0-SNAPSHOT test produced in /Users/keremuyanik/Documents/WebTech/target/resolution-cache/reports/play-java-play-java_2.11-test.xml[0m
-[0m[[0mdebug[0m] [0m	report for play-java#play-java_2.11;1.0-SNAPSHOT provided produced in /Users/keremuyanik/Documents/WebTech/target/resolution-cache/reports/play-java-play-java_2.11-provided.xml[0m
-[0m[[0mdebug[0m] [0m	report for play-java#play-java_2.11;1.0-SNAPSHOT optional produced in /Users/keremuyanik/Documents/WebTech/target/resolution-cache/reports/play-java-play-java_2.11-optional.xml[0m
-[0m[[0mdebug[0m] [0m	report for play-java#play-java_2.11;1.0-SNAPSHOT compile-internal produced in /Users/keremuyanik/Documents/WebTech/target/resolution-cache/reports/play-java-play-java_2.11-compile-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for play-java#play-java_2.11;1.0-SNAPSHOT runtime-internal produced in /Users/keremuyanik/Documents/WebTech/target/resolution-cache/reports/play-java-play-java_2.11-runtime-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for play-java#play-java_2.11;1.0-SNAPSHOT test-internal produced in /Users/keremuyanik/Documents/WebTech/target/resolution-cache/reports/play-java-play-java_2.11-test-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for play-java#play-java_2.11;1.0-SNAPSHOT plugin produced in /Users/keremuyanik/Documents/WebTech/target/resolution-cache/reports/play-java-play-java_2.11-plugin.xml[0m
-[0m[[0mdebug[0m] [0m	report for play-java#play-java_2.11;1.0-SNAPSHOT sources produced in /Users/keremuyanik/Documents/WebTech/target/resolution-cache/reports/play-java-play-java_2.11-sources.xml[0m
-[0m[[0mdebug[0m] [0m	report for play-java#play-java_2.11;1.0-SNAPSHOT docs produced in /Users/keremuyanik/Documents/WebTech/target/resolution-cache/reports/play-java-play-java_2.11-docs.xml[0m
-[0m[[0mdebug[0m] [0m	report for play-java#play-java_2.11;1.0-SNAPSHOT pom produced in /Users/keremuyanik/Documents/WebTech/target/resolution-cache/reports/play-java-play-java_2.11-pom.xml[0m
-[0m[[0mdebug[0m] [0m	report for play-java#play-java_2.11;1.0-SNAPSHOT scala-tool produced in /Users/keremuyanik/Documents/WebTech/target/resolution-cache/reports/play-java-play-java_2.11-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	report for play-java#play-java_2.11;1.0-SNAPSHOT fork-run produced in /Users/keremuyanik/Documents/WebTech/target/resolution-cache/reports/play-java-play-java_2.11-fork-run.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (4066ms resolve - 62ms download)[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 11669ms :: artifacts dl 210ms[0m
+[0m[[0mdebug[0m] [0m	report for play-java#play-java_2.11;1.0-SNAPSHOT compile produced in /Users/keremuyanik/Documents/WebT/play-java/target/resolution-cache/reports/play-java-play-java_2.11-compile.xml[0m
+[0m[[0mdebug[0m] [0m	report for play-java#play-java_2.11;1.0-SNAPSHOT runtime produced in /Users/keremuyanik/Documents/WebT/play-java/target/resolution-cache/reports/play-java-play-java_2.11-runtime.xml[0m
+[0m[[0mdebug[0m] [0m	report for play-java#play-java_2.11;1.0-SNAPSHOT test produced in /Users/keremuyanik/Documents/WebT/play-java/target/resolution-cache/reports/play-java-play-java_2.11-test.xml[0m
+[0m[[0mdebug[0m] [0m	report for play-java#play-java_2.11;1.0-SNAPSHOT provided produced in /Users/keremuyanik/Documents/WebT/play-java/target/resolution-cache/reports/play-java-play-java_2.11-provided.xml[0m
+[0m[[0mdebug[0m] [0m	report for play-java#play-java_2.11;1.0-SNAPSHOT optional produced in /Users/keremuyanik/Documents/WebT/play-java/target/resolution-cache/reports/play-java-play-java_2.11-optional.xml[0m
+[0m[[0mdebug[0m] [0m	report for play-java#play-java_2.11;1.0-SNAPSHOT compile-internal produced in /Users/keremuyanik/Documents/WebT/play-java/target/resolution-cache/reports/play-java-play-java_2.11-compile-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for play-java#play-java_2.11;1.0-SNAPSHOT runtime-internal produced in /Users/keremuyanik/Documents/WebT/play-java/target/resolution-cache/reports/play-java-play-java_2.11-runtime-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for play-java#play-java_2.11;1.0-SNAPSHOT test-internal produced in /Users/keremuyanik/Documents/WebT/play-java/target/resolution-cache/reports/play-java-play-java_2.11-test-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for play-java#play-java_2.11;1.0-SNAPSHOT plugin produced in /Users/keremuyanik/Documents/WebT/play-java/target/resolution-cache/reports/play-java-play-java_2.11-plugin.xml[0m
+[0m[[0mdebug[0m] [0m	report for play-java#play-java_2.11;1.0-SNAPSHOT sources produced in /Users/keremuyanik/Documents/WebT/play-java/target/resolution-cache/reports/play-java-play-java_2.11-sources.xml[0m
+[0m[[0mdebug[0m] [0m	report for play-java#play-java_2.11;1.0-SNAPSHOT docs produced in /Users/keremuyanik/Documents/WebT/play-java/target/resolution-cache/reports/play-java-play-java_2.11-docs.xml[0m
+[0m[[0mdebug[0m] [0m	report for play-java#play-java_2.11;1.0-SNAPSHOT pom produced in /Users/keremuyanik/Documents/WebT/play-java/target/resolution-cache/reports/play-java-play-java_2.11-pom.xml[0m
+[0m[[0mdebug[0m] [0m	report for play-java#play-java_2.11;1.0-SNAPSHOT scala-tool produced in /Users/keremuyanik/Documents/WebT/play-java/target/resolution-cache/reports/play-java-play-java_2.11-scala-tool.xml[0m
+[0m[[0mdebug[0m] [0m	report for play-java#play-java_2.11;1.0-SNAPSHOT fork-run produced in /Users/keremuyanik/Documents/WebT/play-java/target/resolution-cache/reports/play-java-play-java_2.11-fork-run.xml[0m
+[0m[[0mdebug[0m] [0m	resolve done (11669ms resolve - 210ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m
