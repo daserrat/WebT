@@ -5,12 +5,12 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="Staj" content="">
-		<title>Staj - Home</title>
-		<link href="css/bootstrap.css" rel="stylesheet" />
-		<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" />
-		<link href="css/suche.css" rel="stylesheet" />
-		<script src="js/jquery.js"></script>
-		<script src="js/bootstrap.js"></script>
+		<title>Staj - Suche</title>
+		<link href="@routes.Assets.versioned("stylesheets/bootstrap.css")" rel="stylesheet" />
+		<link href="@routes.Assets.versioned("font-awesome/css/font-awesome.min.css")" rel="stylesheet" />
+		<script src="@routes.Assets.versioned("javascripts/jquery.js")"></script>
+		<script src="@routes.Assets.versioned("javascripts/bootstrap.js")"></script>
+		<link href="@routes.Assets.versioned("stylesheets/suche.css")" rel="stylesheet" />
 		<link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
@@ -28,10 +28,10 @@
 				<div class="collapse navbar-collapse navbar-menubuilder" id="navigation-menupunkte">
 					<ul class="nav navbar-nav navbar-left">
 						<li class="list_menupunkt">
-							<a href="" class="menupunkte">Home</a>
+							<a href="/" class="menupunkte">Home</a>
 						</li>
 						<li class="active" >
-							<a href="/Praktikumssuche" class="menupunkte">Suche</a>
+							<a href="/suche" class="menupunkte">Suche</a>
 						</li>
 						<li>
 							<a href="/about-us" class="menupunkte">Praktikumupload</a>

@@ -11,7 +11,7 @@ public class DBConnector {
 	Connection con;
 
 	public DBConnector() {
-
+		System.out.println("War im DB Connector");
 		try {
 
 			Class.forName("com.mysql.jdbc.Driver");

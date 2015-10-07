@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/keremuyanik/Documents/WebT/play-java/conf/routes
-// @DATE:Sun Oct 04 22:25:16 CEST 2015
+// @DATE:Wed Oct 07 22:01:31 CEST 2015
 
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
 import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamicString }
@@ -13,14 +13,29 @@ import _root_.play.libs.F
 // @LINE:6
 package controllers {
 
-  // @LINE:9
+  // @LINE:22
+  class ReverseTestClass(_prefix: => String) {
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:22
+    def testen(): Call = {
+      import ReverseRouteContext.empty
+      Call("POST", _prefix + { _defaultPrefix } + "testPost")
+    }
+  
+  }
+
+  // @LINE:17
   class ReverseAssets(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:9
+    // @LINE:17
     def versioned(file:Asset): Call = {
       implicit val _rrc = new ReverseRouteContext(Map(("path", "/public")))
       Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[Asset]].unbind("file", file))
@@ -35,10 +50,36 @@ package controllers {
     }
 
   
+    // @LINE:12
+    def upload(): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "upload")
+    }
+  
+    // @LINE:10
+    def suche(): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "suche")
+    }
+  
+    // @LINE:14
+    def stellenangebot(): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "stellenangebot")
+    }
+  
     // @LINE:6
     def startseite(): Call = {
-      import ReverseRouteContext.empty
-      Call("GET", _prefix)
+    
+      () match {
+      
+        // @LINE:6
+        case ()  =>
+          import ReverseRouteContext.empty
+          Call("GET", _prefix)
+      
+      }
+    
     }
   
   }

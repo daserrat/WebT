@@ -1,5 +1,5 @@
-New log file opened at Tue Sep 29 20:39:41 CEST 2015 by 866@wl-0257.wlan.uni-konstanz.de
-jvm 866@wl-0257.wlan.uni-konstanz.de
+New log file opened at Wed Oct 07 21:58:13 CEST 2015 by 1332@Kerems-MacBook-Pro.local
+jvm 1332@Kerems-MacBook-Pro.local
 jvm vmName=Java HotSpot(TM) 64-Bit Server VM vmVendor=Oracle Corporation vmVersion=25.60-b23
 jvm specName=Java Virtual Machine Specification specVendor=Oracle Corporation specVersion=1.8
 jvm arguments: [-Xms256m, -Xmx1024m, -XX:MetaspaceSize=64m, -XX:MaxMetaspaceSize=256m]
@@ -27,7 +27,7 @@ sorting: ns: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.Jvm
   :: sorted deduced result: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin)
 [Loading] Done in /Users/keremuyanik/Documents/WebT/play-java/project, returning: (play-java-build)
 Loading project definition from /Users/keremuyanik/Documents/WebT/play-java/project
-Running task... Cancel: sbt.TaskCancellationStrategy$Null$@5ab76e52, check cycles: false
+Running task... Cancel: sbt.TaskCancellationStrategy$Null$@1da2d8a8, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -69,356 +69,565 @@ Set current project to play-java (in build file:/Users/keremuyanik/Documents/Web
 > server-handle-next-server-request
 > compile
 Evaluating tasks: compile:compile
-Running task... Cancel: sbt.server.ServerTaskCancellation@6dada50a, check cycles: false
-
-Initial source changes: 
-	removed:Set()
-	added: Set(/Users/keremuyanik/Documents/WebT/play-java/app/database/DBStarter.java, /Users/keremuyanik/Documents/WebT/play-java/app/database/DBConnector.java)
-	modified: Set()
-Removed products: Set()
-External API changes: API Changes: Set()
-Modified binary dependencies: Set()
-Initial directly invalidated sources: Set(/Users/keremuyanik/Documents/WebT/play-java/app/database/DBStarter.java, /Users/keremuyanik/Documents/WebT/play-java/app/database/DBConnector.java)
-
-Sources indirectly invalidated by:
-	product: Set()
-	binary dep: Set()
-	external source: Set()
-All initially invalidated sources: Set(/Users/keremuyanik/Documents/WebT/play-java/app/database/DBStarter.java, /Users/keremuyanik/Documents/WebT/play-java/app/database/DBConnector.java)
-
-Read from stdout: Compiling 2 Java sources to /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/classes...
-Compiling 2 Java sources to /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/classes...
-Attempting to call com.sun.tools.javac.api.JavacTool@77e0ddc9 directly...
-Java compilation took 0.782685216 s
-Java analysis took 0.107001484 s
-Java compile + analysis took 0.898555872 s
-Invalidating /Users/keremuyanik/Documents/WebT/play-java/app/database/DBStarter.java...
-Invalidating (transitively) by inheritance from /Users/keremuyanik/Documents/WebT/play-java/app/database/DBStarter.java...
-Initial set of included nodes: Set(/Users/keremuyanik/Documents/WebT/play-java/app/database/DBStarter.java)
-Invalidated by transitive inheritance dependency: Set(/Users/keremuyanik/Documents/WebT/play-java/app/database/DBStarter.java)
-The /Users/keremuyanik/Documents/WebT/play-java/app/database/DBStarter.java source file has the following regular definitions changed:
-	notify, wait, DBStarter, equals, main, notifyAll, <init>, toString, getClass, hashCode.
-All member reference dependencies will be considered within this context.
-Name hashing optimization doesn't apply to non-Scala dependency: /Users/keremuyanik/Documents/WebT/play-java/app/database/DBStarter.java
-Invalidating /Users/keremuyanik/Documents/WebT/play-java/app/database/DBConnector.java...
-Invalidating (transitively) by inheritance from /Users/keremuyanik/Documents/WebT/play-java/app/database/DBConnector.java...
-Initial set of included nodes: Set(/Users/keremuyanik/Documents/WebT/play-java/app/database/DBConnector.java)
-Invalidated by transitive inheritance dependency: Set(/Users/keremuyanik/Documents/WebT/play-java/app/database/DBConnector.java)
-The /Users/keremuyanik/Documents/WebT/play-java/app/database/DBConnector.java source file has the following regular definitions changed:
-	notify, rs, wait, con, equals, notifyAll, DBConnector, <init>, toString, stmt, getClass, hashCode.
-All member reference dependencies will be considered within this context.
-Name hashing optimization doesn't apply to non-Scala dependency: /Users/keremuyanik/Documents/WebT/play-java/app/database/DBStarter.java
-Name hashing optimization doesn't apply to non-Scala dependency: /Users/keremuyanik/Documents/WebT/play-java/app/database/DBConnector.java
-New invalidations:
-	Set()
-Initial set of included nodes: Set()
-Previously invalidated, but (transitively) depend on new invalidations:
-	Set()
-All newly invalidated sources after taking into account (previously) recompiled sources:Set()
-Total time: 3 s, completed 29.09.2015 20:39:53
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/Users/keremuyanik/Documents/WebT/play-java/}root/compile:discoveredMainClasses
-Evaluating tasks: compile:discoveredMainClasses
-Running task... Cancel: sbt.server.ServerTaskCancellation@4b51793a, check cycles: false
+Running task... Cancel: sbt.server.ServerTaskCancellation@320ec081, check cycles: false
 
 Initial source changes: 
 	removed:Set()
 	added: Set()
-	modified: Set()
+	modified: Set(/Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/router/Routes.scala, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/routes.java, /Users/keremuyanik/Documents/WebT/play-java/app/controllers/TestClass.java, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/router/RoutesPrefix.scala, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/ReverseRoutes.scala, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/javascript/JavaScriptReverseRoutes.scala)
 Removed products: Set()
 External API changes: API Changes: Set()
 Modified binary dependencies: Set()
-Initial directly invalidated sources: Set()
+Initial directly invalidated sources: Set(/Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/router/Routes.scala, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/routes.java, /Users/keremuyanik/Documents/WebT/play-java/app/controllers/TestClass.java, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/router/RoutesPrefix.scala, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/ReverseRoutes.scala, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/javascript/JavaScriptReverseRoutes.scala)
 
 Sources indirectly invalidated by:
 	product: Set()
 	binary dep: Set()
 	external source: Set()
-All initially invalidated sources: Set()
+All initially invalidated sources: Set(/Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/router/Routes.scala, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/routes.java, /Users/keremuyanik/Documents/WebT/play-java/app/controllers/TestClass.java, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/router/RoutesPrefix.scala, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/ReverseRoutes.scala, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/javascript/JavaScriptReverseRoutes.scala)
 
-Total time: 1 s, completed 29.09.2015 20:39:54
+Read from stdout: Compiling 4 Scala sources and 2 Java sources to /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/classes...
+Compiling 4 Scala sources and 2 Java sources to /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/classes...
+Getting compiler-interface from component compiler for Scala 2.11.6
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.6
+Other repositories:
+Default repositories:
+Running cached compiler 1e7a7ec6, interfacing (CompilerInterface) with Scala compiler version 2.11.6
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/classes:/Users/keremuyanik/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.6.jar
+	-classpath
+	/Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/classes:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/twirl-api_2.11/jars/twirl-api_2.11-1.1.1.jar:/Users/keremuyanik/.ivy2/cache/org.apache.commons/commons-lang3/jars/commons-lang3-3.4.jar:/Users/keremuyanik/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/bundles/scala-xml_2.11-1.0.1.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-enhancer/jars/play-enhancer-1.1.0.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-server_2.11/jars/play-server_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play_2.11/jars/play_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/build-link/jars/build-link-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-exceptions/jars/play-exceptions-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/org.javassist/javassist/bundles/javassist-3.19.0-GA.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-iteratees_2.11/jars/play-iteratees_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/org.scala-stm/scala-stm_2.11/jars/scala-stm_2.11-0.7.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe/config/bundles/config-1.3.0.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-json_2.11/jars/play-json_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-functional_2.11/jars/play-functional_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-datacommons_2.11/jars/play-datacommons_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/joda-time/joda-time/jars/joda-time-2.8.1.jar:/Users/keremuyanik/.ivy2/cache/org.joda/joda-convert/jars/joda-convert-1.7.jar:/Users/keremuyanik/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.11.6.jar:/Users/keremuyanik/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/bundles/jackson-core-2.5.4.jar:/Users/keremuyanik/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/bundles/jackson-annotations-2.5.4.jar:/Users/keremuyanik/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/bundles/jackson-databind-2.5.4.jar:/Users/keremuyanik/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/bundles/jackson-datatype-jdk8-2.5.4.jar:/Users/keremuyanik/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/bundles/jackson-datatype-jsr310-2.5.4.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-netty-utils/jars/play-netty-utils-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/org.slf4j/slf4j-api/jars/slf4j-api-1.7.12.jar:/Users/keremuyanik/.ivy2/cache/org.slf4j/jul-to-slf4j/jars/jul-to-slf4j-1.7.12.jar:/Users/keremuyanik/.ivy2/cache/org.slf4j/jcl-over-slf4j/jars/jcl-over-slf4j-1.7.12.jar:/Users/keremuyanik/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.11/bundles/scala-parser-combinators_2.11-1.0.1.jar:/Users/keremuyanik/.ivy2/cache/ch.qos.logback/logback-core/jars/logback-core-1.1.3.jar:/Users/keremuyanik/.ivy2/cache/ch.qos.logback/logback-classic/jars/logback-classic-1.1.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.akka/akka-actor_2.11/jars/akka-actor_2.11-2.3.13.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.akka/akka-slf4j_2.11/jars/akka-slf4j_2.11-2.3.13.jar:/Users/keremuyanik/.ivy2/cache/commons-codec/commons-codec/jars/commons-codec-1.10.jar:/Users/keremuyanik/.ivy2/cache/xerces/xercesImpl/jars/xercesImpl-2.11.0.jar:/Users/keremuyanik/.ivy2/cache/xml-apis/xml-apis/jars/xml-apis-1.4.01.jar:/Users/keremuyanik/.ivy2/cache/javax.transaction/jta/jars/jta-1.1.jar:/Users/keremuyanik/.ivy2/cache/com.google.inject/guice/jars/guice-4.0.jar:/Users/keremuyanik/.ivy2/cache/javax.inject/javax.inject/jars/javax.inject-1.jar:/Users/keremuyanik/.ivy2/cache/aopalliance/aopalliance/jars/aopalliance-1.0.jar:/Users/keremuyanik/.ivy2/cache/com.google.inject.extensions/guice-assistedinject/jars/guice-assistedinject-4.0.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-java_2.11/jars/play-java_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/org.scala-lang.modules/scala-java8-compat_2.11/bundles/scala-java8-compat_2.11-0.3.0.jar:/Users/keremuyanik/.ivy2/cache/org.yaml/snakeyaml/bundles/snakeyaml-1.15.jar:/Users/keremuyanik/.ivy2/cache/org.hibernate/hibernate-validator/jars/hibernate-validator-5.0.3.Final.jar:/Users/keremuyanik/.ivy2/cache/javax.validation/validation-api/jars/validation-api-1.1.0.Final.jar:/Users/keremuyanik/.ivy2/cache/com.fasterxml/classmate/bundles/classmate-1.0.0.jar:/Users/keremuyanik/.ivy2/cache/org.jboss.logging/jboss-logging/jars/jboss-logging-3.2.1.Final.jar:/Users/keremuyanik/.ivy2/cache/org.springframework/spring-context/jars/spring-context-4.1.6.RELEASE.jar:/Users/keremuyanik/.ivy2/cache/org.springframework/spring-core/jars/spring-core-4.1.6.RELEASE.jar:/Users/keremuyanik/.ivy2/cache/org.springframework/spring-beans/jars/spring-beans-4.1.6.RELEASE.jar:/Users/keremuyanik/.ivy2/cache/org.reflections/reflections/jars/reflections-0.9.9.jar:/Users/keremuyanik/.ivy2/cache/com.google.guava/guava/bundles/guava-18.0.jar:/Users/keremuyanik/.ivy2/cache/com.google.code.findbugs/annotations/jars/annotations-2.0.1.jar:/Users/keremuyanik/.ivy2/cache/net.jodah/typetools/bundles/typetools-0.4.1.jar:/Users/keremuyanik/.ivy2/cache/com.google.code.findbugs/jsr305/jars/jsr305-2.0.3.jar:/Users/keremuyanik/.ivy2/cache/org.apache.tomcat/tomcat-servlet-api/jars/tomcat-servlet-api-8.0.21.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-netty-server_2.11/jars/play-netty-server_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/io.netty/netty/bundles/netty-3.10.4.Final.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.netty/netty-http-pipelining/jars/netty-http-pipelining-1.1.4.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-java-jdbc_2.11/jars/play-java-jdbc_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-jdbc_2.11/jars/play-jdbc_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-jdbc-api_2.11/jars/play-jdbc-api_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.jolbox/bonecp/bundles/bonecp-0.8.0.RELEASE.jar:/Users/keremuyanik/.ivy2/cache/com.zaxxer/HikariCP/bundles/HikariCP-2.3.7.jar:/Users/keremuyanik/.ivy2/cache/com.h2database/h2/jars/h2-1.4.187.jar:/Users/keremuyanik/.ivy2/cache/tyrex/tyrex/jars/tyrex-1.0.1.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-cache_2.11/jars/play-cache_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/net.sf.ehcache/ehcache-core/jars/ehcache-core-2.6.11.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-java-ws_2.11/jars/play-java-ws_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-ws_2.11/jars/play-ws_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.ning/async-http-client/jars/async-http-client-1.9.21.jar:/Users/keremuyanik/.ivy2/cache/oauth.signpost/signpost-core/jars/signpost-core-1.2.1.2.jar:/Users/keremuyanik/.ivy2/cache/oauth.signpost/signpost-commonshttp4/jars/signpost-commonshttp4-1.2.1.2.jar:/Users/keremuyanik/.ivy2/cache/org.apache.httpcomponents/httpcore/jars/httpcore-4.0.1.jar:/Users/keremuyanik/.ivy2/cache/org.apache.httpcomponents/httpclient/jars/httpclient-4.0.1.jar:/Users/keremuyanik/.ivy2/cache/commons-logging/commons-logging/jars/commons-logging-1.1.1.jar
+Read from stdout: /Users/keremuyanik/Documents/WebT/play-java/conf/routes:6: value startseite is not a member of object controllers.Application
+/Users/keremuyanik/Documents/WebT/play-java/conf/routes:6: value startseite is not a member of object controllers.Application
+Read from stdout: GET     /                           controllers.Application.startseite()
+GET     /                           controllers.Application.startseite()
+Read from stdout: /Users/keremuyanik/Documents/WebT/play-java/conf/routes:8: value startseite is not a member of object controllers.Application
+/Users/keremuyanik/Documents/WebT/play-java/conf/routes:8: value startseite is not a member of object controllers.Application
+Read from stdout: GET     /startseite                 controllers.Application.startseite()
+GET     /startseite                 controllers.Application.startseite()
+Read from stdout: /Users/keremuyanik/Documents/WebT/play-java/conf/routes:10: value suche is not a member of object controllers.Application
+/Users/keremuyanik/Documents/WebT/play-java/conf/routes:10: value suche is not a member of object controllers.Application
+Read from stdout: GET		/suche						controllers.Application.suche()
+GET		/suche						controllers.Application.suche()
+Read from stdout: /Users/keremuyanik/Documents/WebT/play-java/conf/routes:12: value upload is not a member of object controllers.Application
+/Users/keremuyanik/Documents/WebT/play-java/conf/routes:12: value upload is not a member of object controllers.Application
+Read from stdout: GET		/upload						controllers.Application.upload()
+GET		/upload						controllers.Application.upload()
+Read from stdout: /Users/keremuyanik/Documents/WebT/play-java/conf/routes:14: value stellenangebot is not a member of object controllers.Application
+/Users/keremuyanik/Documents/WebT/play-java/conf/routes:14: value stellenangebot is not a member of object controllers.Application
+Read from stdout: GET		/stellenangebot				controllers.Application.stellenangebot()
+GET		/stellenangebot				controllers.Application.stellenangebot()
+Read from stdout: /Users/keremuyanik/Documents/WebT/play-java/conf/routes:22: value testen is not a member of object controllers.TestClass
+/Users/keremuyanik/Documents/WebT/play-java/conf/routes:22: value testen is not a member of object controllers.TestClass
+Read from stdout: POST	/testPost					controllers.TestClass.testen()
+POST	/testPost					controllers.TestClass.testen()
+Read from stdout: 6 errors found
+6 errors found
+Compilation failed (CompilerInterface)
+Read from stdout: (compile:compileIncremental) Compilation failed
+(compile:compileIncremental) Compilation failed
+Total time: 7 s, completed 07.10.2015 21:58:26
+> server-post-command-error-handler
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/Users/keremuyanik/Documents/WebT/play-java/}root/compile:discoveredMainClasses
+Evaluating tasks: compile:discoveredMainClasses
+Running task... Cancel: sbt.server.ServerTaskCancellation@4fb13b2b, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(/Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/router/Routes.scala, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/routes.java, /Users/keremuyanik/Documents/WebT/play-java/app/controllers/TestClass.java, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/router/RoutesPrefix.scala, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/ReverseRoutes.scala, /Users/keremuyanik/Documents/WebT/play-java/app/controllers/Application.java, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/javascript/JavaScriptReverseRoutes.scala)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(/Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/router/Routes.scala, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/routes.java, /Users/keremuyanik/Documents/WebT/play-java/app/controllers/TestClass.java, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/router/RoutesPrefix.scala, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/ReverseRoutes.scala, /Users/keremuyanik/Documents/WebT/play-java/app/controllers/Application.java, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/javascript/JavaScriptReverseRoutes.scala)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(/Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/router/Routes.scala, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/routes.java, /Users/keremuyanik/Documents/WebT/play-java/app/controllers/TestClass.java, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/router/RoutesPrefix.scala, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/ReverseRoutes.scala, /Users/keremuyanik/Documents/WebT/play-java/app/controllers/Application.java, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/javascript/JavaScriptReverseRoutes.scala)
+
+Read from stdout: Compiling 4 Scala sources and 3 Java sources to /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/classes...
+Compiling 4 Scala sources and 3 Java sources to /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/classes...
+Getting compiler-interface from component compiler for Scala 2.11.6
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.6
+Other repositories:
+Default repositories:
+Running cached compiler 13b4c192, interfacing (CompilerInterface) with Scala compiler version 2.11.6
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/classes:/Users/keremuyanik/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.6.jar
+	-classpath
+	/Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/classes:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/twirl-api_2.11/jars/twirl-api_2.11-1.1.1.jar:/Users/keremuyanik/.ivy2/cache/org.apache.commons/commons-lang3/jars/commons-lang3-3.4.jar:/Users/keremuyanik/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/bundles/scala-xml_2.11-1.0.1.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-enhancer/jars/play-enhancer-1.1.0.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-server_2.11/jars/play-server_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play_2.11/jars/play_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/build-link/jars/build-link-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-exceptions/jars/play-exceptions-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/org.javassist/javassist/bundles/javassist-3.19.0-GA.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-iteratees_2.11/jars/play-iteratees_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/org.scala-stm/scala-stm_2.11/jars/scala-stm_2.11-0.7.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe/config/bundles/config-1.3.0.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-json_2.11/jars/play-json_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-functional_2.11/jars/play-functional_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-datacommons_2.11/jars/play-datacommons_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/joda-time/joda-time/jars/joda-time-2.8.1.jar:/Users/keremuyanik/.ivy2/cache/org.joda/joda-convert/jars/joda-convert-1.7.jar:/Users/keremuyanik/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.11.6.jar:/Users/keremuyanik/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/bundles/jackson-core-2.5.4.jar:/Users/keremuyanik/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/bundles/jackson-annotations-2.5.4.jar:/Users/keremuyanik/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/bundles/jackson-databind-2.5.4.jar:/Users/keremuyanik/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/bundles/jackson-datatype-jdk8-2.5.4.jar:/Users/keremuyanik/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/bundles/jackson-datatype-jsr310-2.5.4.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-netty-utils/jars/play-netty-utils-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/org.slf4j/slf4j-api/jars/slf4j-api-1.7.12.jar:/Users/keremuyanik/.ivy2/cache/org.slf4j/jul-to-slf4j/jars/jul-to-slf4j-1.7.12.jar:/Users/keremuyanik/.ivy2/cache/org.slf4j/jcl-over-slf4j/jars/jcl-over-slf4j-1.7.12.jar:/Users/keremuyanik/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.11/bundles/scala-parser-combinators_2.11-1.0.1.jar:/Users/keremuyanik/.ivy2/cache/ch.qos.logback/logback-core/jars/logback-core-1.1.3.jar:/Users/keremuyanik/.ivy2/cache/ch.qos.logback/logback-classic/jars/logback-classic-1.1.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.akka/akka-actor_2.11/jars/akka-actor_2.11-2.3.13.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.akka/akka-slf4j_2.11/jars/akka-slf4j_2.11-2.3.13.jar:/Users/keremuyanik/.ivy2/cache/commons-codec/commons-codec/jars/commons-codec-1.10.jar:/Users/keremuyanik/.ivy2/cache/xerces/xercesImpl/jars/xercesImpl-2.11.0.jar:/Users/keremuyanik/.ivy2/cache/xml-apis/xml-apis/jars/xml-apis-1.4.01.jar:/Users/keremuyanik/.ivy2/cache/javax.transaction/jta/jars/jta-1.1.jar:/Users/keremuyanik/.ivy2/cache/com.google.inject/guice/jars/guice-4.0.jar:/Users/keremuyanik/.ivy2/cache/javax.inject/javax.inject/jars/javax.inject-1.jar:/Users/keremuyanik/.ivy2/cache/aopalliance/aopalliance/jars/aopalliance-1.0.jar:/Users/keremuyanik/.ivy2/cache/com.google.inject.extensions/guice-assistedinject/jars/guice-assistedinject-4.0.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-java_2.11/jars/play-java_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/org.scala-lang.modules/scala-java8-compat_2.11/bundles/scala-java8-compat_2.11-0.3.0.jar:/Users/keremuyanik/.ivy2/cache/org.yaml/snakeyaml/bundles/snakeyaml-1.15.jar:/Users/keremuyanik/.ivy2/cache/org.hibernate/hibernate-validator/jars/hibernate-validator-5.0.3.Final.jar:/Users/keremuyanik/.ivy2/cache/javax.validation/validation-api/jars/validation-api-1.1.0.Final.jar:/Users/keremuyanik/.ivy2/cache/com.fasterxml/classmate/bundles/classmate-1.0.0.jar:/Users/keremuyanik/.ivy2/cache/org.jboss.logging/jboss-logging/jars/jboss-logging-3.2.1.Final.jar:/Users/keremuyanik/.ivy2/cache/org.springframework/spring-context/jars/spring-context-4.1.6.RELEASE.jar:/Users/keremuyanik/.ivy2/cache/org.springframework/spring-core/jars/spring-core-4.1.6.RELEASE.jar:/Users/keremuyanik/.ivy2/cache/org.springframework/spring-beans/jars/spring-beans-4.1.6.RELEASE.jar:/Users/keremuyanik/.ivy2/cache/org.reflections/reflections/jars/reflections-0.9.9.jar:/Users/keremuyanik/.ivy2/cache/com.google.guava/guava/bundles/guava-18.0.jar:/Users/keremuyanik/.ivy2/cache/com.google.code.findbugs/annotations/jars/annotations-2.0.1.jar:/Users/keremuyanik/.ivy2/cache/net.jodah/typetools/bundles/typetools-0.4.1.jar:/Users/keremuyanik/.ivy2/cache/com.google.code.findbugs/jsr305/jars/jsr305-2.0.3.jar:/Users/keremuyanik/.ivy2/cache/org.apache.tomcat/tomcat-servlet-api/jars/tomcat-servlet-api-8.0.21.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-netty-server_2.11/jars/play-netty-server_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/io.netty/netty/bundles/netty-3.10.4.Final.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.netty/netty-http-pipelining/jars/netty-http-pipelining-1.1.4.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-java-jdbc_2.11/jars/play-java-jdbc_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-jdbc_2.11/jars/play-jdbc_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-jdbc-api_2.11/jars/play-jdbc-api_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.jolbox/bonecp/bundles/bonecp-0.8.0.RELEASE.jar:/Users/keremuyanik/.ivy2/cache/com.zaxxer/HikariCP/bundles/HikariCP-2.3.7.jar:/Users/keremuyanik/.ivy2/cache/com.h2database/h2/jars/h2-1.4.187.jar:/Users/keremuyanik/.ivy2/cache/tyrex/tyrex/jars/tyrex-1.0.1.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-cache_2.11/jars/play-cache_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/net.sf.ehcache/ehcache-core/jars/ehcache-core-2.6.11.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-java-ws_2.11/jars/play-java-ws_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-ws_2.11/jars/play-ws_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.ning/async-http-client/jars/async-http-client-1.9.21.jar:/Users/keremuyanik/.ivy2/cache/oauth.signpost/signpost-core/jars/signpost-core-1.2.1.2.jar:/Users/keremuyanik/.ivy2/cache/oauth.signpost/signpost-commonshttp4/jars/signpost-commonshttp4-1.2.1.2.jar:/Users/keremuyanik/.ivy2/cache/org.apache.httpcomponents/httpcore/jars/httpcore-4.0.1.jar:/Users/keremuyanik/.ivy2/cache/org.apache.httpcomponents/httpclient/jars/httpclient-4.0.1.jar:/Users/keremuyanik/.ivy2/cache/commons-logging/commons-logging/jars/commons-logging-1.1.1.jar
+Read from stdout: /Users/keremuyanik/Documents/WebT/play-java/conf/routes:22: value testen is not a member of object controllers.TestClass
+/Users/keremuyanik/Documents/WebT/play-java/conf/routes:22: value testen is not a member of object controllers.TestClass
+Read from stdout: POST	/testPost					controllers.TestClass.testen()
+POST	/testPost					controllers.TestClass.testen()
+Read from stdout: one error found
+one error found
+Compilation failed (CompilerInterface)
+Read from stdout: (compile:compileIncremental) Compilation failed
+(compile:compileIncremental) Compilation failed
+Total time: 3 s, completed 07.10.2015 21:58:30
+> server-post-command-error-handler
 > server-post-command-cleanup
 > server-handle-next-server-request
 > {file:/Users/keremuyanik/Documents/WebT/play-java/}root/compile:mainClass
 Evaluating tasks: compile:mainClass
-Running task... Cancel: sbt.server.ServerTaskCancellation@3bcf7a24, check cycles: false
-Total time: 0 s, completed 29.09.2015 20:39:54
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/Users/keremuyanik/Documents/WebT/play-java/}root/compile:discoveredMainClasses
-Evaluating tasks: compile:discoveredMainClasses
-Running task... Cancel: sbt.server.ServerTaskCancellation@29418709, check cycles: false
-
-Initial source changes: 
-	removed:Set()
-	added: Set()
-	modified: Set()
-Removed products: Set()
-External API changes: API Changes: Set()
-Modified binary dependencies: Set()
-Initial directly invalidated sources: Set()
-
-Sources indirectly invalidated by:
-	product: Set()
-	binary dep: Set()
-	external source: Set()
-All initially invalidated sources: Set()
-
-Total time: 1 s, completed 29.09.2015 20:39:55
-> server-post-command-cleanup
-> server-handle-next-server-request
-> backgroundRun
-Evaluating tasks: compile:backgroundRun
-Running task... Cancel: sbt.server.ServerTaskCancellation@549e0eaa, check cycles: false
-Total time: 0 s, completed 29.09.2015 20:39:59
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/Users/keremuyanik/Documents/WebT/play-java/}root/*:playForkConfig
-Evaluating tasks: *:playForkConfig
-Running task... Cancel: sbt.server.ServerTaskCancellation@23edf36c, check cycles: false
-Total time: 1 s, completed 29.09.2015 20:40:03
-> server-post-command-cleanup
-> server-handle-next-server-request
-> root/playForkNotifyStart http://localhost:9000
-Evaluating tasks: *:playForkNotifyStart
-Running task... Cancel: sbt.server.ServerTaskCancellation@25724a36, check cycles: false
-Total time: 0 s, completed 29.09.2015 20:40:05
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/Users/keremuyanik/Documents/WebT/play-java/}root/*:playForkReload
-Evaluating tasks: *:playForkReload
-Running task... Cancel: sbt.server.ServerTaskCancellation@6270cdea, check cycles: false
-
-Initial source changes: 
-	removed:Set()
-	added: Set()
-	modified: Set()
-Removed products: Set()
-External API changes: API Changes: Set()
-Modified binary dependencies: Set()
-Initial directly invalidated sources: Set()
-
-Sources indirectly invalidated by:
-	product: Set()
-	binary dep: Set()
-	external source: Set()
-All initially invalidated sources: Set()
-
-Copy resource mappings: 
-	(/Users/keremuyanik/Documents/WebT/play-java/conf/application.conf,/Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/classes/application.conf)
-	(/Users/keremuyanik/Documents/WebT/play-java/conf/logback.xml,/Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/classes/logback.xml)
-	(/Users/keremuyanik/Documents/WebT/play-java/conf/routes,/Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/classes/routes)
-Total time: 2 s, completed 29.09.2015 20:40:09
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/Users/keremuyanik/Documents/WebT/play-java/}root/*:playForkReload
-Evaluating tasks: *:playForkReload
-Running task... Cancel: sbt.server.ServerTaskCancellation@69072027, check cycles: false
-
-Initial source changes: 
-	removed:Set()
-	added: Set()
-	modified: Set()
-Removed products: Set()
-External API changes: API Changes: Set()
-Modified binary dependencies: Set()
-Initial directly invalidated sources: Set()
-
-Sources indirectly invalidated by:
-	product: Set()
-	binary dep: Set()
-	external source: Set()
-All initially invalidated sources: Set()
-
-Copy resource mappings: 
-	(/Users/keremuyanik/Documents/WebT/play-java/conf/application.conf,/Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/classes/application.conf)
-	(/Users/keremuyanik/Documents/WebT/play-java/conf/logback.xml,/Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/classes/logback.xml)
-	(/Users/keremuyanik/Documents/WebT/play-java/conf/routes,/Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/classes/routes)
-Total time: 1 s, completed 29.09.2015 20:42:13
-> server-post-command-cleanup
-> server-handle-next-server-request
-> jobStop 1
-Evaluating tasks: *:jobStop
-Running task... Cancel: sbt.server.ServerTaskCancellation@5992412, check cycles: false
-Total time: 0 s, completed 29.09.2015 20:42:18
-> server-post-command-cleanup
-> server-handle-next-server-request
-> backgroundRun
-Evaluating tasks: compile:backgroundRun
-Running task... Cancel: sbt.server.ServerTaskCancellation@3fdd52f3, check cycles: false
-Total time: 0 s, completed 29.09.2015 20:42:27
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/Users/keremuyanik/Documents/WebT/play-java/}root/*:playForkConfig
-Evaluating tasks: *:playForkConfig
-Running task... Cancel: sbt.server.ServerTaskCancellation@641644d6, check cycles: false
-Total time: 0 s, completed 29.09.2015 20:42:30
-> server-post-command-cleanup
-> server-handle-next-server-request
-> root/playForkNotifyStart http://localhost:9000
-Evaluating tasks: *:playForkNotifyStart
-Running task... Cancel: sbt.server.ServerTaskCancellation@3a93a387, check cycles: false
-Total time: 0 s, completed 29.09.2015 20:42:31
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/Users/keremuyanik/Documents/WebT/play-java/}root/*:playForkReload
-Evaluating tasks: *:playForkReload
-Running task... Cancel: sbt.server.ServerTaskCancellation@6fff4163, check cycles: false
-
-Initial source changes: 
-	removed:Set()
-	added: Set()
-	modified: Set()
-Removed products: Set()
-External API changes: API Changes: Set()
-Modified binary dependencies: Set()
-Initial directly invalidated sources: Set()
-
-Sources indirectly invalidated by:
-	product: Set()
-	binary dep: Set()
-	external source: Set()
-All initially invalidated sources: Set()
-
-Copy resource mappings: 
-	(/Users/keremuyanik/Documents/WebT/play-java/conf/application.conf,/Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/classes/application.conf)
-	(/Users/keremuyanik/Documents/WebT/play-java/conf/logback.xml,/Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/classes/logback.xml)
-	(/Users/keremuyanik/Documents/WebT/play-java/conf/routes,/Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/classes/routes)
-Total time: 1 s, completed 29.09.2015 20:42:34
-> server-post-command-cleanup
-> server-handle-next-server-request
-> jobStop 2
-Evaluating tasks: *:jobStop
-Running task... Cancel: sbt.server.ServerTaskCancellation@39db73e1, check cycles: false
-Total time: 0 s, completed 29.09.2015 20:42:58
-> server-post-command-cleanup
-> server-handle-next-server-request
-> backgroundRun
-Evaluating tasks: compile:backgroundRun
-Running task... Cancel: sbt.server.ServerTaskCancellation@790b965a, check cycles: false
-Total time: 0 s, completed 29.09.2015 20:43:05
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/Users/keremuyanik/Documents/WebT/play-java/}root/*:playForkConfig
-Evaluating tasks: *:playForkConfig
-Running task... Cancel: sbt.server.ServerTaskCancellation@11188979, check cycles: false
-Total time: 0 s, completed 29.09.2015 20:43:08
-> server-post-command-cleanup
-> server-handle-next-server-request
-> root/playForkNotifyStart http://localhost:9000
-Evaluating tasks: *:playForkNotifyStart
-Running task... Cancel: sbt.server.ServerTaskCancellation@36f52875, check cycles: false
-Total time: 0 s, completed 29.09.2015 20:43:09
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/Users/keremuyanik/Documents/WebT/play-java/}root/*:playForkReload
-Evaluating tasks: *:playForkReload
-Running task... Cancel: sbt.server.ServerTaskCancellation@583e0270, check cycles: false
-
-Initial source changes: 
-	removed:Set()
-	added: Set()
-	modified: Set()
-Removed products: Set()
-External API changes: API Changes: Set()
-Modified binary dependencies: Set()
-Initial directly invalidated sources: Set()
-
-Sources indirectly invalidated by:
-	product: Set()
-	binary dep: Set()
-	external source: Set()
-All initially invalidated sources: Set()
-
-Copy resource mappings: 
-	(/Users/keremuyanik/Documents/WebT/play-java/conf/application.conf,/Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/classes/application.conf)
-	(/Users/keremuyanik/Documents/WebT/play-java/conf/logback.xml,/Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/classes/logback.xml)
-	(/Users/keremuyanik/Documents/WebT/play-java/conf/routes,/Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/classes/routes)
-Total time: 1 s, completed 29.09.2015 20:43:12
+Running task... Cancel: sbt.server.ServerTaskCancellation@24fbb750, check cycles: false
+Total time: 0 s, completed 07.10.2015 21:58:30
 > server-post-command-cleanup
 > server-handle-next-server-request
 > compile
 Evaluating tasks: compile:compile
-Running task... Cancel: sbt.server.ServerTaskCancellation@78ba95f0, check cycles: false
+Running task... Cancel: sbt.server.ServerTaskCancellation@472a916f, check cycles: false
 
 Initial source changes: 
 	removed:Set()
 	added: Set()
-	modified: Set(/Users/keremuyanik/Documents/WebT/play-java/app/controllers/Application.java)
+	modified: Set(/Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/router/Routes.scala, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/routes.java, /Users/keremuyanik/Documents/WebT/play-java/app/controllers/TestClass.java, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/router/RoutesPrefix.scala, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/ReverseRoutes.scala, /Users/keremuyanik/Documents/WebT/play-java/app/controllers/Application.java, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/javascript/JavaScriptReverseRoutes.scala)
 Removed products: Set()
 External API changes: API Changes: Set()
 Modified binary dependencies: Set()
-Initial directly invalidated sources: Set(/Users/keremuyanik/Documents/WebT/play-java/app/controllers/Application.java)
+Initial directly invalidated sources: Set(/Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/router/Routes.scala, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/routes.java, /Users/keremuyanik/Documents/WebT/play-java/app/controllers/TestClass.java, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/router/RoutesPrefix.scala, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/ReverseRoutes.scala, /Users/keremuyanik/Documents/WebT/play-java/app/controllers/Application.java, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/javascript/JavaScriptReverseRoutes.scala)
 
 Sources indirectly invalidated by:
 	product: Set()
 	binary dep: Set()
 	external source: Set()
-All initially invalidated sources: Set(/Users/keremuyanik/Documents/WebT/play-java/app/controllers/Application.java)
+All initially invalidated sources: Set(/Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/router/Routes.scala, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/routes.java, /Users/keremuyanik/Documents/WebT/play-java/app/controllers/TestClass.java, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/router/RoutesPrefix.scala, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/ReverseRoutes.scala, /Users/keremuyanik/Documents/WebT/play-java/app/controllers/Application.java, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/javascript/JavaScriptReverseRoutes.scala)
 
-Read from stdout: Compiling 1 Java source to /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/classes...
-Compiling 1 Java source to /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/classes...
-Attempting to call com.sun.tools.javac.api.JavacTool@7d6258a5 directly...
-Java compilation took 0.193963671 s
-Java analysis took 0.001872073 s
-Java compile + analysis took 0.202434377 s
+Read from stdout: Compiling 4 Scala sources and 3 Java sources to /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/classes...
+Compiling 4 Scala sources and 3 Java sources to /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/classes...
+Getting compiler-interface from component compiler for Scala 2.11.6
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.6
+Other repositories:
+Default repositories:
+Running cached compiler 5fca23af, interfacing (CompilerInterface) with Scala compiler version 2.11.6
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/classes:/Users/keremuyanik/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.6.jar
+	-classpath
+	/Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/classes:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/twirl-api_2.11/jars/twirl-api_2.11-1.1.1.jar:/Users/keremuyanik/.ivy2/cache/org.apache.commons/commons-lang3/jars/commons-lang3-3.4.jar:/Users/keremuyanik/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/bundles/scala-xml_2.11-1.0.1.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-enhancer/jars/play-enhancer-1.1.0.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-server_2.11/jars/play-server_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play_2.11/jars/play_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/build-link/jars/build-link-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-exceptions/jars/play-exceptions-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/org.javassist/javassist/bundles/javassist-3.19.0-GA.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-iteratees_2.11/jars/play-iteratees_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/org.scala-stm/scala-stm_2.11/jars/scala-stm_2.11-0.7.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe/config/bundles/config-1.3.0.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-json_2.11/jars/play-json_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-functional_2.11/jars/play-functional_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-datacommons_2.11/jars/play-datacommons_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/joda-time/joda-time/jars/joda-time-2.8.1.jar:/Users/keremuyanik/.ivy2/cache/org.joda/joda-convert/jars/joda-convert-1.7.jar:/Users/keremuyanik/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.11.6.jar:/Users/keremuyanik/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/bundles/jackson-core-2.5.4.jar:/Users/keremuyanik/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/bundles/jackson-annotations-2.5.4.jar:/Users/keremuyanik/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/bundles/jackson-databind-2.5.4.jar:/Users/keremuyanik/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/bundles/jackson-datatype-jdk8-2.5.4.jar:/Users/keremuyanik/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/bundles/jackson-datatype-jsr310-2.5.4.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-netty-utils/jars/play-netty-utils-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/org.slf4j/slf4j-api/jars/slf4j-api-1.7.12.jar:/Users/keremuyanik/.ivy2/cache/org.slf4j/jul-to-slf4j/jars/jul-to-slf4j-1.7.12.jar:/Users/keremuyanik/.ivy2/cache/org.slf4j/jcl-over-slf4j/jars/jcl-over-slf4j-1.7.12.jar:/Users/keremuyanik/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.11/bundles/scala-parser-combinators_2.11-1.0.1.jar:/Users/keremuyanik/.ivy2/cache/ch.qos.logback/logback-core/jars/logback-core-1.1.3.jar:/Users/keremuyanik/.ivy2/cache/ch.qos.logback/logback-classic/jars/logback-classic-1.1.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.akka/akka-actor_2.11/jars/akka-actor_2.11-2.3.13.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.akka/akka-slf4j_2.11/jars/akka-slf4j_2.11-2.3.13.jar:/Users/keremuyanik/.ivy2/cache/commons-codec/commons-codec/jars/commons-codec-1.10.jar:/Users/keremuyanik/.ivy2/cache/xerces/xercesImpl/jars/xercesImpl-2.11.0.jar:/Users/keremuyanik/.ivy2/cache/xml-apis/xml-apis/jars/xml-apis-1.4.01.jar:/Users/keremuyanik/.ivy2/cache/javax.transaction/jta/jars/jta-1.1.jar:/Users/keremuyanik/.ivy2/cache/com.google.inject/guice/jars/guice-4.0.jar:/Users/keremuyanik/.ivy2/cache/javax.inject/javax.inject/jars/javax.inject-1.jar:/Users/keremuyanik/.ivy2/cache/aopalliance/aopalliance/jars/aopalliance-1.0.jar:/Users/keremuyanik/.ivy2/cache/com.google.inject.extensions/guice-assistedinject/jars/guice-assistedinject-4.0.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-java_2.11/jars/play-java_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/org.scala-lang.modules/scala-java8-compat_2.11/bundles/scala-java8-compat_2.11-0.3.0.jar:/Users/keremuyanik/.ivy2/cache/org.yaml/snakeyaml/bundles/snakeyaml-1.15.jar:/Users/keremuyanik/.ivy2/cache/org.hibernate/hibernate-validator/jars/hibernate-validator-5.0.3.Final.jar:/Users/keremuyanik/.ivy2/cache/javax.validation/validation-api/jars/validation-api-1.1.0.Final.jar:/Users/keremuyanik/.ivy2/cache/com.fasterxml/classmate/bundles/classmate-1.0.0.jar:/Users/keremuyanik/.ivy2/cache/org.jboss.logging/jboss-logging/jars/jboss-logging-3.2.1.Final.jar:/Users/keremuyanik/.ivy2/cache/org.springframework/spring-context/jars/spring-context-4.1.6.RELEASE.jar:/Users/keremuyanik/.ivy2/cache/org.springframework/spring-core/jars/spring-core-4.1.6.RELEASE.jar:/Users/keremuyanik/.ivy2/cache/org.springframework/spring-beans/jars/spring-beans-4.1.6.RELEASE.jar:/Users/keremuyanik/.ivy2/cache/org.reflections/reflections/jars/reflections-0.9.9.jar:/Users/keremuyanik/.ivy2/cache/com.google.guava/guava/bundles/guava-18.0.jar:/Users/keremuyanik/.ivy2/cache/com.google.code.findbugs/annotations/jars/annotations-2.0.1.jar:/Users/keremuyanik/.ivy2/cache/net.jodah/typetools/bundles/typetools-0.4.1.jar:/Users/keremuyanik/.ivy2/cache/com.google.code.findbugs/jsr305/jars/jsr305-2.0.3.jar:/Users/keremuyanik/.ivy2/cache/org.apache.tomcat/tomcat-servlet-api/jars/tomcat-servlet-api-8.0.21.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-netty-server_2.11/jars/play-netty-server_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/io.netty/netty/bundles/netty-3.10.4.Final.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.netty/netty-http-pipelining/jars/netty-http-pipelining-1.1.4.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-java-jdbc_2.11/jars/play-java-jdbc_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-jdbc_2.11/jars/play-jdbc_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-jdbc-api_2.11/jars/play-jdbc-api_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.jolbox/bonecp/bundles/bonecp-0.8.0.RELEASE.jar:/Users/keremuyanik/.ivy2/cache/com.zaxxer/HikariCP/bundles/HikariCP-2.3.7.jar:/Users/keremuyanik/.ivy2/cache/com.h2database/h2/jars/h2-1.4.187.jar:/Users/keremuyanik/.ivy2/cache/tyrex/tyrex/jars/tyrex-1.0.1.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-cache_2.11/jars/play-cache_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/net.sf.ehcache/ehcache-core/jars/ehcache-core-2.6.11.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-java-ws_2.11/jars/play-java-ws_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-ws_2.11/jars/play-ws_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.ning/async-http-client/jars/async-http-client-1.9.21.jar:/Users/keremuyanik/.ivy2/cache/oauth.signpost/signpost-core/jars/signpost-core-1.2.1.2.jar:/Users/keremuyanik/.ivy2/cache/oauth.signpost/signpost-commonshttp4/jars/signpost-commonshttp4-1.2.1.2.jar:/Users/keremuyanik/.ivy2/cache/org.apache.httpcomponents/httpcore/jars/httpcore-4.0.1.jar:/Users/keremuyanik/.ivy2/cache/org.apache.httpcomponents/httpclient/jars/httpclient-4.0.1.jar:/Users/keremuyanik/.ivy2/cache/commons-logging/commons-logging/jars/commons-logging-1.1.1.jar
+Read from stdout: /Users/keremuyanik/Documents/WebT/play-java/conf/routes:22: value testen is not a member of object controllers.TestClass
+/Users/keremuyanik/Documents/WebT/play-java/conf/routes:22: value testen is not a member of object controllers.TestClass
+Read from stdout: POST	/testPost					controllers.TestClass.testen()
+POST	/testPost					controllers.TestClass.testen()
+Read from stdout: one error found
+one error found
+Compilation failed (CompilerInterface)
+Read from stdout: (compile:compileIncremental) Compilation failed
+(compile:compileIncremental) Compilation failed
+Total time: 2 s, completed 07.10.2015 21:58:32
+> server-post-command-error-handler
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/Users/keremuyanik/Documents/WebT/play-java/}root/compile:discoveredMainClasses
+Evaluating tasks: compile:discoveredMainClasses
+Running task... Cancel: sbt.server.ServerTaskCancellation@17a2cadb, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(/Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/router/Routes.scala, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/routes.java, /Users/keremuyanik/Documents/WebT/play-java/app/controllers/TestClass.java, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/router/RoutesPrefix.scala, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/ReverseRoutes.scala, /Users/keremuyanik/Documents/WebT/play-java/app/controllers/Application.java, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/javascript/JavaScriptReverseRoutes.scala)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(/Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/router/Routes.scala, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/routes.java, /Users/keremuyanik/Documents/WebT/play-java/app/controllers/TestClass.java, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/router/RoutesPrefix.scala, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/ReverseRoutes.scala, /Users/keremuyanik/Documents/WebT/play-java/app/controllers/Application.java, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/javascript/JavaScriptReverseRoutes.scala)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(/Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/router/Routes.scala, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/routes.java, /Users/keremuyanik/Documents/WebT/play-java/app/controllers/TestClass.java, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/router/RoutesPrefix.scala, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/ReverseRoutes.scala, /Users/keremuyanik/Documents/WebT/play-java/app/controllers/Application.java, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/javascript/JavaScriptReverseRoutes.scala)
+
+Read from stdout: Compiling 4 Scala sources and 3 Java sources to /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/classes...
+Compiling 4 Scala sources and 3 Java sources to /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/classes...
+Getting compiler-interface from component compiler for Scala 2.11.6
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.6
+Other repositories:
+Default repositories:
+Running cached compiler 46b5bf11, interfacing (CompilerInterface) with Scala compiler version 2.11.6
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/classes:/Users/keremuyanik/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.6.jar
+	-classpath
+	/Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/classes:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/twirl-api_2.11/jars/twirl-api_2.11-1.1.1.jar:/Users/keremuyanik/.ivy2/cache/org.apache.commons/commons-lang3/jars/commons-lang3-3.4.jar:/Users/keremuyanik/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/bundles/scala-xml_2.11-1.0.1.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-enhancer/jars/play-enhancer-1.1.0.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-server_2.11/jars/play-server_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play_2.11/jars/play_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/build-link/jars/build-link-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-exceptions/jars/play-exceptions-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/org.javassist/javassist/bundles/javassist-3.19.0-GA.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-iteratees_2.11/jars/play-iteratees_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/org.scala-stm/scala-stm_2.11/jars/scala-stm_2.11-0.7.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe/config/bundles/config-1.3.0.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-json_2.11/jars/play-json_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-functional_2.11/jars/play-functional_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-datacommons_2.11/jars/play-datacommons_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/joda-time/joda-time/jars/joda-time-2.8.1.jar:/Users/keremuyanik/.ivy2/cache/org.joda/joda-convert/jars/joda-convert-1.7.jar:/Users/keremuyanik/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.11.6.jar:/Users/keremuyanik/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/bundles/jackson-core-2.5.4.jar:/Users/keremuyanik/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/bundles/jackson-annotations-2.5.4.jar:/Users/keremuyanik/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/bundles/jackson-databind-2.5.4.jar:/Users/keremuyanik/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/bundles/jackson-datatype-jdk8-2.5.4.jar:/Users/keremuyanik/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/bundles/jackson-datatype-jsr310-2.5.4.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-netty-utils/jars/play-netty-utils-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/org.slf4j/slf4j-api/jars/slf4j-api-1.7.12.jar:/Users/keremuyanik/.ivy2/cache/org.slf4j/jul-to-slf4j/jars/jul-to-slf4j-1.7.12.jar:/Users/keremuyanik/.ivy2/cache/org.slf4j/jcl-over-slf4j/jars/jcl-over-slf4j-1.7.12.jar:/Users/keremuyanik/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.11/bundles/scala-parser-combinators_2.11-1.0.1.jar:/Users/keremuyanik/.ivy2/cache/ch.qos.logback/logback-core/jars/logback-core-1.1.3.jar:/Users/keremuyanik/.ivy2/cache/ch.qos.logback/logback-classic/jars/logback-classic-1.1.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.akka/akka-actor_2.11/jars/akka-actor_2.11-2.3.13.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.akka/akka-slf4j_2.11/jars/akka-slf4j_2.11-2.3.13.jar:/Users/keremuyanik/.ivy2/cache/commons-codec/commons-codec/jars/commons-codec-1.10.jar:/Users/keremuyanik/.ivy2/cache/xerces/xercesImpl/jars/xercesImpl-2.11.0.jar:/Users/keremuyanik/.ivy2/cache/xml-apis/xml-apis/jars/xml-apis-1.4.01.jar:/Users/keremuyanik/.ivy2/cache/javax.transaction/jta/jars/jta-1.1.jar:/Users/keremuyanik/.ivy2/cache/com.google.inject/guice/jars/guice-4.0.jar:/Users/keremuyanik/.ivy2/cache/javax.inject/javax.inject/jars/javax.inject-1.jar:/Users/keremuyanik/.ivy2/cache/aopalliance/aopalliance/jars/aopalliance-1.0.jar:/Users/keremuyanik/.ivy2/cache/com.google.inject.extensions/guice-assistedinject/jars/guice-assistedinject-4.0.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-java_2.11/jars/play-java_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/org.scala-lang.modules/scala-java8-compat_2.11/bundles/scala-java8-compat_2.11-0.3.0.jar:/Users/keremuyanik/.ivy2/cache/org.yaml/snakeyaml/bundles/snakeyaml-1.15.jar:/Users/keremuyanik/.ivy2/cache/org.hibernate/hibernate-validator/jars/hibernate-validator-5.0.3.Final.jar:/Users/keremuyanik/.ivy2/cache/javax.validation/validation-api/jars/validation-api-1.1.0.Final.jar:/Users/keremuyanik/.ivy2/cache/com.fasterxml/classmate/bundles/classmate-1.0.0.jar:/Users/keremuyanik/.ivy2/cache/org.jboss.logging/jboss-logging/jars/jboss-logging-3.2.1.Final.jar:/Users/keremuyanik/.ivy2/cache/org.springframework/spring-context/jars/spring-context-4.1.6.RELEASE.jar:/Users/keremuyanik/.ivy2/cache/org.springframework/spring-core/jars/spring-core-4.1.6.RELEASE.jar:/Users/keremuyanik/.ivy2/cache/org.springframework/spring-beans/jars/spring-beans-4.1.6.RELEASE.jar:/Users/keremuyanik/.ivy2/cache/org.reflections/reflections/jars/reflections-0.9.9.jar:/Users/keremuyanik/.ivy2/cache/com.google.guava/guava/bundles/guava-18.0.jar:/Users/keremuyanik/.ivy2/cache/com.google.code.findbugs/annotations/jars/annotations-2.0.1.jar:/Users/keremuyanik/.ivy2/cache/net.jodah/typetools/bundles/typetools-0.4.1.jar:/Users/keremuyanik/.ivy2/cache/com.google.code.findbugs/jsr305/jars/jsr305-2.0.3.jar:/Users/keremuyanik/.ivy2/cache/org.apache.tomcat/tomcat-servlet-api/jars/tomcat-servlet-api-8.0.21.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-netty-server_2.11/jars/play-netty-server_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/io.netty/netty/bundles/netty-3.10.4.Final.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.netty/netty-http-pipelining/jars/netty-http-pipelining-1.1.4.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-java-jdbc_2.11/jars/play-java-jdbc_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-jdbc_2.11/jars/play-jdbc_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-jdbc-api_2.11/jars/play-jdbc-api_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.jolbox/bonecp/bundles/bonecp-0.8.0.RELEASE.jar:/Users/keremuyanik/.ivy2/cache/com.zaxxer/HikariCP/bundles/HikariCP-2.3.7.jar:/Users/keremuyanik/.ivy2/cache/com.h2database/h2/jars/h2-1.4.187.jar:/Users/keremuyanik/.ivy2/cache/tyrex/tyrex/jars/tyrex-1.0.1.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-cache_2.11/jars/play-cache_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/net.sf.ehcache/ehcache-core/jars/ehcache-core-2.6.11.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-java-ws_2.11/jars/play-java-ws_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-ws_2.11/jars/play-ws_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.ning/async-http-client/jars/async-http-client-1.9.21.jar:/Users/keremuyanik/.ivy2/cache/oauth.signpost/signpost-core/jars/signpost-core-1.2.1.2.jar:/Users/keremuyanik/.ivy2/cache/oauth.signpost/signpost-commonshttp4/jars/signpost-commonshttp4-1.2.1.2.jar:/Users/keremuyanik/.ivy2/cache/org.apache.httpcomponents/httpcore/jars/httpcore-4.0.1.jar:/Users/keremuyanik/.ivy2/cache/org.apache.httpcomponents/httpclient/jars/httpclient-4.0.1.jar:/Users/keremuyanik/.ivy2/cache/commons-logging/commons-logging/jars/commons-logging-1.1.1.jar
+Read from stdout: /Users/keremuyanik/Documents/WebT/play-java/conf/routes:22: value testen is not a member of object controllers.TestClass
+/Users/keremuyanik/Documents/WebT/play-java/conf/routes:22: value testen is not a member of object controllers.TestClass
+Read from stdout: POST	/testPost					controllers.TestClass.testen()
+POST	/testPost					controllers.TestClass.testen()
+Read from stdout: one error found
+one error found
+Compilation failed (CompilerInterface)
+Read from stdout: (compile:compileIncremental) Compilation failed
+(compile:compileIncremental) Compilation failed
+Total time: 2 s, completed 07.10.2015 21:58:34
+> server-post-command-error-handler
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/Users/keremuyanik/Documents/WebT/play-java/}root/compile:mainClass
+Evaluating tasks: compile:mainClass
+Running task... Cancel: sbt.server.ServerTaskCancellation@12d809b9, check cycles: false
+Total time: 0 s, completed 07.10.2015 21:58:34
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@37703645, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(/Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/router/Routes.scala, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/routes.java, /Users/keremuyanik/Documents/WebT/play-java/app/controllers/TestClass.java, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/router/RoutesPrefix.scala, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/ReverseRoutes.scala, /Users/keremuyanik/Documents/WebT/play-java/app/controllers/Application.java, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/javascript/JavaScriptReverseRoutes.scala)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(/Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/router/Routes.scala, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/routes.java, /Users/keremuyanik/Documents/WebT/play-java/app/controllers/TestClass.java, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/router/RoutesPrefix.scala, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/ReverseRoutes.scala, /Users/keremuyanik/Documents/WebT/play-java/app/controllers/Application.java, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/javascript/JavaScriptReverseRoutes.scala)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(/Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/router/Routes.scala, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/routes.java, /Users/keremuyanik/Documents/WebT/play-java/app/controllers/TestClass.java, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/router/RoutesPrefix.scala, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/ReverseRoutes.scala, /Users/keremuyanik/Documents/WebT/play-java/app/controllers/Application.java, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/javascript/JavaScriptReverseRoutes.scala)
+
+Read from stdout: Compiling 4 Scala sources and 3 Java sources to /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/classes...
+Compiling 4 Scala sources and 3 Java sources to /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/classes...
+Getting compiler-interface from component compiler for Scala 2.11.6
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.6
+Other repositories:
+Default repositories:
+Running cached compiler 7df0150a, interfacing (CompilerInterface) with Scala compiler version 2.11.6
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/classes:/Users/keremuyanik/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.6.jar
+	-classpath
+	/Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/classes:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/twirl-api_2.11/jars/twirl-api_2.11-1.1.1.jar:/Users/keremuyanik/.ivy2/cache/org.apache.commons/commons-lang3/jars/commons-lang3-3.4.jar:/Users/keremuyanik/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/bundles/scala-xml_2.11-1.0.1.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-enhancer/jars/play-enhancer-1.1.0.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-server_2.11/jars/play-server_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play_2.11/jars/play_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/build-link/jars/build-link-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-exceptions/jars/play-exceptions-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/org.javassist/javassist/bundles/javassist-3.19.0-GA.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-iteratees_2.11/jars/play-iteratees_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/org.scala-stm/scala-stm_2.11/jars/scala-stm_2.11-0.7.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe/config/bundles/config-1.3.0.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-json_2.11/jars/play-json_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-functional_2.11/jars/play-functional_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-datacommons_2.11/jars/play-datacommons_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/joda-time/joda-time/jars/joda-time-2.8.1.jar:/Users/keremuyanik/.ivy2/cache/org.joda/joda-convert/jars/joda-convert-1.7.jar:/Users/keremuyanik/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.11.6.jar:/Users/keremuyanik/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/bundles/jackson-core-2.5.4.jar:/Users/keremuyanik/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/bundles/jackson-annotations-2.5.4.jar:/Users/keremuyanik/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/bundles/jackson-databind-2.5.4.jar:/Users/keremuyanik/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/bundles/jackson-datatype-jdk8-2.5.4.jar:/Users/keremuyanik/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/bundles/jackson-datatype-jsr310-2.5.4.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-netty-utils/jars/play-netty-utils-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/org.slf4j/slf4j-api/jars/slf4j-api-1.7.12.jar:/Users/keremuyanik/.ivy2/cache/org.slf4j/jul-to-slf4j/jars/jul-to-slf4j-1.7.12.jar:/Users/keremuyanik/.ivy2/cache/org.slf4j/jcl-over-slf4j/jars/jcl-over-slf4j-1.7.12.jar:/Users/keremuyanik/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.11/bundles/scala-parser-combinators_2.11-1.0.1.jar:/Users/keremuyanik/.ivy2/cache/ch.qos.logback/logback-core/jars/logback-core-1.1.3.jar:/Users/keremuyanik/.ivy2/cache/ch.qos.logback/logback-classic/jars/logback-classic-1.1.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.akka/akka-actor_2.11/jars/akka-actor_2.11-2.3.13.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.akka/akka-slf4j_2.11/jars/akka-slf4j_2.11-2.3.13.jar:/Users/keremuyanik/.ivy2/cache/commons-codec/commons-codec/jars/commons-codec-1.10.jar:/Users/keremuyanik/.ivy2/cache/xerces/xercesImpl/jars/xercesImpl-2.11.0.jar:/Users/keremuyanik/.ivy2/cache/xml-apis/xml-apis/jars/xml-apis-1.4.01.jar:/Users/keremuyanik/.ivy2/cache/javax.transaction/jta/jars/jta-1.1.jar:/Users/keremuyanik/.ivy2/cache/com.google.inject/guice/jars/guice-4.0.jar:/Users/keremuyanik/.ivy2/cache/javax.inject/javax.inject/jars/javax.inject-1.jar:/Users/keremuyanik/.ivy2/cache/aopalliance/aopalliance/jars/aopalliance-1.0.jar:/Users/keremuyanik/.ivy2/cache/com.google.inject.extensions/guice-assistedinject/jars/guice-assistedinject-4.0.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-java_2.11/jars/play-java_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/org.scala-lang.modules/scala-java8-compat_2.11/bundles/scala-java8-compat_2.11-0.3.0.jar:/Users/keremuyanik/.ivy2/cache/org.yaml/snakeyaml/bundles/snakeyaml-1.15.jar:/Users/keremuyanik/.ivy2/cache/org.hibernate/hibernate-validator/jars/hibernate-validator-5.0.3.Final.jar:/Users/keremuyanik/.ivy2/cache/javax.validation/validation-api/jars/validation-api-1.1.0.Final.jar:/Users/keremuyanik/.ivy2/cache/com.fasterxml/classmate/bundles/classmate-1.0.0.jar:/Users/keremuyanik/.ivy2/cache/org.jboss.logging/jboss-logging/jars/jboss-logging-3.2.1.Final.jar:/Users/keremuyanik/.ivy2/cache/org.springframework/spring-context/jars/spring-context-4.1.6.RELEASE.jar:/Users/keremuyanik/.ivy2/cache/org.springframework/spring-core/jars/spring-core-4.1.6.RELEASE.jar:/Users/keremuyanik/.ivy2/cache/org.springframework/spring-beans/jars/spring-beans-4.1.6.RELEASE.jar:/Users/keremuyanik/.ivy2/cache/org.reflections/reflections/jars/reflections-0.9.9.jar:/Users/keremuyanik/.ivy2/cache/com.google.guava/guava/bundles/guava-18.0.jar:/Users/keremuyanik/.ivy2/cache/com.google.code.findbugs/annotations/jars/annotations-2.0.1.jar:/Users/keremuyanik/.ivy2/cache/net.jodah/typetools/bundles/typetools-0.4.1.jar:/Users/keremuyanik/.ivy2/cache/com.google.code.findbugs/jsr305/jars/jsr305-2.0.3.jar:/Users/keremuyanik/.ivy2/cache/org.apache.tomcat/tomcat-servlet-api/jars/tomcat-servlet-api-8.0.21.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-netty-server_2.11/jars/play-netty-server_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/io.netty/netty/bundles/netty-3.10.4.Final.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.netty/netty-http-pipelining/jars/netty-http-pipelining-1.1.4.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-java-jdbc_2.11/jars/play-java-jdbc_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-jdbc_2.11/jars/play-jdbc_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-jdbc-api_2.11/jars/play-jdbc-api_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.jolbox/bonecp/bundles/bonecp-0.8.0.RELEASE.jar:/Users/keremuyanik/.ivy2/cache/com.zaxxer/HikariCP/bundles/HikariCP-2.3.7.jar:/Users/keremuyanik/.ivy2/cache/com.h2database/h2/jars/h2-1.4.187.jar:/Users/keremuyanik/.ivy2/cache/tyrex/tyrex/jars/tyrex-1.0.1.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-cache_2.11/jars/play-cache_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/net.sf.ehcache/ehcache-core/jars/ehcache-core-2.6.11.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-java-ws_2.11/jars/play-java-ws_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-ws_2.11/jars/play-ws_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.ning/async-http-client/jars/async-http-client-1.9.21.jar:/Users/keremuyanik/.ivy2/cache/oauth.signpost/signpost-core/jars/signpost-core-1.2.1.2.jar:/Users/keremuyanik/.ivy2/cache/oauth.signpost/signpost-commonshttp4/jars/signpost-commonshttp4-1.2.1.2.jar:/Users/keremuyanik/.ivy2/cache/org.apache.httpcomponents/httpcore/jars/httpcore-4.0.1.jar:/Users/keremuyanik/.ivy2/cache/org.apache.httpcomponents/httpclient/jars/httpclient-4.0.1.jar:/Users/keremuyanik/.ivy2/cache/commons-logging/commons-logging/jars/commons-logging-1.1.1.jar
+Read from stdout: /Users/keremuyanik/Documents/WebT/play-java/conf/routes:22: value testen is not a member of object controllers.TestClass
+/Users/keremuyanik/Documents/WebT/play-java/conf/routes:22: value testen is not a member of object controllers.TestClass
+Read from stdout: POST	/testPost					controllers.TestClass.testen()
+POST	/testPost					controllers.TestClass.testen()
+Read from stdout: one error found
+one error found
+Compilation failed (CompilerInterface)
+Read from stdout: (compile:compileIncremental) Compilation failed
+(compile:compileIncremental) Compilation failed
+Total time: 2 s, completed 07.10.2015 21:58:50
+> server-post-command-error-handler
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@7901e79d, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(/Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/router/Routes.scala, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/routes.java, /Users/keremuyanik/Documents/WebT/play-java/app/controllers/TestClass.java, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/router/RoutesPrefix.scala, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/ReverseRoutes.scala, /Users/keremuyanik/Documents/WebT/play-java/app/controllers/Application.java, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/javascript/JavaScriptReverseRoutes.scala)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(/Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/router/Routes.scala, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/routes.java, /Users/keremuyanik/Documents/WebT/play-java/app/controllers/TestClass.java, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/router/RoutesPrefix.scala, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/ReverseRoutes.scala, /Users/keremuyanik/Documents/WebT/play-java/app/controllers/Application.java, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/javascript/JavaScriptReverseRoutes.scala)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(/Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/router/Routes.scala, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/routes.java, /Users/keremuyanik/Documents/WebT/play-java/app/controllers/TestClass.java, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/router/RoutesPrefix.scala, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/ReverseRoutes.scala, /Users/keremuyanik/Documents/WebT/play-java/app/controllers/Application.java, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/javascript/JavaScriptReverseRoutes.scala)
+
+Read from stdout: Compiling 4 Scala sources and 3 Java sources to /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/classes...
+Compiling 4 Scala sources and 3 Java sources to /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/classes...
+Getting compiler-interface from component compiler for Scala 2.11.6
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.6
+Other repositories:
+Default repositories:
+Running cached compiler 1167fadb, interfacing (CompilerInterface) with Scala compiler version 2.11.6
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/classes:/Users/keremuyanik/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.6.jar
+	-classpath
+	/Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/classes:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/twirl-api_2.11/jars/twirl-api_2.11-1.1.1.jar:/Users/keremuyanik/.ivy2/cache/org.apache.commons/commons-lang3/jars/commons-lang3-3.4.jar:/Users/keremuyanik/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/bundles/scala-xml_2.11-1.0.1.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-enhancer/jars/play-enhancer-1.1.0.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-server_2.11/jars/play-server_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play_2.11/jars/play_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/build-link/jars/build-link-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-exceptions/jars/play-exceptions-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/org.javassist/javassist/bundles/javassist-3.19.0-GA.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-iteratees_2.11/jars/play-iteratees_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/org.scala-stm/scala-stm_2.11/jars/scala-stm_2.11-0.7.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe/config/bundles/config-1.3.0.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-json_2.11/jars/play-json_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-functional_2.11/jars/play-functional_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-datacommons_2.11/jars/play-datacommons_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/joda-time/joda-time/jars/joda-time-2.8.1.jar:/Users/keremuyanik/.ivy2/cache/org.joda/joda-convert/jars/joda-convert-1.7.jar:/Users/keremuyanik/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.11.6.jar:/Users/keremuyanik/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/bundles/jackson-core-2.5.4.jar:/Users/keremuyanik/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/bundles/jackson-annotations-2.5.4.jar:/Users/keremuyanik/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/bundles/jackson-databind-2.5.4.jar:/Users/keremuyanik/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/bundles/jackson-datatype-jdk8-2.5.4.jar:/Users/keremuyanik/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/bundles/jackson-datatype-jsr310-2.5.4.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-netty-utils/jars/play-netty-utils-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/org.slf4j/slf4j-api/jars/slf4j-api-1.7.12.jar:/Users/keremuyanik/.ivy2/cache/org.slf4j/jul-to-slf4j/jars/jul-to-slf4j-1.7.12.jar:/Users/keremuyanik/.ivy2/cache/org.slf4j/jcl-over-slf4j/jars/jcl-over-slf4j-1.7.12.jar:/Users/keremuyanik/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.11/bundles/scala-parser-combinators_2.11-1.0.1.jar:/Users/keremuyanik/.ivy2/cache/ch.qos.logback/logback-core/jars/logback-core-1.1.3.jar:/Users/keremuyanik/.ivy2/cache/ch.qos.logback/logback-classic/jars/logback-classic-1.1.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.akka/akka-actor_2.11/jars/akka-actor_2.11-2.3.13.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.akka/akka-slf4j_2.11/jars/akka-slf4j_2.11-2.3.13.jar:/Users/keremuyanik/.ivy2/cache/commons-codec/commons-codec/jars/commons-codec-1.10.jar:/Users/keremuyanik/.ivy2/cache/xerces/xercesImpl/jars/xercesImpl-2.11.0.jar:/Users/keremuyanik/.ivy2/cache/xml-apis/xml-apis/jars/xml-apis-1.4.01.jar:/Users/keremuyanik/.ivy2/cache/javax.transaction/jta/jars/jta-1.1.jar:/Users/keremuyanik/.ivy2/cache/com.google.inject/guice/jars/guice-4.0.jar:/Users/keremuyanik/.ivy2/cache/javax.inject/javax.inject/jars/javax.inject-1.jar:/Users/keremuyanik/.ivy2/cache/aopalliance/aopalliance/jars/aopalliance-1.0.jar:/Users/keremuyanik/.ivy2/cache/com.google.inject.extensions/guice-assistedinject/jars/guice-assistedinject-4.0.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-java_2.11/jars/play-java_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/org.scala-lang.modules/scala-java8-compat_2.11/bundles/scala-java8-compat_2.11-0.3.0.jar:/Users/keremuyanik/.ivy2/cache/org.yaml/snakeyaml/bundles/snakeyaml-1.15.jar:/Users/keremuyanik/.ivy2/cache/org.hibernate/hibernate-validator/jars/hibernate-validator-5.0.3.Final.jar:/Users/keremuyanik/.ivy2/cache/javax.validation/validation-api/jars/validation-api-1.1.0.Final.jar:/Users/keremuyanik/.ivy2/cache/com.fasterxml/classmate/bundles/classmate-1.0.0.jar:/Users/keremuyanik/.ivy2/cache/org.jboss.logging/jboss-logging/jars/jboss-logging-3.2.1.Final.jar:/Users/keremuyanik/.ivy2/cache/org.springframework/spring-context/jars/spring-context-4.1.6.RELEASE.jar:/Users/keremuyanik/.ivy2/cache/org.springframework/spring-core/jars/spring-core-4.1.6.RELEASE.jar:/Users/keremuyanik/.ivy2/cache/org.springframework/spring-beans/jars/spring-beans-4.1.6.RELEASE.jar:/Users/keremuyanik/.ivy2/cache/org.reflections/reflections/jars/reflections-0.9.9.jar:/Users/keremuyanik/.ivy2/cache/com.google.guava/guava/bundles/guava-18.0.jar:/Users/keremuyanik/.ivy2/cache/com.google.code.findbugs/annotations/jars/annotations-2.0.1.jar:/Users/keremuyanik/.ivy2/cache/net.jodah/typetools/bundles/typetools-0.4.1.jar:/Users/keremuyanik/.ivy2/cache/com.google.code.findbugs/jsr305/jars/jsr305-2.0.3.jar:/Users/keremuyanik/.ivy2/cache/org.apache.tomcat/tomcat-servlet-api/jars/tomcat-servlet-api-8.0.21.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-netty-server_2.11/jars/play-netty-server_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/io.netty/netty/bundles/netty-3.10.4.Final.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.netty/netty-http-pipelining/jars/netty-http-pipelining-1.1.4.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-java-jdbc_2.11/jars/play-java-jdbc_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-jdbc_2.11/jars/play-jdbc_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-jdbc-api_2.11/jars/play-jdbc-api_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.jolbox/bonecp/bundles/bonecp-0.8.0.RELEASE.jar:/Users/keremuyanik/.ivy2/cache/com.zaxxer/HikariCP/bundles/HikariCP-2.3.7.jar:/Users/keremuyanik/.ivy2/cache/com.h2database/h2/jars/h2-1.4.187.jar:/Users/keremuyanik/.ivy2/cache/tyrex/tyrex/jars/tyrex-1.0.1.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-cache_2.11/jars/play-cache_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/net.sf.ehcache/ehcache-core/jars/ehcache-core-2.6.11.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-java-ws_2.11/jars/play-java-ws_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-ws_2.11/jars/play-ws_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.ning/async-http-client/jars/async-http-client-1.9.21.jar:/Users/keremuyanik/.ivy2/cache/oauth.signpost/signpost-core/jars/signpost-core-1.2.1.2.jar:/Users/keremuyanik/.ivy2/cache/oauth.signpost/signpost-commonshttp4/jars/signpost-commonshttp4-1.2.1.2.jar:/Users/keremuyanik/.ivy2/cache/org.apache.httpcomponents/httpcore/jars/httpcore-4.0.1.jar:/Users/keremuyanik/.ivy2/cache/org.apache.httpcomponents/httpclient/jars/httpclient-4.0.1.jar:/Users/keremuyanik/.ivy2/cache/commons-logging/commons-logging/jars/commons-logging-1.1.1.jar
+Scala compilation took 5.335282479 s
+Attempting to call com.sun.tools.javac.api.JavacTool@53117656 directly...
+Read from stdout: /Users/keremuyanik/Documents/WebT/play-java/app/controllers/TestClass.java:19: no suitable method found for ok(java.util.Map<java.lang.String,java.lang.String[]>)
+Read from stdout: method play.mvc.Results.ok(play.twirl.api.Content) is not applicable
+Read from stdout: (argument mismatch; java.util.Map<java.lang.String,java.lang.String[]> cannot be converted to play.twirl.api.Content)
+Read from stdout: method play.mvc.Results.ok(java.lang.String) is not applicable
+Read from stdout: (argument mismatch; java.util.Map<java.lang.String,java.lang.String[]> cannot be converted to java.lang.String)
+Read from stdout: method play.mvc.Results.ok(com.fasterxml.jackson.databind.JsonNode) is not applicable
+Read from stdout: (argument mismatch; java.util.Map<java.lang.String,java.lang.String[]> cannot be converted to com.fasterxml.jackson.databind.JsonNode)
+Read from stdout: method play.mvc.Results.ok(byte[]) is not applicable
+Read from stdout: (argument mismatch; java.util.Map<java.lang.String,java.lang.String[]> cannot be converted to byte[])
+Read from stdout: method play.mvc.Results.ok(java.io.InputStream) is not applicable
+Read from stdout: (argument mismatch; java.util.Map<java.lang.String,java.lang.String[]> cannot be converted to java.io.InputStream)
+Read from stdout: method play.mvc.Results.ok(java.io.File) is not applicable
+Read from stdout: (argument mismatch; java.util.Map<java.lang.String,java.lang.String[]> cannot be converted to java.io.File)
+Read from stdout: method play.mvc.Results.ok(play.mvc.Results.Chunks<?>) is not applicable
+Read from stdout: (argument mismatch; java.util.Map<java.lang.String,java.lang.String[]> cannot be converted to play.mvc.Results.Chunks<?>)
+/Users/keremuyanik/Documents/WebT/play-java/app/controllers/TestClass.java:19: no suitable method found for ok(java.util.Map<java.lang.String,java.lang.String[]>)
+    method play.mvc.Results.ok(play.twirl.api.Content) is not applicable
+      (argument mismatch; java.util.Map<java.lang.String,java.lang.String[]> cannot be converted to play.twirl.api.Content)
+    method play.mvc.Results.ok(java.lang.String) is not applicable
+      (argument mismatch; java.util.Map<java.lang.String,java.lang.String[]> cannot be converted to java.lang.String)
+    method play.mvc.Results.ok(com.fasterxml.jackson.databind.JsonNode) is not applicable
+      (argument mismatch; java.util.Map<java.lang.String,java.lang.String[]> cannot be converted to com.fasterxml.jackson.databind.JsonNode)
+    method play.mvc.Results.ok(byte[]) is not applicable
+      (argument mismatch; java.util.Map<java.lang.String,java.lang.String[]> cannot be converted to byte[])
+    method play.mvc.Results.ok(java.io.InputStream) is not applicable
+      (argument mismatch; java.util.Map<java.lang.String,java.lang.String[]> cannot be converted to java.io.InputStream)
+    method play.mvc.Results.ok(java.io.File) is not applicable
+      (argument mismatch; java.util.Map<java.lang.String,java.lang.String[]> cannot be converted to java.io.File)
+    method play.mvc.Results.ok(play.mvc.Results.Chunks<?>) is not applicable
+      (argument mismatch; java.util.Map<java.lang.String,java.lang.String[]> cannot be converted to play.mvc.Results.Chunks<?>)
+Read from stdout: ok
+ok
+Read from stdout: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+Read from stdout: (compile:compileIncremental) javac returned nonzero exit code
+(compile:compileIncremental) javac returned nonzero exit code
+Total time: 7 s, completed 07.10.2015 21:59:44
+> server-post-command-error-handler
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@a1eeeb0, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(/Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/router/Routes.scala, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/routes.java, /Users/keremuyanik/Documents/WebT/play-java/app/controllers/TestClass.java, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/router/RoutesPrefix.scala, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/ReverseRoutes.scala, /Users/keremuyanik/Documents/WebT/play-java/app/controllers/Application.java, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/javascript/JavaScriptReverseRoutes.scala)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(/Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/router/Routes.scala, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/routes.java, /Users/keremuyanik/Documents/WebT/play-java/app/controllers/TestClass.java, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/router/RoutesPrefix.scala, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/ReverseRoutes.scala, /Users/keremuyanik/Documents/WebT/play-java/app/controllers/Application.java, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/javascript/JavaScriptReverseRoutes.scala)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(/Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/router/Routes.scala, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/routes.java, /Users/keremuyanik/Documents/WebT/play-java/app/controllers/TestClass.java, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/router/RoutesPrefix.scala, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/ReverseRoutes.scala, /Users/keremuyanik/Documents/WebT/play-java/app/controllers/Application.java, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/javascript/JavaScriptReverseRoutes.scala)
+
+Read from stdout: Compiling 4 Scala sources and 3 Java sources to /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/classes...
+Compiling 4 Scala sources and 3 Java sources to /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/classes...
+Getting compiler-interface from component compiler for Scala 2.11.6
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.6
+Other repositories:
+Default repositories:
+Running cached compiler 3827a3cf, interfacing (CompilerInterface) with Scala compiler version 2.11.6
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/classes:/Users/keremuyanik/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.6.jar
+	-classpath
+	/Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/classes:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/twirl-api_2.11/jars/twirl-api_2.11-1.1.1.jar:/Users/keremuyanik/.ivy2/cache/org.apache.commons/commons-lang3/jars/commons-lang3-3.4.jar:/Users/keremuyanik/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/bundles/scala-xml_2.11-1.0.1.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-enhancer/jars/play-enhancer-1.1.0.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-server_2.11/jars/play-server_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play_2.11/jars/play_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/build-link/jars/build-link-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-exceptions/jars/play-exceptions-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/org.javassist/javassist/bundles/javassist-3.19.0-GA.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-iteratees_2.11/jars/play-iteratees_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/org.scala-stm/scala-stm_2.11/jars/scala-stm_2.11-0.7.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe/config/bundles/config-1.3.0.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-json_2.11/jars/play-json_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-functional_2.11/jars/play-functional_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-datacommons_2.11/jars/play-datacommons_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/joda-time/joda-time/jars/joda-time-2.8.1.jar:/Users/keremuyanik/.ivy2/cache/org.joda/joda-convert/jars/joda-convert-1.7.jar:/Users/keremuyanik/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.11.6.jar:/Users/keremuyanik/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/bundles/jackson-core-2.5.4.jar:/Users/keremuyanik/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/bundles/jackson-annotations-2.5.4.jar:/Users/keremuyanik/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/bundles/jackson-databind-2.5.4.jar:/Users/keremuyanik/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/bundles/jackson-datatype-jdk8-2.5.4.jar:/Users/keremuyanik/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/bundles/jackson-datatype-jsr310-2.5.4.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-netty-utils/jars/play-netty-utils-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/org.slf4j/slf4j-api/jars/slf4j-api-1.7.12.jar:/Users/keremuyanik/.ivy2/cache/org.slf4j/jul-to-slf4j/jars/jul-to-slf4j-1.7.12.jar:/Users/keremuyanik/.ivy2/cache/org.slf4j/jcl-over-slf4j/jars/jcl-over-slf4j-1.7.12.jar:/Users/keremuyanik/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.11/bundles/scala-parser-combinators_2.11-1.0.1.jar:/Users/keremuyanik/.ivy2/cache/ch.qos.logback/logback-core/jars/logback-core-1.1.3.jar:/Users/keremuyanik/.ivy2/cache/ch.qos.logback/logback-classic/jars/logback-classic-1.1.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.akka/akka-actor_2.11/jars/akka-actor_2.11-2.3.13.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.akka/akka-slf4j_2.11/jars/akka-slf4j_2.11-2.3.13.jar:/Users/keremuyanik/.ivy2/cache/commons-codec/commons-codec/jars/commons-codec-1.10.jar:/Users/keremuyanik/.ivy2/cache/xerces/xercesImpl/jars/xercesImpl-2.11.0.jar:/Users/keremuyanik/.ivy2/cache/xml-apis/xml-apis/jars/xml-apis-1.4.01.jar:/Users/keremuyanik/.ivy2/cache/javax.transaction/jta/jars/jta-1.1.jar:/Users/keremuyanik/.ivy2/cache/com.google.inject/guice/jars/guice-4.0.jar:/Users/keremuyanik/.ivy2/cache/javax.inject/javax.inject/jars/javax.inject-1.jar:/Users/keremuyanik/.ivy2/cache/aopalliance/aopalliance/jars/aopalliance-1.0.jar:/Users/keremuyanik/.ivy2/cache/com.google.inject.extensions/guice-assistedinject/jars/guice-assistedinject-4.0.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-java_2.11/jars/play-java_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/org.scala-lang.modules/scala-java8-compat_2.11/bundles/scala-java8-compat_2.11-0.3.0.jar:/Users/keremuyanik/.ivy2/cache/org.yaml/snakeyaml/bundles/snakeyaml-1.15.jar:/Users/keremuyanik/.ivy2/cache/org.hibernate/hibernate-validator/jars/hibernate-validator-5.0.3.Final.jar:/Users/keremuyanik/.ivy2/cache/javax.validation/validation-api/jars/validation-api-1.1.0.Final.jar:/Users/keremuyanik/.ivy2/cache/com.fasterxml/classmate/bundles/classmate-1.0.0.jar:/Users/keremuyanik/.ivy2/cache/org.jboss.logging/jboss-logging/jars/jboss-logging-3.2.1.Final.jar:/Users/keremuyanik/.ivy2/cache/org.springframework/spring-context/jars/spring-context-4.1.6.RELEASE.jar:/Users/keremuyanik/.ivy2/cache/org.springframework/spring-core/jars/spring-core-4.1.6.RELEASE.jar:/Users/keremuyanik/.ivy2/cache/org.springframework/spring-beans/jars/spring-beans-4.1.6.RELEASE.jar:/Users/keremuyanik/.ivy2/cache/org.reflections/reflections/jars/reflections-0.9.9.jar:/Users/keremuyanik/.ivy2/cache/com.google.guava/guava/bundles/guava-18.0.jar:/Users/keremuyanik/.ivy2/cache/com.google.code.findbugs/annotations/jars/annotations-2.0.1.jar:/Users/keremuyanik/.ivy2/cache/net.jodah/typetools/bundles/typetools-0.4.1.jar:/Users/keremuyanik/.ivy2/cache/com.google.code.findbugs/jsr305/jars/jsr305-2.0.3.jar:/Users/keremuyanik/.ivy2/cache/org.apache.tomcat/tomcat-servlet-api/jars/tomcat-servlet-api-8.0.21.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-netty-server_2.11/jars/play-netty-server_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/io.netty/netty/bundles/netty-3.10.4.Final.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.netty/netty-http-pipelining/jars/netty-http-pipelining-1.1.4.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-java-jdbc_2.11/jars/play-java-jdbc_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-jdbc_2.11/jars/play-jdbc_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-jdbc-api_2.11/jars/play-jdbc-api_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.jolbox/bonecp/bundles/bonecp-0.8.0.RELEASE.jar:/Users/keremuyanik/.ivy2/cache/com.zaxxer/HikariCP/bundles/HikariCP-2.3.7.jar:/Users/keremuyanik/.ivy2/cache/com.h2database/h2/jars/h2-1.4.187.jar:/Users/keremuyanik/.ivy2/cache/tyrex/tyrex/jars/tyrex-1.0.1.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-cache_2.11/jars/play-cache_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/net.sf.ehcache/ehcache-core/jars/ehcache-core-2.6.11.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-java-ws_2.11/jars/play-java-ws_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-ws_2.11/jars/play-ws_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.ning/async-http-client/jars/async-http-client-1.9.21.jar:/Users/keremuyanik/.ivy2/cache/oauth.signpost/signpost-core/jars/signpost-core-1.2.1.2.jar:/Users/keremuyanik/.ivy2/cache/oauth.signpost/signpost-commonshttp4/jars/signpost-commonshttp4-1.2.1.2.jar:/Users/keremuyanik/.ivy2/cache/org.apache.httpcomponents/httpcore/jars/httpcore-4.0.1.jar:/Users/keremuyanik/.ivy2/cache/org.apache.httpcomponents/httpclient/jars/httpclient-4.0.1.jar:/Users/keremuyanik/.ivy2/cache/commons-logging/commons-logging/jars/commons-logging-1.1.1.jar
+Scala compilation took 3.256182323 s
+Attempting to call com.sun.tools.javac.api.JavacTool@5942c87e directly...
+Read from stdout: /Users/keremuyanik/Documents/WebT/play-java/app/controllers/TestClass.java:17: cannot find symbol
+Read from stdout: symbol:   variable daten
+Read from stdout: location: class controllers.TestClass
+/Users/keremuyanik/Documents/WebT/play-java/app/controllers/TestClass.java:17: cannot find symbol
+  symbol:   variable daten
+  location: class controllers.TestClass
+Read from stdout: daten
+daten
+Read from stdout: /Users/keremuyanik/Documents/WebT/play-java/app/controllers/TestClass.java:19: cannot find symbol
+Read from stdout: symbol:   variable daten
+Read from stdout: location: class controllers.TestClass
+/Users/keremuyanik/Documents/WebT/play-java/app/controllers/TestClass.java:19: cannot find symbol
+  symbol:   variable daten
+  location: class controllers.TestClass
+Read from stdout: daten
+daten
+Read from stdout: (compile:compileIncremental) javac returned nonzero exit code
+(compile:compileIncremental) javac returned nonzero exit code
+Total time: 5 s, completed 07.10.2015 22:00:02
+> server-post-command-error-handler
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@55e6471b, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(/Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/router/Routes.scala, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/routes.java, /Users/keremuyanik/Documents/WebT/play-java/app/controllers/TestClass.java, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/router/RoutesPrefix.scala, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/ReverseRoutes.scala, /Users/keremuyanik/Documents/WebT/play-java/app/controllers/Application.java, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/javascript/JavaScriptReverseRoutes.scala)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(/Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/router/Routes.scala, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/routes.java, /Users/keremuyanik/Documents/WebT/play-java/app/controllers/TestClass.java, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/router/RoutesPrefix.scala, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/ReverseRoutes.scala, /Users/keremuyanik/Documents/WebT/play-java/app/controllers/Application.java, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/javascript/JavaScriptReverseRoutes.scala)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(/Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/router/Routes.scala, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/routes.java, /Users/keremuyanik/Documents/WebT/play-java/app/controllers/TestClass.java, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/router/RoutesPrefix.scala, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/ReverseRoutes.scala, /Users/keremuyanik/Documents/WebT/play-java/app/controllers/Application.java, /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/controllers/javascript/JavaScriptReverseRoutes.scala)
+
+Read from stdout: Compiling 4 Scala sources and 3 Java sources to /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/classes...
+Compiling 4 Scala sources and 3 Java sources to /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/classes...
+Getting compiler-interface from component compiler for Scala 2.11.6
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.6
+Other repositories:
+Default repositories:
+Running cached compiler 7478f3e9, interfacing (CompilerInterface) with Scala compiler version 2.11.6
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/classes:/Users/keremuyanik/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.6.jar
+	-classpath
+	/Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/classes:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/twirl-api_2.11/jars/twirl-api_2.11-1.1.1.jar:/Users/keremuyanik/.ivy2/cache/org.apache.commons/commons-lang3/jars/commons-lang3-3.4.jar:/Users/keremuyanik/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/bundles/scala-xml_2.11-1.0.1.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-enhancer/jars/play-enhancer-1.1.0.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-server_2.11/jars/play-server_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play_2.11/jars/play_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/build-link/jars/build-link-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-exceptions/jars/play-exceptions-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/org.javassist/javassist/bundles/javassist-3.19.0-GA.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-iteratees_2.11/jars/play-iteratees_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/org.scala-stm/scala-stm_2.11/jars/scala-stm_2.11-0.7.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe/config/bundles/config-1.3.0.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-json_2.11/jars/play-json_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-functional_2.11/jars/play-functional_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-datacommons_2.11/jars/play-datacommons_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/joda-time/joda-time/jars/joda-time-2.8.1.jar:/Users/keremuyanik/.ivy2/cache/org.joda/joda-convert/jars/joda-convert-1.7.jar:/Users/keremuyanik/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.11.6.jar:/Users/keremuyanik/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/bundles/jackson-core-2.5.4.jar:/Users/keremuyanik/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/bundles/jackson-annotations-2.5.4.jar:/Users/keremuyanik/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/bundles/jackson-databind-2.5.4.jar:/Users/keremuyanik/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/bundles/jackson-datatype-jdk8-2.5.4.jar:/Users/keremuyanik/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/bundles/jackson-datatype-jsr310-2.5.4.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-netty-utils/jars/play-netty-utils-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/org.slf4j/slf4j-api/jars/slf4j-api-1.7.12.jar:/Users/keremuyanik/.ivy2/cache/org.slf4j/jul-to-slf4j/jars/jul-to-slf4j-1.7.12.jar:/Users/keremuyanik/.ivy2/cache/org.slf4j/jcl-over-slf4j/jars/jcl-over-slf4j-1.7.12.jar:/Users/keremuyanik/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.11/bundles/scala-parser-combinators_2.11-1.0.1.jar:/Users/keremuyanik/.ivy2/cache/ch.qos.logback/logback-core/jars/logback-core-1.1.3.jar:/Users/keremuyanik/.ivy2/cache/ch.qos.logback/logback-classic/jars/logback-classic-1.1.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.akka/akka-actor_2.11/jars/akka-actor_2.11-2.3.13.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.akka/akka-slf4j_2.11/jars/akka-slf4j_2.11-2.3.13.jar:/Users/keremuyanik/.ivy2/cache/commons-codec/commons-codec/jars/commons-codec-1.10.jar:/Users/keremuyanik/.ivy2/cache/xerces/xercesImpl/jars/xercesImpl-2.11.0.jar:/Users/keremuyanik/.ivy2/cache/xml-apis/xml-apis/jars/xml-apis-1.4.01.jar:/Users/keremuyanik/.ivy2/cache/javax.transaction/jta/jars/jta-1.1.jar:/Users/keremuyanik/.ivy2/cache/com.google.inject/guice/jars/guice-4.0.jar:/Users/keremuyanik/.ivy2/cache/javax.inject/javax.inject/jars/javax.inject-1.jar:/Users/keremuyanik/.ivy2/cache/aopalliance/aopalliance/jars/aopalliance-1.0.jar:/Users/keremuyanik/.ivy2/cache/com.google.inject.extensions/guice-assistedinject/jars/guice-assistedinject-4.0.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-java_2.11/jars/play-java_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/org.scala-lang.modules/scala-java8-compat_2.11/bundles/scala-java8-compat_2.11-0.3.0.jar:/Users/keremuyanik/.ivy2/cache/org.yaml/snakeyaml/bundles/snakeyaml-1.15.jar:/Users/keremuyanik/.ivy2/cache/org.hibernate/hibernate-validator/jars/hibernate-validator-5.0.3.Final.jar:/Users/keremuyanik/.ivy2/cache/javax.validation/validation-api/jars/validation-api-1.1.0.Final.jar:/Users/keremuyanik/.ivy2/cache/com.fasterxml/classmate/bundles/classmate-1.0.0.jar:/Users/keremuyanik/.ivy2/cache/org.jboss.logging/jboss-logging/jars/jboss-logging-3.2.1.Final.jar:/Users/keremuyanik/.ivy2/cache/org.springframework/spring-context/jars/spring-context-4.1.6.RELEASE.jar:/Users/keremuyanik/.ivy2/cache/org.springframework/spring-core/jars/spring-core-4.1.6.RELEASE.jar:/Users/keremuyanik/.ivy2/cache/org.springframework/spring-beans/jars/spring-beans-4.1.6.RELEASE.jar:/Users/keremuyanik/.ivy2/cache/org.reflections/reflections/jars/reflections-0.9.9.jar:/Users/keremuyanik/.ivy2/cache/com.google.guava/guava/bundles/guava-18.0.jar:/Users/keremuyanik/.ivy2/cache/com.google.code.findbugs/annotations/jars/annotations-2.0.1.jar:/Users/keremuyanik/.ivy2/cache/net.jodah/typetools/bundles/typetools-0.4.1.jar:/Users/keremuyanik/.ivy2/cache/com.google.code.findbugs/jsr305/jars/jsr305-2.0.3.jar:/Users/keremuyanik/.ivy2/cache/org.apache.tomcat/tomcat-servlet-api/jars/tomcat-servlet-api-8.0.21.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-netty-server_2.11/jars/play-netty-server_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/io.netty/netty/bundles/netty-3.10.4.Final.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.netty/netty-http-pipelining/jars/netty-http-pipelining-1.1.4.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-java-jdbc_2.11/jars/play-java-jdbc_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-jdbc_2.11/jars/play-jdbc_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-jdbc-api_2.11/jars/play-jdbc-api_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.jolbox/bonecp/bundles/bonecp-0.8.0.RELEASE.jar:/Users/keremuyanik/.ivy2/cache/com.zaxxer/HikariCP/bundles/HikariCP-2.3.7.jar:/Users/keremuyanik/.ivy2/cache/com.h2database/h2/jars/h2-1.4.187.jar:/Users/keremuyanik/.ivy2/cache/tyrex/tyrex/jars/tyrex-1.0.1.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-cache_2.11/jars/play-cache_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/net.sf.ehcache/ehcache-core/jars/ehcache-core-2.6.11.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-java-ws_2.11/jars/play-java-ws_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.typesafe.play/play-ws_2.11/jars/play-ws_2.11-2.4.3.jar:/Users/keremuyanik/.ivy2/cache/com.ning/async-http-client/jars/async-http-client-1.9.21.jar:/Users/keremuyanik/.ivy2/cache/oauth.signpost/signpost-core/jars/signpost-core-1.2.1.2.jar:/Users/keremuyanik/.ivy2/cache/oauth.signpost/signpost-commonshttp4/jars/signpost-commonshttp4-1.2.1.2.jar:/Users/keremuyanik/.ivy2/cache/org.apache.httpcomponents/httpcore/jars/httpcore-4.0.1.jar:/Users/keremuyanik/.ivy2/cache/org.apache.httpcomponents/httpclient/jars/httpclient-4.0.1.jar:/Users/keremuyanik/.ivy2/cache/commons-logging/commons-logging/jars/commons-logging-1.1.1.jar
+Scala compilation took 2.839560779 s
+Attempting to call com.sun.tools.javac.api.JavacTool@102c7c2b directly...
+Java compilation took 0.185490017 s
+Java analysis took 0.25153058 s
+Java compile + analysis took 0.445211457 s
+Invalidating /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/router/Routes.scala...
+Invalidating (transitively) by inheritance from /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/router/Routes.scala...
+Initial set of included nodes: Set(/Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/router/Routes.scala)
+Invalidated by transitive inheritance dependency: Set(/Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/router/Routes.scala)
+The /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/router/Routes.scala source file has the following regular definitions changed:
+	controllers_TestClass_testen6_route, notify, controllers_Application_startseite1_route, badRequest, wait, $asInstanceOf, routes, createInvoker, equals, prefix, asInstanceOf, documentation, synchronized, $isInstanceOf, handlerFor, controllers_Application_stellenangebot4_route, controllers_Application_startseite0_route, controllers_Application_suche2_route, _prefix, notifyAll, isInstanceOf, errorHandler, <init>, ==, clone, Routes, toString, !=, fakeValue, getClass, ne, withPrefix, call, eq, controllers_Assets_versioned5_route, defaultPrefix, controllers_Application_upload3_route, ##, finalize, hashCode.
+All member reference dependencies will be considered within this context.
+Invalidating /Users/keremuyanik/Documents/WebT/play-java/app/controllers/TestClass.java...
+Invalidating (transitively) by inheritance from /Users/keremuyanik/Documents/WebT/play-java/app/controllers/TestClass.java...
+Initial set of included nodes: Set(/Users/keremuyanik/Documents/WebT/play-java/app/controllers/TestClass.java)
+Invalidated by transitive inheritance dependency: Set(/Users/keremuyanik/Documents/WebT/play-java/app/controllers/TestClass.java)
+The /Users/keremuyanik/Documents/WebT/play-java/app/controllers/TestClass.java source file has the following regular definitions changed:
+	testen.
+All member reference dependencies will be considered within this context.
+The following modified names cause invalidation of /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/routes/main/router/Routes.scala: Set(testen)
+Name hashing optimization doesn't apply to non-Scala dependency: /Users/keremuyanik/Documents/WebT/play-java/app/controllers/TestClass.java
 New invalidations:
 	Set()
 Initial set of included nodes: Set()
 Previously invalidated, but (transitively) depend on new invalidations:
 	Set()
 All newly invalidated sources after taking into account (previously) recompiled sources:Set()
-Total time: 1 s, completed 29.09.2015 20:44:30
+Total time: 4 s, completed 07.10.2015 22:00:52
 > server-post-command-cleanup
 > server-handle-next-server-request
-> jobStop 3
-Evaluating tasks: *:jobStop
-Running task... Cancel: sbt.server.ServerTaskCancellation@7bfd67a9, check cycles: false
-Total time: 0 s, completed 29.09.2015 20:44:39
-> server-post-command-cleanup
-> server-handle-next-server-request
-> backgroundRun
-Evaluating tasks: compile:backgroundRun
-Running task... Cancel: sbt.server.ServerTaskCancellation@7a6ca0f8, check cycles: false
-Total time: 0 s, completed 29.09.2015 20:44:45
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/Users/keremuyanik/Documents/WebT/play-java/}root/*:playForkConfig
-Evaluating tasks: *:playForkConfig
-Running task... Cancel: sbt.server.ServerTaskCancellation@580b83e1, check cycles: false
-Total time: 0 s, completed 29.09.2015 20:44:48
-> server-post-command-cleanup
-> server-handle-next-server-request
-> root/playForkNotifyStart http://localhost:9000
-Evaluating tasks: *:playForkNotifyStart
-Running task... Cancel: sbt.server.ServerTaskCancellation@72b21042, check cycles: false
-Total time: 0 s, completed 29.09.2015 20:44:50
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/Users/keremuyanik/Documents/WebT/play-java/}root/*:playForkReload
-Evaluating tasks: *:playForkReload
-Running task... Cancel: sbt.server.ServerTaskCancellation@b261cee, check cycles: false
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@3f65963e, check cycles: false
 
 Initial source changes: 
 	removed:Set()
 	added: Set()
-	modified: Set()
+	modified: Set(/Users/keremuyanik/Documents/WebT/play-java/app/controllers/TestClass.java)
 Removed products: Set()
 External API changes: API Changes: Set()
 Modified binary dependencies: Set()
-Initial directly invalidated sources: Set()
+Initial directly invalidated sources: Set(/Users/keremuyanik/Documents/WebT/play-java/app/controllers/TestClass.java)
 
 Sources indirectly invalidated by:
 	product: Set()
 	binary dep: Set()
 	external source: Set()
-All initially invalidated sources: Set()
+All initially invalidated sources: Set(/Users/keremuyanik/Documents/WebT/play-java/app/controllers/TestClass.java)
 
-Copy resource mappings: 
-	(/Users/keremuyanik/Documents/WebT/play-java/conf/application.conf,/Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/classes/application.conf)
-	(/Users/keremuyanik/Documents/WebT/play-java/conf/logback.xml,/Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/classes/logback.xml)
-	(/Users/keremuyanik/Documents/WebT/play-java/conf/routes,/Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/classes/routes)
-Total time: 1 s, completed 29.09.2015 20:44:52
+Read from stdout: Compiling 1 Java source to /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/classes...
+Compiling 1 Java source to /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/classes...
+Attempting to call com.sun.tools.javac.api.JavacTool@500e5b79 directly...
+Java compilation took 0.081783171 s
+Java analysis took 0.079879767 s
+Java compile + analysis took 0.166766631 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Total time: 1 s, completed 07.10.2015 22:00:53
 > server-post-command-cleanup
 > server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@4915eab5, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(/Users/keremuyanik/Documents/WebT/play-java/app/controllers/TestClass.java)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(/Users/keremuyanik/Documents/WebT/play-java/app/controllers/TestClass.java)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(/Users/keremuyanik/Documents/WebT/play-java/app/controllers/TestClass.java)
+
+Read from stdout: Compiling 1 Java source to /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/classes...
+Compiling 1 Java source to /Users/keremuyanik/Documents/WebT/play-java/target/scala-2.11/classes...
+Attempting to call com.sun.tools.javac.api.JavacTool@58c70745 directly...
+Java compilation took 0.123943348 s
+Java analysis took 0.149940124 s
+Java compile + analysis took 0.280087552 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Total time: 1 s, completed 07.10.2015 22:01:03
+> server-post-command-cleanup
+> server-handle-next-server-request
+Done executing sbt server engine, result Right(Exit(0))
+Closing listening server socket
+Waiting for socket thread
+Waiting for request processor thread
+Waiting for command engine result
+Returning control to sbt launcher with result Exit(0)
+Closing the 1332@Kerems-MacBook-Pro.local logs at Wed Oct 07 22:01:15 CEST 2015, goodbye.

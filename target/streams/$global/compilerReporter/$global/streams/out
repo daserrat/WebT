@@ -1,4 +1,9 @@
-[0m[[31merror[0m] [0m/Users/keremuyanik/Documents/WebT/play-java/app/views/startseite.scala.html:13: value Assetsjs is not a member of object controllers.routes[0m
-[0m[[31merror[0m] [0m		<script src="@routes.Assetsjs/bootstrap.js"></script>[0m
-[0m[[31merror[0m] [0m		                     ^[0m
-[0m[[31merror[0m] [0mone error found[0m
+[0m[[31merror[0m] [0m/Users/keremuyanik/Documents/WebT/play-java/conf/routes:6: value startseite is not a member of controllers.Application[0m
+[0m[[31merror[0m] [0mGET     /                           controllers.Application.startseite()[0m
+[0m[[31merror[0m] [0m/Users/keremuyanik/Documents/WebT/play-java/conf/routes:8: value startseite is not a member of controllers.Application[0m
+[0m[[31merror[0m] [0mGET     /startseite                 controllers.Application.startseite()[0m
+[0m[[31merror[0m] [0m/Users/keremuyanik/Documents/WebT/play-java/conf/routes:10: value suche is not a member of controllers.Application[0m
+[0m[[31merror[0m] [0mGET		/suche						controllers.Application.suche()[0m
+[0m[[31merror[0m] [0m/Users/keremuyanik/Documents/WebT/play-java/conf/routes:12: value upload is not a member of controllers.Application[0m
+[0m[[31merror[0m] [0mGET		/upload						controllers.Application.upload()[0m
+[0m[[31merror[0m] [0mfour errors found[0m

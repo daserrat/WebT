@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/keremuyanik/Documents/WebT/play-java/conf/routes
-// @DATE:Sun Oct 04 22:25:16 CEST 2015
+// @DATE:Wed Oct 07 22:01:31 CEST 2015
 
 
 package router {
