@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/keremuyanik/Documents/WebT/play-java/conf/routes
-// @DATE:Wed Oct 07 22:01:31 CEST 2015
+// @DATE:Mon Oct 12 22:52:14 CEST 2015
 
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
 import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamicString }
@@ -13,14 +13,14 @@ import _root_.play.libs.F
 // @LINE:6
 package controllers {
 
-  // @LINE:22
+  // @LINE:24
   class ReverseTestClass(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:22
+    // @LINE:24
     def testen(): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "testPost")
@@ -28,14 +28,29 @@ package controllers {
   
   }
 
-  // @LINE:17
+  // @LINE:25
+  class ReverseRegistrierung(_prefix: => String) {
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:25
+    def registrierung(): Call = {
+      import ReverseRouteContext.empty
+      Call("POST", _prefix + { _defaultPrefix } + "registrierung")
+    }
+  
+  }
+
+  // @LINE:19
   class ReverseAssets(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:17
+    // @LINE:19
     def versioned(file:Asset): Call = {
       implicit val _rrc = new ReverseRouteContext(Map(("path", "/public")))
       Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[Asset]].unbind("file", file))
@@ -50,19 +65,19 @@ package controllers {
     }
 
   
-    // @LINE:12
+    // @LINE:14
     def upload(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "upload")
     }
   
-    // @LINE:10
+    // @LINE:12
     def suche(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "suche")
     }
   
-    // @LINE:14
+    // @LINE:16
     def stellenangebot(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "stellenangebot")
@@ -80,6 +95,12 @@ package controllers {
       
       }
     
+    }
+  
+    // @LINE:10
+    def NachLogin(): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "NachLogin")
     }
   
   }

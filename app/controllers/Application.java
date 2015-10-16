@@ -4,13 +4,15 @@ import play.*;
 import play.mvc.*;
 import views.html.*;
 
-import views.html.*;
-
 public class Application extends Controller {
 
 	//HTML Routes
     public Result startseite() {
         return ok(startseite.render());
+    }
+    
+    public Result NachLogin() {
+    	return ok(NachLogin.render());
     }
     
     public Result suche() {

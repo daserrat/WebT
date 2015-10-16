@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html ng-app="startseite">
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,6 +12,8 @@
 		<script src="@routes.Assets.versioned("javascripts/bootstrap.js")"></script>
 		<link href="@routes.Assets.versioned("stylesheets/index.css")" rel="stylesheet" />
 		<link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+		<script src="@routes.Assets.versioned("javascripts/angular.js")"></script>
+		<script src="@routes.Assets.versioned("javascripts/startseite.js")"></script>
 	</head>
 	<body>
 		<div id="background">
@@ -105,9 +107,9 @@
 						Mit unserer Suchfunktion können Sie ganz einfach nach den gewünschten Kriterien filtern</h4></i>
 					</p>
 					<p>
-						<button type="button" class="btn btn-primary buttons" id="startseitebutton1">
+						<a href="/suche"><button type="button" class="btn btn-primary buttons" id="startseitebutton1">
 							Suche starten <span class="glyphicon glyphicon-search"></span>
-						</button>
+						</button></a>
 					</p>
 					<hr />
 					<p>
@@ -123,7 +125,7 @@
 			</div>
 			<div class="col-md-1"></div>
 		</div>
-		<div class="modal fade" id="modal_registrierung">
+		<div class="modal fade" id="modal_registrierung" ng-controller="registrierungCtrl">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -156,14 +158,14 @@
 												<div class="tab-pane active" role="tabpanel" id="step1">
 													<h4>E-Mail & Unternehmensname</h4>
 													<p>
-														<input type="email" placeholder="E-Mail" class="wizard_formular input1" id="email" />
+														<input type="email" placeholder="E-Mail" class="wizard_formular input1" id="email" ng-model="email"/>
 													</p>
 													<p>
-														<input type="text" placeholder="Name des Unternehmens" class="wizard_formular input2" id="uname" />
+														<input type="text" placeholder="Name des Unternehmens" class="wizard_formular input2" id="uname" ng-model="name"/>
 													</p>
 													<ul class="list-inline pull-right">
 														<li>
-															<button type="button" class="btn btn-success next-step" id="buttonstep1" onclick="weiter('step1')">
+															<button ng-click="ngWeiter()" type="button" class="btn btn-success next-step" id="buttonstep1" onclick="weiter('step1')">
 																Weiter
 															</button>
 														</li>
@@ -172,10 +174,10 @@
 												<div class="tab-pane" role="tabpanel" id="step2">
 													<h4>Passwort</h4>
 													<p>
-														<input type="password" placeholder="Passwort" class="wizard_formular input1"  id="passwort"/>
+														<input type="password" placeholder="Passwort" class="wizard_formular input1"  id="passwort" ng-model="passwort"/>
 													</p>
 													<p>
-														<input type="password" placeholder="Passwort wiederholen" class="wizard_formular input2" id="passwortw"/>
+														<input type="password" placeholder="Passwort wiederholen" class="wizard_formular input2" id="passwortw" ng-model="passwortw"/>
 													</p>
 													<ul class="list-inline pull-right">
 														<li>
@@ -184,7 +186,7 @@
 															</button>
 														</li>
 														<li>
-															<button type="button" class="btn btn-success next-step" onclick="weiter('step2')" id="buttonstep2">
+															<button type="button" class="btn btn-success next-step" onclick="weiter('step2')" ng-click="ngWeiter2()"id="buttonstep2">
 																Weiter
 															</button>
 														</li>

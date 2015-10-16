@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/keremuyanik/Documents/WebT/play-java/conf/routes
-// @DATE:Wed Oct 07 22:01:31 CEST 2015
+// @DATE:Mon Oct 12 22:52:14 CEST 2015
 
 package router
 
@@ -18,10 +18,12 @@ class Routes(
   override val errorHandler: play.api.http.HttpErrorHandler, 
   // @LINE:6
   Application_1: controllers.Application,
-  // @LINE:17
+  // @LINE:19
   Assets_0: controllers.Assets,
-  // @LINE:22
+  // @LINE:24
   TestClass_2: controllers.TestClass,
+  // @LINE:25
+  Registrierung_3: controllers.Registrierung,
   val prefix: String
 ) extends GeneratedRouter {
 
@@ -29,17 +31,19 @@ class Routes(
    def this(errorHandler: play.api.http.HttpErrorHandler,
     // @LINE:6
     Application_1: controllers.Application,
-    // @LINE:17
+    // @LINE:19
     Assets_0: controllers.Assets,
-    // @LINE:22
-    TestClass_2: controllers.TestClass
-  ) = this(errorHandler, Application_1, Assets_0, TestClass_2, "/")
+    // @LINE:24
+    TestClass_2: controllers.TestClass,
+    // @LINE:25
+    Registrierung_3: controllers.Registrierung
+  ) = this(errorHandler, Application_1, Assets_0, TestClass_2, Registrierung_3, "/")
 
   import ReverseRouteContext.empty
 
   def withPrefix(prefix: String): Routes = {
     router.RoutesPrefix.setPrefix(prefix)
-    new Routes(errorHandler, Application_1, Assets_0, TestClass_2, prefix)
+    new Routes(errorHandler, Application_1, Assets_0, TestClass_2, Registrierung_3, prefix)
   }
 
   private[this] val defaultPrefix: String = {
@@ -49,11 +53,13 @@ class Routes(
   def documentation = List(
     ("""GET""", this.prefix, """controllers.Application.startseite()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """startseite""", """controllers.Application.startseite()"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """NachLogin""", """controllers.Application.NachLogin()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """suche""", """controllers.Application.suche()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """upload""", """controllers.Application.upload()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """stellenangebot""", """controllers.Application.stellenangebot()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""", """controllers.Assets.versioned(path:String = "/public", file:Asset)"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """testPost""", """controllers.TestClass.testen()"""),
+    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """registrierung""", """controllers.Registrierung.registrierung()"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
     case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
@@ -96,10 +102,27 @@ class Routes(
   )
 
   // @LINE:10
-  private[this] lazy val controllers_Application_suche2_route = Route("GET",
+  private[this] lazy val controllers_Application_NachLogin2_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("NachLogin")))
+  )
+  private[this] lazy val controllers_Application_NachLogin2_invoker = createInvoker(
+    Application_1.NachLogin(),
+    HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.Application",
+      "NachLogin",
+      Nil,
+      "GET",
+      """""",
+      this.prefix + """NachLogin"""
+    )
+  )
+
+  // @LINE:12
+  private[this] lazy val controllers_Application_suche3_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("suche")))
   )
-  private[this] lazy val controllers_Application_suche2_invoker = createInvoker(
+  private[this] lazy val controllers_Application_suche3_invoker = createInvoker(
     Application_1.suche(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -112,11 +135,11 @@ class Routes(
     )
   )
 
-  // @LINE:12
-  private[this] lazy val controllers_Application_upload3_route = Route("GET",
+  // @LINE:14
+  private[this] lazy val controllers_Application_upload4_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("upload")))
   )
-  private[this] lazy val controllers_Application_upload3_invoker = createInvoker(
+  private[this] lazy val controllers_Application_upload4_invoker = createInvoker(
     Application_1.upload(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -129,11 +152,11 @@ class Routes(
     )
   )
 
-  // @LINE:14
-  private[this] lazy val controllers_Application_stellenangebot4_route = Route("GET",
+  // @LINE:16
+  private[this] lazy val controllers_Application_stellenangebot5_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("stellenangebot")))
   )
-  private[this] lazy val controllers_Application_stellenangebot4_invoker = createInvoker(
+  private[this] lazy val controllers_Application_stellenangebot5_invoker = createInvoker(
     Application_1.stellenangebot(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -146,11 +169,11 @@ class Routes(
     )
   )
 
-  // @LINE:17
-  private[this] lazy val controllers_Assets_versioned5_route = Route("GET",
+  // @LINE:19
+  private[this] lazy val controllers_Assets_versioned6_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("assets/"), DynamicPart("file", """.+""",false)))
   )
-  private[this] lazy val controllers_Assets_versioned5_invoker = createInvoker(
+  private[this] lazy val controllers_Assets_versioned6_invoker = createInvoker(
     Assets_0.versioned(fakeValue[String], fakeValue[Asset]),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -163,11 +186,11 @@ class Routes(
     )
   )
 
-  // @LINE:22
-  private[this] lazy val controllers_TestClass_testen6_route = Route("POST",
+  // @LINE:24
+  private[this] lazy val controllers_TestClass_testen7_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("testPost")))
   )
-  private[this] lazy val controllers_TestClass_testen6_invoker = createInvoker(
+  private[this] lazy val controllers_TestClass_testen7_invoker = createInvoker(
     TestClass_2.testen(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -177,6 +200,23 @@ class Routes(
       "POST",
       """""",
       this.prefix + """testPost"""
+    )
+  )
+
+  // @LINE:25
+  private[this] lazy val controllers_Registrierung_registrierung8_route = Route("POST",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("registrierung")))
+  )
+  private[this] lazy val controllers_Registrierung_registrierung8_invoker = createInvoker(
+    Registrierung_3.registrierung(),
+    HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.Registrierung",
+      "registrierung",
+      Nil,
+      "POST",
+      """""",
+      this.prefix + """registrierung"""
     )
   )
 
@@ -196,33 +236,45 @@ class Routes(
       }
   
     // @LINE:10
-    case controllers_Application_suche2_route(params) =>
+    case controllers_Application_NachLogin2_route(params) =>
       call { 
-        controllers_Application_suche2_invoker.call(Application_1.suche())
+        controllers_Application_NachLogin2_invoker.call(Application_1.NachLogin())
       }
   
     // @LINE:12
-    case controllers_Application_upload3_route(params) =>
+    case controllers_Application_suche3_route(params) =>
       call { 
-        controllers_Application_upload3_invoker.call(Application_1.upload())
+        controllers_Application_suche3_invoker.call(Application_1.suche())
       }
   
     // @LINE:14
-    case controllers_Application_stellenangebot4_route(params) =>
+    case controllers_Application_upload4_route(params) =>
       call { 
-        controllers_Application_stellenangebot4_invoker.call(Application_1.stellenangebot())
+        controllers_Application_upload4_invoker.call(Application_1.upload())
       }
   
-    // @LINE:17
-    case controllers_Assets_versioned5_route(params) =>
+    // @LINE:16
+    case controllers_Application_stellenangebot5_route(params) =>
+      call { 
+        controllers_Application_stellenangebot5_invoker.call(Application_1.stellenangebot())
+      }
+  
+    // @LINE:19
+    case controllers_Assets_versioned6_route(params) =>
       call(Param[String]("path", Right("/public")), params.fromPath[Asset]("file", None)) { (path, file) =>
-        controllers_Assets_versioned5_invoker.call(Assets_0.versioned(path, file))
+        controllers_Assets_versioned6_invoker.call(Assets_0.versioned(path, file))
       }
   
-    // @LINE:22
-    case controllers_TestClass_testen6_route(params) =>
+    // @LINE:24
+    case controllers_TestClass_testen7_route(params) =>
       call { 
-        controllers_TestClass_testen6_invoker.call(TestClass_2.testen())
+        controllers_TestClass_testen7_invoker.call(TestClass_2.testen())
+      }
+  
+    // @LINE:25
+    case controllers_Registrierung_registrierung8_route(params) =>
+      call { 
+        controllers_Registrierung_registrierung8_invoker.call(Registrierung_3.registrierung())
       }
   }
 }

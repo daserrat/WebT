@@ -34,7 +34,7 @@
 							<a href="/suche" class="menupunkte">Suche</a>
 						</li>
 						<li>
-							<a href="/about-us" class="menupunkte">Praktikumupload</a>
+							<a href="/upload" class="menupunkte">Praktikumupload</a>
 						</li>
 						<li>
 							<a href="/contact" class="menupunkte">Kontakt</a>
@@ -172,7 +172,7 @@
 			</div>
 			<div class="col-md-1"></div>
 		</div>
-		<div class="modal fade" id="modal_registrierung">
+		<div class="modal fade" id="modal_registrierung" ng-controller="registrierungCtrl">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -205,10 +205,10 @@
 												<div class="tab-pane active" role="tabpanel" id="step1">
 													<h4>E-Mail & Unternehmensname</h4>
 													<p>
-														<input type="email" placeholder="E-Mail" class="wizard_formular input1" id="email" />
+														<input type="email" placeholder="E-Mail" class="wizard_formular input1" id="email" ng-model="email" />
 													</p>
 													<p>
-														<input type="text" placeholder="Name des Unternehmens" class="wizard_formular input2" id="uname" />
+														<input type="text" placeholder="Name des Unternehmens" class="wizard_formular input2" id="uname" ng-model="name" />
 													</p>
 													<ul class="list-inline pull-right">
 														<li>
