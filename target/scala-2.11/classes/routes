@@ -7,7 +7,7 @@ GET     /                           controllers.Application.startseite()
 
 GET     /startseite                 controllers.Application.startseite()
 
-GET		/NachLogin					controllers.Application.NachLogin()
+GET		/nichtangemeldet			controllers.Application.nichtangemeldet()
 
 GET		/suche						controllers.Application.suche()
 
@@ -21,5 +21,6 @@ GET     /assets/*file               controllers.Assets.versioned(path="/public",
 
 # POSTS
 
-POST	/testPost					controllers.TestClass.testen()
 POST	/registrierung				controllers.Registrierung.registrierung()
+POST	/login						controllers.Login.login()
+POST	/logout						controllers.Login.logout()

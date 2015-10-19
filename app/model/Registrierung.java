@@ -27,6 +27,10 @@ public class Registrierung {
 			
 			String hashpw = DigestUtils.md5Hex(passwort);
 			
+			System.out.println(hashpw);
+			System.out.println(email);
+			System.out.println(passwort);
+			
 			ps = con.prepareStatement("INSERT INTO staj_db.unternehmen (unt_name, email, passwort) VALUES (?,?,?);");
 			
 			ps.setString(1, name);

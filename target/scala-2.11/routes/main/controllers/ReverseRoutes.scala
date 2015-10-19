@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/keremuyanik/Documents/WebT/play-java/conf/routes
-// @DATE:Mon Oct 12 22:52:14 CEST 2015
+// @DATE:Mon Oct 19 21:41:21 CEST 2015
 
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
 import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamicString }
@@ -13,29 +13,35 @@ import _root_.play.libs.F
 // @LINE:6
 package controllers {
 
-  // @LINE:24
-  class ReverseTestClass(_prefix: => String) {
+  // @LINE:25
+  class ReverseLogin(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:24
-    def testen(): Call = {
+    // @LINE:26
+    def logout(): Call = {
       import ReverseRouteContext.empty
-      Call("POST", _prefix + { _defaultPrefix } + "testPost")
+      Call("POST", _prefix + { _defaultPrefix } + "logout")
+    }
+  
+    // @LINE:25
+    def login(): Call = {
+      import ReverseRouteContext.empty
+      Call("POST", _prefix + { _defaultPrefix } + "login")
     }
   
   }
 
-  // @LINE:25
+  // @LINE:24
   class ReverseRegistrierung(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:25
+    // @LINE:24
     def registrierung(): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "registrierung")
@@ -77,6 +83,12 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "suche")
     }
   
+    // @LINE:10
+    def nichtangemeldet(): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "nichtangemeldet")
+    }
+  
     // @LINE:16
     def stellenangebot(): Call = {
       import ReverseRouteContext.empty
@@ -95,12 +107,6 @@ package controllers {
       
       }
     
-    }
-  
-    // @LINE:10
-    def NachLogin(): Call = {
-      import ReverseRouteContext.empty
-      Call("GET", _prefix + { _defaultPrefix } + "NachLogin")
     }
   
   }

@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="Staj" content="">
+		<title>Staj - Home</title>
+		<link href="@routes.Assets.versioned("stylesheets/bootstrap.css")" rel="stylesheet" />
+		<link href="@routes.Assets.versioned("font-awesome/css/font-awesome.min.css")" rel="stylesheet" />
+		<script src="@routes.Assets.versioned("javascripts/jquery.js")"></script>
+		<script src="@routes.Assets.versioned("javascripts/bootstrap.js")"></script>
+		<link href="@routes.Assets.versioned("stylesheets/index.css")" rel="stylesheet" />
+		<link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+		<script src="@routes.Assets.versioned("javascripts/angular.js")"></script>
+		<script src="@routes.Assets.versioned("javascripts/startseite.js")"></script>
+		<script src="@routes.Assets.versioned("javascripts/header.js")"></script>
+	</head>
+	<body>
+		<div id="background">
+
+		</div>
+	<div class="navbar navbar-default" role="navigation" id="navigation-bar" ng-app="header">
+			<div class="container-fluid" id="navigation">
+				<div class="navbar-header" id="navigation-titel">
+					<a class="navbar-brand titel" href="#" id="titel">StaJ </a>
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder">
+						<span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse navbar-menubuilder" id="navigation-menupunkte">
+					<ul class="nav navbar-nav navbar-left">
+						<li class="active" class="list_menupunkt">
+							<a href="/startseite" class="menupunkte">Home</a>
+						</li>
+						<li>
+							<a href="/suche" class="menupunkte">Suche</a>
+						</li>
+						<li>
+							<a href="/upload" class="menupunkte" id="upload">Praktikumupload</a>
+						</li>
+						<li>
+							<a href="/contact" class="menupunkte">Kontakt</a>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right" ng-controller="loginCtrl">
+						<li class="dropdown" id="logindorpdown">
+							<a href="#" class="dropdown-toggle menupunkte" data-toggle="dropdown" id="login">Login<span class="caret"></span></a>
+							<ul id="login-dp" class="dropdown-menu">
+								<li>
+									<div class="row">
+										<div class="col-md-12">
+											<form class="form" role="form" accept-charset="UTF-8" id="login-nav">
+												<div class="form-group">
+													<label class="sr-only">E-Mail</label>
+													<input type="email" ng-model="email" class="form-control" id="inputEmail" placeholder="E-Mail " required>
+												</div>
+												<div class="form-group">
+													<label class="sr-only" for="exampleInputPassword2">Passwort</label>
+													<input type="password" class="form-control" ng-model="passwort" id="inputPasswort" placeholder="Passwort" required>
+												</div>
+												<div class="form-group">
+													<button type="submit" class="btn btn-primary btn-block" ng-click="anmelden()">
+														Anmelden
+													</button>
+												</div>
+												<div class="fehlermeldung" ng-model="fehler">{{fehler}}</div>
+											</form>
+										</div>
+										<div class="bottom text-center">
+											<a href="#" data-toggle="modal" data-target="#modal_registrierung"><b>Jetzt kostenlos registrieren</b></a>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<ul id="eingeloggt" class="dropdown-menu">
+								<li>
+									<div class="row">
+										<div class="col-md-12">
+											<div class="bottom text-center"><a href="/profil">Zu Eurem Profil</a></div>
+											<input type="button" value="Ausloggen" ng-click="logout()" style="margin-bottom:10px"></input>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- Navigation - Ende----------------------------------------------------------------------------------------------------------------------------------- -->
+		<div class="mainbody">
+			<div class="col-md-1"></div>
+			<div class="col-md-10" class="maindiv">
+				<div class="maintextdiv">
+					<h1 id="titel2">StaJ</h1>
+					<p>
+						<h4>Willkommen auf <span id="staj">StaJ - </span>Praktikumsportal</h4>
+					</p>
+					<p style="margin-top: 2%;">
+						<h4><i>Suchen Sie nach einer passende Praktiumsstelle in unserem Portal.
+						<br>
+						Mit unserer Suchfunktion können Sie ganz einfach nach den gewünschten Kriterien filtern</h4></i>
+					</p>
+					<p>
+						<a href="/suche"><button type="button" class="btn btn-primary buttons" id="startseitebutton1">
+							Suche starten <span class="glyphicon glyphicon-search"></span>
+						</button></a>
+					</p>
+					<hr />
+					<p>
+						<h4><i>Wollen Sie ein Praktikum anbieten? Dann Registrieren Sie sich in unserem Praktikumsportal und veröffentlichen eine Stellenanzeige!</i></h4>
+					</p>
+					<p>
+						<button type="button" class="btn btn-info buttons" data-toggle="modal" data-target="#modal_registrierung" id="startseitebutton2">
+							Registrieren <span class="glyphicon glyphicon-list-alt"></span>
+						</button>
+					</p>
+
+				</div>
+			</div>
+			<div class="col-md-1"></div>
+		</div>
+	</body>
+	<script>
+		$(document).ready(function() {
+			//Initialize tooltips
+			$('.nav-tabs > li a[title]').tooltip();
+
+			//Wizard
+			$('a[data-toggle="tab"]').on('show.bs.tab', function(e) {
+
+				var $target = $(e.target);
+
+				if ($target.parent().hasClass('disabled')) {
+					return false;
+				}
+			});
+
+			$(".prev-step").click(function(e) {
+
+				var $active = $('.wizard .nav-tabs li.active');
+				prevTab($active);
+
+			});
+		});
+
+		function nextTab(elem) {
+			$(elem).next().find('a[data-toggle="tab"]').click();
+		}
+
+		function prevTab(elem) {
+			$(elem).prev().find('a[data-toggle="tab"]').click();
+		}
+
+		function weiter(step) {
+			if (step == "step1") {
+				if ($('#email').val() != "" && $('#uname').val() != "") {
+					var $active = $('.wizard .nav-tabs li.active');
+					$active.next().removeClass('disabled');
+					nextTab($active);
+				}
+			} else {
+				if (step == "step2") {
+					if ($('#passwort').val() != "" && $('#passwortw').val() != "") {
+						var $active = $('.wizard .nav-tabs li.active');
+						$active.next().removeClass('disabled');
+						nextTab($active);
+					}
+				}
+			}
+		}
+	</script>
+</html>

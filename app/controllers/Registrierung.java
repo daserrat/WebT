@@ -6,26 +6,38 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import play.*;
-import play.api.libs.json.Json;
+import play.mvc.BodyParser;                     
+import play.libs.Json;
+import play.libs.Json.*;
 import play.mvc.*;
 import views.html.*;
 
 public class Registrierung extends Controller {
 	
+	@BodyParser.Of(BodyParser.Json.class)
 	public Result registrierung() {
 		
 		JsonNode registrierung = request().body().asJson();
-						
-		String email = registrierung.get("email").toString();
+		
+		ObjectNode result = Json.newObject();
+		
+		//char email = registrierung.get("email").
+		
+		String email = registrierung.get("email").asText();
+		String name = registrierung.get("name").asText();
+		String passwort = registrierung.get("passwort").asText();
+		String passwortw = registrierung.get("passwortw").asText();
+		
+		/*String email = registrierung.get("email").toString();
 		String name = registrierung.get("name").toString();
 		String passwort = registrierung.get("passwort").toString();
-		String passwortw = registrierung.get("passwortw").toString();
+		String passwortw = registrierung.get("passwortw").toString();*/
 		
 		System.out.println("Registrierungsdaten: " + registrierung);
 		
 		boolean ergebnis = model.Model.getInstance().getRegistrierung().registrieren(email,name,passwort,passwortw);
 		
-		String fehler = "Fehler";
+		String fehler = "Fehler, E-Mail existiert schon";
 		
 		if (ergebnis == true) {
 			
@@ -35,9 +47,14 @@ public class Registrierung extends Controller {
 			
 			System.out.println("ICH WAR IN TRUE DRIN");
 		
-			return ok(NachLogin.render());
+			//return ok(NachLogin.render());
 			
-			//return ok();
+			result.put("status", "ok");
+			result.put("message", email);
+			
+			System.out.println(result);
+			
+			return ok(result);
 			
 			//System.out.println("Die Email: " + email);
 			
@@ -46,8 +63,11 @@ public class Registrierung extends Controller {
 			//return ok(daten);
 	
 		} else {
+			
+			result.put("status", "error");
+			result.put("message", fehler);
 
-			return ok(fehler);
+			return badRequest(fehler);
 		}
 		
 	}

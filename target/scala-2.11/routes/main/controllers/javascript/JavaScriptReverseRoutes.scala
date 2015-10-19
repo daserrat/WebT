@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/keremuyanik/Documents/WebT/play-java/conf/routes
-// @DATE:Mon Oct 12 22:52:14 CEST 2015
+// @DATE:Mon Oct 19 21:41:21 CEST 2015
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -15,27 +15,37 @@ import _root_.play.libs.F
 package controllers.javascript {
   import ReverseRouteContext.empty
 
-  // @LINE:24
-  class ReverseTestClass(_prefix: => String) {
+  // @LINE:25
+  class ReverseLogin(_prefix: => String) {
 
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:24
-    def testen: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.TestClass.testen",
+    // @LINE:26
+    def logout: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Login.logout",
       """
         function() {
-          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "testPost"})
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "logout"})
+        }
+      """
+    )
+  
+    // @LINE:25
+    def login: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Login.login",
+      """
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "login"})
         }
       """
     )
   
   }
 
-  // @LINE:25
+  // @LINE:24
   class ReverseRegistrierung(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -43,7 +53,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:25
+    // @LINE:24
     def registrierung: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Registrierung.registrierung",
       """
@@ -103,6 +113,16 @@ package controllers.javascript {
       """
     )
   
+    // @LINE:10
+    def nichtangemeldet: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Application.nichtangemeldet",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "nichtangemeldet"})
+        }
+      """
+    )
+  
     // @LINE:16
     def stellenangebot: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.stellenangebot",
@@ -123,16 +143,6 @@ package controllers.javascript {
             return _wA({method:"GET", url:"""" + _prefix + """"})
           }
         
-        }
-      """
-    )
-  
-    // @LINE:10
-    def NachLogin: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.Application.NachLogin",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "NachLogin"})
         }
       """
     )

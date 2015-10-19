@@ -5,7 +5,18 @@ public class Model {
 	private static Model instance;
 	
 	Registrierung registrierung = new Registrierung();
+	Login login = new Login();
+
 	
+	
+	public Login getLogin() {
+		return login;
+	}
+
+	public void setLogin(Login login) {
+		this.login = login;
+	}
+
 	public Registrierung getRegistrierung() {
 		
 		return registrierung;

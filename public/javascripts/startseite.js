@@ -1,21 +1,22 @@
 var startseite = angular.module('startseite', []);
 
-var email;
-var name;
-var passwort;
-var passwort2;
 var host = "http://" + window.location.host;
 
-startseite.controller('registrierungCtrl', function($scope,$http,$location) {
+startseite.controller('registrierungCtrl', function($scope,$http) {
 	
-	/*$scope.ngWeiter = function() {
+	var email;
+	var name;
+	var passwort;
+	var passwort2;
+	
+	$scope.ngWeiter = function() {
 		
 		email = $scope.email;
 		name = $scope.name;
 		
-	};*/
+	};
 
-	$scope.ngWeiter = function() {
+	$scope.ngWeiter2 = function() {
 		
 		email = $scope.email;
 		name = $scope.name;
@@ -30,13 +31,23 @@ startseite.controller('registrierungCtrl', function($scope,$http,$location) {
 		daten["passwort"] = passwort;
 		daten["passwortw"] = passwortw;
 		
+		$scope.meldung = "Fehler";
+		
 		$http.post(host + "/registrierung", daten).then(function(data) {
 			
-			console.log(data);
+				console.log(data);
+				var erfolg = data.data.message;
+				$scope.meldung = "Hallo " + erfolg;
 						
 		});
-		
+				
 		}
+		
+	}
+	
+	$scope.ngRedirect = function() {
+		
+		location.reload();
 		
 	}
 	

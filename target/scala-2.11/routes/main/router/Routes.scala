@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/keremuyanik/Documents/WebT/play-java/conf/routes
-// @DATE:Mon Oct 12 22:52:14 CEST 2015
+// @DATE:Mon Oct 19 21:41:21 CEST 2015
 
 package router
 
@@ -21,9 +21,9 @@ class Routes(
   // @LINE:19
   Assets_0: controllers.Assets,
   // @LINE:24
-  TestClass_2: controllers.TestClass,
-  // @LINE:25
   Registrierung_3: controllers.Registrierung,
+  // @LINE:25
+  Login_2: controllers.Login,
   val prefix: String
 ) extends GeneratedRouter {
 
@@ -34,16 +34,16 @@ class Routes(
     // @LINE:19
     Assets_0: controllers.Assets,
     // @LINE:24
-    TestClass_2: controllers.TestClass,
+    Registrierung_3: controllers.Registrierung,
     // @LINE:25
-    Registrierung_3: controllers.Registrierung
-  ) = this(errorHandler, Application_1, Assets_0, TestClass_2, Registrierung_3, "/")
+    Login_2: controllers.Login
+  ) = this(errorHandler, Application_1, Assets_0, Registrierung_3, Login_2, "/")
 
   import ReverseRouteContext.empty
 
   def withPrefix(prefix: String): Routes = {
     router.RoutesPrefix.setPrefix(prefix)
-    new Routes(errorHandler, Application_1, Assets_0, TestClass_2, Registrierung_3, prefix)
+    new Routes(errorHandler, Application_1, Assets_0, Registrierung_3, Login_2, prefix)
   }
 
   private[this] val defaultPrefix: String = {
@@ -53,13 +53,14 @@ class Routes(
   def documentation = List(
     ("""GET""", this.prefix, """controllers.Application.startseite()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """startseite""", """controllers.Application.startseite()"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """NachLogin""", """controllers.Application.NachLogin()"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """nichtangemeldet""", """controllers.Application.nichtangemeldet()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """suche""", """controllers.Application.suche()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """upload""", """controllers.Application.upload()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """stellenangebot""", """controllers.Application.stellenangebot()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""", """controllers.Assets.versioned(path:String = "/public", file:Asset)"""),
-    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """testPost""", """controllers.TestClass.testen()"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """registrierung""", """controllers.Registrierung.registrierung()"""),
+    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """login""", """controllers.Login.login()"""),
+    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """logout""", """controllers.Login.logout()"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
     case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
@@ -102,19 +103,19 @@ class Routes(
   )
 
   // @LINE:10
-  private[this] lazy val controllers_Application_NachLogin2_route = Route("GET",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("NachLogin")))
+  private[this] lazy val controllers_Application_nichtangemeldet2_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("nichtangemeldet")))
   )
-  private[this] lazy val controllers_Application_NachLogin2_invoker = createInvoker(
-    Application_1.NachLogin(),
+  private[this] lazy val controllers_Application_nichtangemeldet2_invoker = createInvoker(
+    Application_1.nichtangemeldet(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.Application",
-      "NachLogin",
+      "nichtangemeldet",
       Nil,
       "GET",
       """""",
-      this.prefix + """NachLogin"""
+      this.prefix + """nichtangemeldet"""
     )
   )
 
@@ -187,27 +188,10 @@ class Routes(
   )
 
   // @LINE:24
-  private[this] lazy val controllers_TestClass_testen7_route = Route("POST",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("testPost")))
-  )
-  private[this] lazy val controllers_TestClass_testen7_invoker = createInvoker(
-    TestClass_2.testen(),
-    HandlerDef(this.getClass.getClassLoader,
-      "router",
-      "controllers.TestClass",
-      "testen",
-      Nil,
-      "POST",
-      """""",
-      this.prefix + """testPost"""
-    )
-  )
-
-  // @LINE:25
-  private[this] lazy val controllers_Registrierung_registrierung8_route = Route("POST",
+  private[this] lazy val controllers_Registrierung_registrierung7_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("registrierung")))
   )
-  private[this] lazy val controllers_Registrierung_registrierung8_invoker = createInvoker(
+  private[this] lazy val controllers_Registrierung_registrierung7_invoker = createInvoker(
     Registrierung_3.registrierung(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -217,6 +201,40 @@ class Routes(
       "POST",
       """""",
       this.prefix + """registrierung"""
+    )
+  )
+
+  // @LINE:25
+  private[this] lazy val controllers_Login_login8_route = Route("POST",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("login")))
+  )
+  private[this] lazy val controllers_Login_login8_invoker = createInvoker(
+    Login_2.login(),
+    HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.Login",
+      "login",
+      Nil,
+      "POST",
+      """""",
+      this.prefix + """login"""
+    )
+  )
+
+  // @LINE:26
+  private[this] lazy val controllers_Login_logout9_route = Route("POST",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("logout")))
+  )
+  private[this] lazy val controllers_Login_logout9_invoker = createInvoker(
+    Login_2.logout(),
+    HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.Login",
+      "logout",
+      Nil,
+      "POST",
+      """""",
+      this.prefix + """logout"""
     )
   )
 
@@ -236,9 +254,9 @@ class Routes(
       }
   
     // @LINE:10
-    case controllers_Application_NachLogin2_route(params) =>
+    case controllers_Application_nichtangemeldet2_route(params) =>
       call { 
-        controllers_Application_NachLogin2_invoker.call(Application_1.NachLogin())
+        controllers_Application_nichtangemeldet2_invoker.call(Application_1.nichtangemeldet())
       }
   
     // @LINE:12
@@ -266,15 +284,21 @@ class Routes(
       }
   
     // @LINE:24
-    case controllers_TestClass_testen7_route(params) =>
+    case controllers_Registrierung_registrierung7_route(params) =>
       call { 
-        controllers_TestClass_testen7_invoker.call(TestClass_2.testen())
+        controllers_Registrierung_registrierung7_invoker.call(Registrierung_3.registrierung())
       }
   
     // @LINE:25
-    case controllers_Registrierung_registrierung8_route(params) =>
+    case controllers_Login_login8_route(params) =>
       call { 
-        controllers_Registrierung_registrierung8_invoker.call(Registrierung_3.registrierung())
+        controllers_Login_login8_invoker.call(Login_2.login())
+      }
+  
+    // @LINE:26
+    case controllers_Login_logout9_route(params) =>
+      call { 
+        controllers_Login_logout9_invoker.call(Login_2.logout())
       }
   }
 }

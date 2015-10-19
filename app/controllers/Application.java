@@ -11,8 +11,8 @@ public class Application extends Controller {
         return ok(startseite.render());
     }
     
-    public Result NachLogin() {
-    	return ok(NachLogin.render());
+    public Result nichtangemeldet() {
+    	return ok(nichtangemeldet.render());
     }
     
     public Result suche() {
