@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/keremuyanik/Documents/WebT/play-java/conf/routes
-// @DATE:Mon Oct 19 21:41:21 CEST 2015
+// @DATE:Tue Oct 20 15:34:49 CEST 2015
 
 package router
 
@@ -18,11 +18,11 @@ class Routes(
   override val errorHandler: play.api.http.HttpErrorHandler, 
   // @LINE:6
   Application_1: controllers.Application,
-  // @LINE:19
+  // @LINE:21
   Assets_0: controllers.Assets,
-  // @LINE:24
+  // @LINE:26
   Registrierung_3: controllers.Registrierung,
-  // @LINE:25
+  // @LINE:27
   Login_2: controllers.Login,
   val prefix: String
 ) extends GeneratedRouter {
@@ -31,11 +31,11 @@ class Routes(
    def this(errorHandler: play.api.http.HttpErrorHandler,
     // @LINE:6
     Application_1: controllers.Application,
-    // @LINE:19
+    // @LINE:21
     Assets_0: controllers.Assets,
-    // @LINE:24
+    // @LINE:26
     Registrierung_3: controllers.Registrierung,
-    // @LINE:25
+    // @LINE:27
     Login_2: controllers.Login
   ) = this(errorHandler, Application_1, Assets_0, Registrierung_3, Login_2, "/")
 
@@ -57,6 +57,7 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """suche""", """controllers.Application.suche()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """upload""", """controllers.Application.upload()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """stellenangebot""", """controllers.Application.stellenangebot()"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """contact""", """controllers.Application.contact()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""", """controllers.Assets.versioned(path:String = "/public", file:Asset)"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """registrierung""", """controllers.Registrierung.registrierung()"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """login""", """controllers.Login.login()"""),
@@ -170,11 +171,28 @@ class Routes(
     )
   )
 
-  // @LINE:19
-  private[this] lazy val controllers_Assets_versioned6_route = Route("GET",
+  // @LINE:18
+  private[this] lazy val controllers_Application_contact6_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("contact")))
+  )
+  private[this] lazy val controllers_Application_contact6_invoker = createInvoker(
+    Application_1.contact(),
+    HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.Application",
+      "contact",
+      Nil,
+      "GET",
+      """""",
+      this.prefix + """contact"""
+    )
+  )
+
+  // @LINE:21
+  private[this] lazy val controllers_Assets_versioned7_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("assets/"), DynamicPart("file", """.+""",false)))
   )
-  private[this] lazy val controllers_Assets_versioned6_invoker = createInvoker(
+  private[this] lazy val controllers_Assets_versioned7_invoker = createInvoker(
     Assets_0.versioned(fakeValue[String], fakeValue[Asset]),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -187,11 +205,11 @@ class Routes(
     )
   )
 
-  // @LINE:24
-  private[this] lazy val controllers_Registrierung_registrierung7_route = Route("POST",
+  // @LINE:26
+  private[this] lazy val controllers_Registrierung_registrierung8_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("registrierung")))
   )
-  private[this] lazy val controllers_Registrierung_registrierung7_invoker = createInvoker(
+  private[this] lazy val controllers_Registrierung_registrierung8_invoker = createInvoker(
     Registrierung_3.registrierung(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -204,11 +222,11 @@ class Routes(
     )
   )
 
-  // @LINE:25
-  private[this] lazy val controllers_Login_login8_route = Route("POST",
+  // @LINE:27
+  private[this] lazy val controllers_Login_login9_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("login")))
   )
-  private[this] lazy val controllers_Login_login8_invoker = createInvoker(
+  private[this] lazy val controllers_Login_login9_invoker = createInvoker(
     Login_2.login(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -221,11 +239,11 @@ class Routes(
     )
   )
 
-  // @LINE:26
-  private[this] lazy val controllers_Login_logout9_route = Route("POST",
+  // @LINE:28
+  private[this] lazy val controllers_Login_logout10_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("logout")))
   )
-  private[this] lazy val controllers_Login_logout9_invoker = createInvoker(
+  private[this] lazy val controllers_Login_logout10_invoker = createInvoker(
     Login_2.logout(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -277,28 +295,34 @@ class Routes(
         controllers_Application_stellenangebot5_invoker.call(Application_1.stellenangebot())
       }
   
-    // @LINE:19
-    case controllers_Assets_versioned6_route(params) =>
+    // @LINE:18
+    case controllers_Application_contact6_route(params) =>
+      call { 
+        controllers_Application_contact6_invoker.call(Application_1.contact())
+      }
+  
+    // @LINE:21
+    case controllers_Assets_versioned7_route(params) =>
       call(Param[String]("path", Right("/public")), params.fromPath[Asset]("file", None)) { (path, file) =>
-        controllers_Assets_versioned6_invoker.call(Assets_0.versioned(path, file))
-      }
-  
-    // @LINE:24
-    case controllers_Registrierung_registrierung7_route(params) =>
-      call { 
-        controllers_Registrierung_registrierung7_invoker.call(Registrierung_3.registrierung())
-      }
-  
-    // @LINE:25
-    case controllers_Login_login8_route(params) =>
-      call { 
-        controllers_Login_login8_invoker.call(Login_2.login())
+        controllers_Assets_versioned7_invoker.call(Assets_0.versioned(path, file))
       }
   
     // @LINE:26
-    case controllers_Login_logout9_route(params) =>
+    case controllers_Registrierung_registrierung8_route(params) =>
       call { 
-        controllers_Login_logout9_invoker.call(Login_2.logout())
+        controllers_Registrierung_registrierung8_invoker.call(Registrierung_3.registrierung())
+      }
+  
+    // @LINE:27
+    case controllers_Login_login9_route(params) =>
+      call { 
+        controllers_Login_login9_invoker.call(Login_2.login())
+      }
+  
+    // @LINE:28
+    case controllers_Login_logout10_route(params) =>
+      call { 
+        controllers_Login_logout10_invoker.call(Login_2.logout())
       }
   }
 }

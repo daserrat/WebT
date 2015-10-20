@@ -1,5 +1,7 @@
 var header = angular.module('header', []);
 
+var host = "http://" + window.location.host;
+
 angular.module('header', []).controller('loginCtrl', function($scope,$http) {
 
 $(document).ready(function() {
@@ -12,13 +14,11 @@ $(document).ready(function() {
 		$("#login").html("Eingeloggt als: " + cookieEmail);
 		
 		$("#login-dp").hide();
-		//$("#eingeloggt").show();
 				
 	} else {
 		
 		$("#eingeloggt").hide();
 		$("#upload").attr("href", "/nichtangemeldet");
-		//$("#login-dp").show();
 		
 	}
 	
@@ -45,10 +45,6 @@ $scope.anmelden = function() {
 			
 		}
 		
-		/*console.log(data);
-		var erfolg = data.data.message;
-		$scope.meldung = "Hallo " + erfolg;*/
-				
 });
 	
 }
@@ -57,13 +53,11 @@ $scope.logout = function() {
 		
 	$http.post(host + "/logout", {}).then(function(data) {
 		
-		location.reload();
+		window.location = host + "/startseite";
 		
 	});
 	
 }
 	
-
 });
-
 

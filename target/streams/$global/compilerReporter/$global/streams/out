@@ -1,7 +1,5 @@
-[0m[[31merror[0m] [0m/Users/keremuyanik/Documents/WebT/play-java/conf/routes:24: type TestClass is not a member of package controllers[0m
-[0m[[31merror[0m] [0mPOST	/testPost					controllers.TestClass.testen()[0m
-[0m[[31merror[0m] [0m/Users/keremuyanik/Documents/WebT/play-java/conf/routes:24: type TestClass is not a member of package controllers[0m
-[0m[[31merror[0m] [0mPOST	/testPost					controllers.TestClass.testen()[0m
-[0m[[31merror[0m] [0m/Users/keremuyanik/Documents/WebT/play-java/conf/routes:24: type TestClass is not a member of package controllers[0m
-[0m[[31merror[0m] [0mPOST	/testPost					controllers.TestClass.testen()[0m
-[0m[[31merror[0m] [0mthree errors found[0m
+[0m[[31merror[0m] [0m/Users/keremuyanik/Documents/WebT/play-java/app/controllers/Application.java:30: method render in class views.html.nichtangemeldet cannot be applied to given types;[0m
+[0m[[31merror[0m] [0m  required: no arguments[0m
+[0m[[31merror[0m] [0m  found: java.lang.String[0m
+[0m[[31merror[0m] [0m  reason: actual and formal argument lists differ in length[0m
+[0m[[31merror[0m] [0mnichtangemeldet.render[0m

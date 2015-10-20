@@ -1,8 +1,8 @@
-var startseite = angular.module('startseite', []);
+var registr = angular.module('registr', []);
 
 var host = "http://" + window.location.host;
 
-startseite.controller('registrierungCtrl', function($scope,$http) {
+registr.controller('registrierungCtrl', function($scope,$http) {
 	
 	var email;
 	var name;
@@ -51,4 +51,19 @@ startseite.controller('registrierungCtrl', function($scope,$http) {
 		
 	}
 	
+});
+
+$(document).ready(function() {
+
+	angular.bootstrap(document.getElementById("modal_registrierung"), ['registr']);
+	
+	if(document.cookie) {
+		
+		$("#praktAnbieten").hide();
+				
+	} else {
+		
+		$("#praktAnbieten").show();
+		
+	}
 });

@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/keremuyanik/Documents/WebT/play-java/conf/routes
-// @DATE:Mon Oct 19 21:41:21 CEST 2015
+// @DATE:Tue Oct 20 15:34:49 CEST 2015
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -15,7 +15,7 @@ import _root_.play.libs.F
 package controllers.javascript {
   import ReverseRouteContext.empty
 
-  // @LINE:25
+  // @LINE:27
   class ReverseLogin(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -23,7 +23,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:26
+    // @LINE:28
     def logout: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Login.logout",
       """
@@ -33,7 +33,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:25
+    // @LINE:27
     def login: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Login.login",
       """
@@ -45,7 +45,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:24
+  // @LINE:26
   class ReverseRegistrierung(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -53,7 +53,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:24
+    // @LINE:26
     def registrierung: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Registrierung.registrierung",
       """
@@ -65,7 +65,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:19
+  // @LINE:21
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -73,7 +73,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:19
+    // @LINE:21
     def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.versioned",
       """
@@ -143,6 +143,16 @@ package controllers.javascript {
             return _wA({method:"GET", url:"""" + _prefix + """"})
           }
         
+        }
+      """
+    )
+  
+    // @LINE:18
+    def contact: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Application.contact",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "contact"})
         }
       """
     )

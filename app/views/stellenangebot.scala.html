@@ -11,8 +11,12 @@
 		<link href="@routes.Assets.versioned("font-awesome/css/font-awesome.css")" rel="stylesheet" />
 		<script src="@routes.Assets.versioned("javascripts/jquery.js")"></script>
 		<script src="@routes.Assets.versioned("javascripts/bootstrap.js")"></script>
+		<link href="@routes.Assets.versioned("stylesheets/stellenangebot.css")" rel="stylesheet" />
 		<link href="@routes.Assets.versioned("stylesheets/index.css")" rel="stylesheet" />
 		<link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+		<script src="@routes.Assets.versioned("javascripts/angular.js")"></script>
+		<script src="@routes.Assets.versioned("javascripts/startseite.js")"></script>
+		<script src="@routes.Assets.versioned("javascripts/header.js")"></script>
 	</head>
 	<body>
 		<div id="background">
@@ -28,10 +32,10 @@
 				</div>
 				<div class="collapse navbar-collapse navbar-menubuilder" id="navigation-menupunkte">
 					<ul class="nav navbar-nav navbar-left">
-						<li class="active" class="list_menupunkt">
+						<li>
 							<a href="/startseite" class="menupunkte">Home</a>
 						</li>
-						<li>
+						<li class="active" class="list_menupunkt">
 							<a href="/suche" class="menupunkte">Suche</a>
 						</li>
 						<li>
@@ -251,7 +255,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="modal fade" id="modal_registrierung">
+		<div class="modal fade" id="modal_registrierung" ng-app="registr" ng-controller="registrierungCtrl">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -284,14 +288,14 @@
 												<div class="tab-pane active" role="tabpanel" id="step1">
 													<h4>E-Mail & Unternehmensname</h4>
 													<p>
-														<input type="email" placeholder="E-Mail" class="wizard_formular input1" id="email" />
+														<input type="email" placeholder="E-Mail" class="wizard_formular input1" id="email" ng-model="email"/>
 													</p>
 													<p>
-														<input type="text" placeholder="Name des Unternehmens" class="wizard_formular input2" id="uname" />
+														<input type="text" placeholder="Name des Unternehmens" class="wizard_formular input2" id="uname" ng-model="name"/>
 													</p>
 													<ul class="list-inline pull-right">
 														<li>
-															<button type="button" class="btn btn-success next-step" id="buttonstep1" onclick="weiter('step1')">
+															<button ng-click="ngWeiter()" type="button" class="btn btn-success next-step" id="buttonstep1" onclick="weiter('step1')">
 																Weiter
 															</button>
 														</li>
@@ -300,10 +304,10 @@
 												<div class="tab-pane" role="tabpanel" id="step2">
 													<h4>Passwort</h4>
 													<p>
-														<input type="password" placeholder="Passwort" class="wizard_formular input1"  id="passwort"/>
+														<input type="password" placeholder="Passwort" class="wizard_formular input1"  id="passwort" ng-model="passwort"/>
 													</p>
 													<p>
-														<input type="password" placeholder="Passwort wiederholen" class="wizard_formular input2" id="passwortw"/>
+														<input type="password" placeholder="Passwort wiederholen" class="wizard_formular input2" id="passwortw" ng-model="passwortw"/>
 													</p>
 													<ul class="list-inline pull-right">
 														<li>
@@ -312,7 +316,7 @@
 															</button>
 														</li>
 														<li>
-															<button type="button" class="btn btn-success next-step" onclick="weiter('step2')" id="buttonstep2">
+															<button type="button" class="btn btn-success next-step" onclick="weiter('step2')" ng-click="ngWeiter2()"id="buttonstep2">
 																Weiter
 															</button>
 														</li>
@@ -320,8 +324,8 @@
 												</div>
 												<div class="tab-pane" role="tabpanel" id="complete">
 													<h4>Fertig</h4>
-													<p>
-														Sie sind jetzt bei Staj-Praktikumsportal registriert. Loggen Sie sich ein!
+													<p ng-model="meldung">
+														{{meldung}}
 													</p>
 												</div>
 												<div class="clearfix"></div>
@@ -333,8 +337,8 @@
 						</div>
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">
-							Schlieißen
+						<button type="button" class="btn btn-default" data-dismiss="modal" ng-click="ngRedirect()">
+							Schließen
 						</button>
 					</div>
 				</div><!-- /.modal-content -->

@@ -78,7 +78,7 @@
 									<div class="row">
 										<div class="col-md-12">
 											<div class="bottom text-center"><a href="/profil">Zu Eurem Profil</a></div>
-											<input type="button" value="Ausloggen" ng-click="logout()" style="margin-bottom:10px"></input>
+											<input type="button" value="Ausloggen" class="btn btn-primary btn-block" ng-click="logout()" style="margin-bottom:10px"></input>
 										</div>
 									</div>
 								</li>
@@ -124,6 +124,7 @@
 						</button></a>
 					</p>
 					<hr />
+					<div id="praktAnbieten">
 					<p>
 						<h4><i>Wollen Sie ein Praktikum anbieten? Dann Registrieren Sie sich in unserem Praktikumsportal und veröffentlichen eine Stellenanzeige!</i></h4>
 					</p>
@@ -132,12 +133,12 @@
 							Registrieren <span class="glyphicon glyphicon-list-alt"></span>
 						</button>
 					</p>
-
+					</div>
 				</div>
 			</div>
 			<div class="col-md-1"></div>
 		</div>
-		<div class="modal fade" id="modal_registrierung" ng-app="startseite" ng-controller="registrierungCtrl">
+		<div class="modal fade" id="modal_registrierung" ng-controller="registrierungCtrl" ng-app="registr">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">

@@ -2,6 +2,7 @@ package controllers;
 
 import play.*;
 import play.mvc.*;
+import play.mvc.Http.Cookie;
 import views.html.*;
 
 public class Application extends Controller {
@@ -20,12 +21,22 @@ public class Application extends Controller {
     }
     
     public Result upload() {
-    	System.out.println("Ich war im Controller");
-    	return ok(upload.render());
+    	
+    	Cookie name = request().cookies().get("data");
+		if (name != null) {
+
+			return ok(upload.render());
+		} else {
+			return ok(nichtangemeldet.render());
+		}
     }
     
     public Result stellenangebot() {
     	return ok(stellenangebot.render());
+    }
+    
+    public Result contact() {
+    	return ok(kontakt.render());
     }
     
 }
