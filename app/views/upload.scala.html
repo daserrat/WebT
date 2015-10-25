@@ -16,6 +16,7 @@
 		<script src="@routes.Assets.versioned("javascripts/angular.js")"></script>
 		<script src="@routes.Assets.versioned("javascripts/startseite.js")"></script>
 		<script src="@routes.Assets.versioned("javascripts/header.js")"></script>
+		<script src="@routes.Assets.versioned("javascripts/upload.js")"></script>
 	</head>
 	<body>
 		<div id="background">
@@ -106,19 +107,19 @@
 				</div>
 			</div>
 		</div>
-		<div class="mainbody">
+		<div class="mainbody" id="uploadBody" ng-app="upload">
 			<div class="col-md-1"></div>
 			<div class="col-md-10" class="maindiv">
 				<div class="maintextdiv" style="padding-top: 2%;">
 					<h3 style="margin-bottom: 3%; top: 2%;">Stellen-Upload</h3>
-
-					<div id="maintabdiv">
+					<h5 ng-model="uploadErfolg">{{uploadErfolg}}</h5>
+					<div id="maintabdiv" ng-controller="uploadCtrl">
 						<div class="btn-pref btn-group btn-group-justified btn-group-lg" role="group" aria-label="" id="buttongurppe">
 							<div class="btn-group" role="group">
 								<button type="button" id="was" class="btn btn-primary" href="#tab1" data-toggle="tab">
 									<span class="glyphicon glyphicon-education" aria-hidden="true"></span>
 									<div class="hidden-xs">
-										Was
+										Was?
 									</div>
 								</button>
 							</div>
@@ -153,29 +154,31 @@
 								<div class="tab-pane fade in active" id="tab1">
 									<div id="alerttab1" class="alert alert-danger" role="alert">Füllen Sie bitte <b>ALLE</b> Felder aus</div>
 									<p>
-										<input type="text" placeholder="Titel der Stelle" id="titelupload" />
+										<input type="text" ng-model="titel" placeholder="Titel der Stelle" id="titelupload" />
 									</p>
 									<p>
-										<input type="text" placeholder="Link zur Stellenbeschreibung (Homepage)" id="link" />
+										<input type="text" ng-model="link" placeholder="Link zur Stellenbeschreibung (Homepage)" id="link" />
 									</p>
+									Studiengang
 									<p>
-										<select id="selectstudi2">
-											<option value="">Studiengang</option>
+										<select id="selectstudi2" multiple>
 											<option value="Informatik">Informatik</option>
 											<option value="BWL">BWL</option>
+											<option value="Maschinenbau">Maschinenbau</option>
+											
 										</select>
 									</p>
 									<p>
-										<textarea id="desc" placeholder="Beschreibung der Stelle ... "></textarea>
+										<textarea id="desc" ng-model="beschreibung" placeholder="Beschreibung der Stelle ... "></textarea>
 									</p>
-									<button id="wetiertab" onclick="weitertab('tab1')" class="speichernweiter btn btn-primary">
+									<button id="wetiertab" ng-click="ngWeiter1()" onclick="weitertab('tab1')" class="speichernweiter btn btn-primary">
 										Speichern & Weiter
 									</button>
 								</div>
 								<div class="tab-pane fade in" id="tab2">
 									<div id="alerttab2" class="alert alert-danger" role="alert">Füllen Sie bitte <b>ALLE</b> Felder aus</div>
 									<p>
-										<input type="text" placeholder="Stadt/PLZ" id="stadt" />
+										<input type="text" placeholder="Stadt/PLZ" id="stadt" ng-model="stadt"/>
 									</p>
 									<p>
 										<select id="bundesland">
@@ -187,14 +190,14 @@
 									<button id="wetiertab" onclick="zuruecktab('tab2')" class="speichernweiter btn btn-primary">
 										Zurück
 									</button>
-									<button id="wetiertab" onclick="weitertab('tab2')" class="speichernweiter btn btn-primary">
+									<button id="wetiertab" onclick="weitertab('tab2')" ng-click="ngWeiter2()" class="speichernweiter btn btn-primary">
 										Speichern & Weiter
 									</button>
 								</div>
 								<div class="tab-pane fade in" id="tab3">
 									<div id="alerttab3" class="alert alert-danger" role="alert">Füllen Sie bitte <b>ALLE</b> Felder aus</div>
 									<p>
-										<input type="date" id="datum" />
+										<input type="date" id="datum"/>
 									</p>
 									<p>
 										<select id="selectdauer2">
@@ -207,7 +210,7 @@
 									<button id="zuruecktab" onclick="zuruecktab('tab3')" class="speichernweiter btn btn-primary">
 										Zurück
 									</button>
-									<button id="wetiertab" onclick="weitertab('tab3')" class="speichernweiter btn btn-primary">
+									<button id="wetiertab" onclick="weitertab('tab3')" ng-click="ngWeiter3()" class="speichernweiter btn btn-primary">
 										Speichern & Weiter
 									</button>
 								</div>
@@ -227,7 +230,7 @@
 									<button id="wetiertab" onclick="zuruecktab('tab4')" class="speichernweiter btn btn-primary">
 										Zurück
 									</button>
-									<button id="wetiertab" onclick="upload()" class="speichernweiter btn btn-success ">
+									<button id="wetiertab" ng-click="ngFertig()" class="speichernweiter btn btn-success ">
 										Upload
 									</button>
 								</div>

@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/keremuyanik/Documents/WebT/play-java/conf/routes
-// @DATE:Tue Oct 20 15:34:49 CEST 2015
+// @DATE:Sun Oct 25 21:47:32 CET 2015
 
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
 import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamicString }
@@ -13,35 +13,29 @@ import _root_.play.libs.F
 // @LINE:6
 package controllers {
 
-  // @LINE:27
-  class ReverseLogin(_prefix: => String) {
+  // @LINE:23
+  class ReverseAssets(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:28
-    def logout(): Call = {
-      import ReverseRouteContext.empty
-      Call("POST", _prefix + { _defaultPrefix } + "logout")
-    }
-  
-    // @LINE:27
-    def login(): Call = {
-      import ReverseRouteContext.empty
-      Call("POST", _prefix + { _defaultPrefix } + "login")
+    // @LINE:23
+    def versioned(file:Asset): Call = {
+      implicit val _rrc = new ReverseRouteContext(Map(("path", "/public")))
+      Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[Asset]].unbind("file", file))
     }
   
   }
 
-  // @LINE:26
+  // @LINE:28
   class ReverseRegistrierung(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:26
+    // @LINE:28
     def registrierung(): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "registrierung")
@@ -49,17 +43,53 @@ package controllers {
   
   }
 
-  // @LINE:21
-  class ReverseAssets(_prefix: => String) {
+  // @LINE:35
+  class ReverseProfil(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:21
-    def versioned(file:Asset): Call = {
-      implicit val _rrc = new ReverseRouteContext(Map(("path", "/public")))
-      Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[Asset]].unbind("file", file))
+    // @LINE:35
+    def eigenestellen(): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "eigeneStellen")
+    }
+  
+  }
+
+  // @LINE:29
+  class ReverseLogin(_prefix: => String) {
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:30
+    def logout(): Call = {
+      import ReverseRouteContext.empty
+      Call("POST", _prefix + { _defaultPrefix } + "logout")
+    }
+  
+    // @LINE:29
+    def login(): Call = {
+      import ReverseRouteContext.empty
+      Call("POST", _prefix + { _defaultPrefix } + "login")
+    }
+  
+  }
+
+  // @LINE:31
+  class ReverseUpload(_prefix: => String) {
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:31
+    def upload(): Call = {
+      import ReverseRouteContext.empty
+      Call("POST", _prefix + { _defaultPrefix } + "upload")
     }
   
   }
@@ -81,6 +111,12 @@ package controllers {
     def suche(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "suche")
+    }
+  
+    // @LINE:20
+    def profil(): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "profil")
     }
   
     // @LINE:10

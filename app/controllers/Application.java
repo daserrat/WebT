@@ -39,4 +39,15 @@ public class Application extends Controller {
     	return ok(kontakt.render());
     }
     
+    public Result profil() {
+    	
+    	Cookie name = request().cookies().get("data");
+		if (name != null) {
+
+			return ok(profil.render());
+		} else {
+			return ok(nichtangemeldet.render());
+		}    			
+    }
+    
 }

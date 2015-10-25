@@ -17,6 +17,8 @@ GET		/stellenangebot				controllers.Application.stellenangebot()
 
 GET		/contact					controllers.Application.contact()
 
+GET		/profil						controllers.Application.profil()
+
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
 
@@ -26,3 +28,8 @@ GET     /assets/*file               controllers.Assets.versioned(path="/public",
 POST	/registrierung				controllers.Registrierung.registrierung()
 POST	/login						controllers.Login.login()
 POST	/logout						controllers.Login.logout()
+POST	/upload						controllers.Upload.upload()
+
+# GETS
+
+GET		/eigeneStellen				controllers.Profil.eigenestellen()				

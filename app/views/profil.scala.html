@@ -90,27 +90,15 @@
 		</div>
 
 		<!-- Navigation - Ende----------------------------------------------------------------------------------------------------------------------------------- -->
-		<div class="mainbody">
+		<div class="profilBody" ng-app="profil">
 			<div class="col-md-1"></div>
-			<div class="col-md-10" class="maindiv">
+			<div class="col-md-10" class="maindiv" ng-controller="profilCtrl">
 				<div class="maintextdiv">
 					<h1 id="titel2">StaJ</h1>
+					
+					<h3>Profil</h3>
 					<p>
-						<h4>Willkommen auf <span id="staj">StaJ - </span>Praktikumsportal</h4>
-					</p>
-					<p style="margin-top: 2%;">
-						<h4><i>Suchen Sie nach einer passende Praktiumsstelle in unserem Portal.
-						<br>
-						Mit unserer Suchfunktion können Sie ganz einfach nach den gewünschten Kriterien filtern</h4></i>
-					</p>
-					<p>
-						<a href="/suche"><button type="button" class="btn btn-primary buttons" id="startseitebutton1">
-							Suche starten <span class="glyphicon glyphicon-search"></span>
-						</button></a>
-					</p>
-					<hr />
-					<p>
-						<h4><i>Wollen Sie ein Praktikum anbieten? Dann Registrieren Sie sich in unserem Praktikumsportal und veröffentlichen eine Stellenanzeige!</i></h4>
+						<h4><i>Ihre Stellenangebote:</i></h4>
 					</p>
 					<p>
 						<button type="button" class="btn btn-info buttons" data-toggle="modal" data-target="#modal_registrierung" id="startseitebutton2">

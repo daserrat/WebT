@@ -6,9 +6,18 @@ public class Model {
 	
 	Registrierung registrierung = new Registrierung();
 	Login login = new Login();
+	Upload upload = new Upload();
 
 	
 	
+	public Upload getUpload() {
+		return upload;
+	}
+
+	public void setUpload(Upload upload) {
+		this.upload = upload;
+	}
+
 	public Login getLogin() {
 		return login;
 	}

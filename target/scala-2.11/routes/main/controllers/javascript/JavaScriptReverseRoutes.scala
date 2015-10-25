@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/keremuyanik/Documents/WebT/play-java/conf/routes
-// @DATE:Tue Oct 20 15:34:49 CEST 2015
+// @DATE:Sun Oct 25 21:47:32 CET 2015
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -15,37 +15,27 @@ import _root_.play.libs.F
 package controllers.javascript {
   import ReverseRouteContext.empty
 
-  // @LINE:27
-  class ReverseLogin(_prefix: => String) {
+  // @LINE:23
+  class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:28
-    def logout: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.Login.logout",
+    // @LINE:23
+    def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Assets.versioned",
       """
-        function() {
-          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "logout"})
-        }
-      """
-    )
-  
-    // @LINE:27
-    def login: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.Login.login",
-      """
-        function() {
-          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "login"})
+        function(file) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "assets/" + (""" + implicitly[PathBindable[Asset]].javascriptUnbind + """)("file", file)})
         }
       """
     )
   
   }
 
-  // @LINE:26
+  // @LINE:28
   class ReverseRegistrierung(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -53,7 +43,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:26
+    // @LINE:28
     def registrierung: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Registrierung.registrierung",
       """
@@ -65,20 +55,70 @@ package controllers.javascript {
   
   }
 
-  // @LINE:21
-  class ReverseAssets(_prefix: => String) {
+  // @LINE:35
+  class ReverseProfil(_prefix: => String) {
 
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:21
-    def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.Assets.versioned",
+    // @LINE:35
+    def eigenestellen: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Profil.eigenestellen",
       """
-        function(file) {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "assets/" + (""" + implicitly[PathBindable[Asset]].javascriptUnbind + """)("file", file)})
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "eigeneStellen"})
+        }
+      """
+    )
+  
+  }
+
+  // @LINE:29
+  class ReverseLogin(_prefix: => String) {
+
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:30
+    def logout: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Login.logout",
+      """
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "logout"})
+        }
+      """
+    )
+  
+    // @LINE:29
+    def login: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Login.login",
+      """
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "login"})
+        }
+      """
+    )
+  
+  }
+
+  // @LINE:31
+  class ReverseUpload(_prefix: => String) {
+
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:31
+    def upload: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Upload.upload",
+      """
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "upload"})
         }
       """
     )
@@ -109,6 +149,16 @@ package controllers.javascript {
       """
         function() {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "suche"})
+        }
+      """
+    )
+  
+    // @LINE:20
+    def profil: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Application.profil",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "profil"})
         }
       """
     )
