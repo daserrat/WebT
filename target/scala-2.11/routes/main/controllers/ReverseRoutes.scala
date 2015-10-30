@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/keremuyanik/Documents/WebT/play-java/conf/routes
-// @DATE:Sun Oct 25 21:47:32 CET 2015
+// @DATE:Fri Oct 30 17:20:42 CET 2015
 
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
 import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamicString }
@@ -28,14 +28,14 @@ package controllers {
   
   }
 
-  // @LINE:28
+  // @LINE:31
   class ReverseRegistrierung(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:28
+    // @LINE:31
     def registrierung(): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "registrierung")
@@ -43,14 +43,14 @@ package controllers {
   
   }
 
-  // @LINE:35
+  // @LINE:27
   class ReverseProfil(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:35
+    // @LINE:27
     def eigenestellen(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "eigeneStellen")
@@ -58,20 +58,20 @@ package controllers {
   
   }
 
-  // @LINE:29
+  // @LINE:32
   class ReverseLogin(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:30
+    // @LINE:33
     def logout(): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "logout")
     }
   
-    // @LINE:29
+    // @LINE:32
     def login(): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "login")
@@ -79,14 +79,14 @@ package controllers {
   
   }
 
-  // @LINE:31
+  // @LINE:34
   class ReverseUpload(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:31
+    // @LINE:34
     def upload(): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "upload")

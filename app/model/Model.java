@@ -7,9 +7,17 @@ public class Model {
 	Registrierung registrierung = new Registrierung();
 	Login login = new Login();
 	Upload upload = new Upload();
+	Profil profil = new Profil();
+	
+	
+	public Profil getProfil() {
+		return profil;
+	}
 
-	
-	
+	public void setProfil(Profil profil) {
+		this.profil = profil;
+	}
+
 	public Upload getUpload() {
 		return upload;
 	}

@@ -4,11 +4,18 @@ var host = "http://" + window.location.host;
 
 profil.controller('profilCtrl', function($scope,$http) {
 	
-	$http.get(host + "/eigeneStellen").then(function({
+	console.log("TEST");
+
+	$http({
+		  method: 'GET',
+		  url: host + "/eigeneStellen"
+		  
+		}).then(function(data){
+			
+			console.log(data.data);
+			
+		});
 		
-		
-		
-	});
 	
 });
 

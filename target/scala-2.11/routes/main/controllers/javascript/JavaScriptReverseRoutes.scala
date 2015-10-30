@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/keremuyanik/Documents/WebT/play-java/conf/routes
-// @DATE:Sun Oct 25 21:47:32 CET 2015
+// @DATE:Fri Oct 30 17:20:42 CET 2015
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -35,7 +35,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:28
+  // @LINE:31
   class ReverseRegistrierung(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -43,7 +43,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:28
+    // @LINE:31
     def registrierung: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Registrierung.registrierung",
       """
@@ -55,7 +55,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:35
+  // @LINE:27
   class ReverseProfil(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -63,7 +63,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:35
+    // @LINE:27
     def eigenestellen: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Profil.eigenestellen",
       """
@@ -75,7 +75,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:29
+  // @LINE:32
   class ReverseLogin(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -83,7 +83,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:30
+    // @LINE:33
     def logout: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Login.logout",
       """
@@ -93,7 +93,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:29
+    // @LINE:32
     def login: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Login.login",
       """
@@ -105,7 +105,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:31
+  // @LINE:34
   class ReverseUpload(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -113,7 +113,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:31
+    // @LINE:34
     def upload: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Upload.upload",
       """

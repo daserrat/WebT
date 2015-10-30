@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/keremuyanik/Documents/WebT/play-java/conf/routes
-// @DATE:Sun Oct 25 21:47:32 CET 2015
+// @DATE:Fri Oct 30 17:20:42 CET 2015
 
 package router
 
@@ -20,14 +20,14 @@ class Routes(
   Application_5: controllers.Application,
   // @LINE:23
   Assets_4: controllers.Assets,
-  // @LINE:28
-  Registrierung_1: controllers.Registrierung,
-  // @LINE:29
-  Login_3: controllers.Login,
-  // @LINE:31
-  Upload_0: controllers.Upload,
-  // @LINE:35
+  // @LINE:27
   Profil_2: controllers.Profil,
+  // @LINE:31
+  Registrierung_1: controllers.Registrierung,
+  // @LINE:32
+  Login_3: controllers.Login,
+  // @LINE:34
+  Upload_0: controllers.Upload,
   val prefix: String
 ) extends GeneratedRouter {
 
@@ -37,21 +37,21 @@ class Routes(
     Application_5: controllers.Application,
     // @LINE:23
     Assets_4: controllers.Assets,
-    // @LINE:28
-    Registrierung_1: controllers.Registrierung,
-    // @LINE:29
-    Login_3: controllers.Login,
+    // @LINE:27
+    Profil_2: controllers.Profil,
     // @LINE:31
-    Upload_0: controllers.Upload,
-    // @LINE:35
-    Profil_2: controllers.Profil
-  ) = this(errorHandler, Application_5, Assets_4, Registrierung_1, Login_3, Upload_0, Profil_2, "/")
+    Registrierung_1: controllers.Registrierung,
+    // @LINE:32
+    Login_3: controllers.Login,
+    // @LINE:34
+    Upload_0: controllers.Upload
+  ) = this(errorHandler, Application_5, Assets_4, Profil_2, Registrierung_1, Login_3, Upload_0, "/")
 
   import ReverseRouteContext.empty
 
   def withPrefix(prefix: String): Routes = {
     router.RoutesPrefix.setPrefix(prefix)
-    new Routes(errorHandler, Application_5, Assets_4, Registrierung_1, Login_3, Upload_0, Profil_2, prefix)
+    new Routes(errorHandler, Application_5, Assets_4, Profil_2, Registrierung_1, Login_3, Upload_0, prefix)
   }
 
   private[this] val defaultPrefix: String = {
@@ -68,11 +68,11 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """contact""", """controllers.Application.contact()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """profil""", """controllers.Application.profil()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""", """controllers.Assets.versioned(path:String = "/public", file:Asset)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """eigeneStellen""", """controllers.Profil.eigenestellen()"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """registrierung""", """controllers.Registrierung.registrierung()"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """login""", """controllers.Login.login()"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """logout""", """controllers.Login.logout()"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """upload""", """controllers.Upload.upload()"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """eigeneStellen""", """controllers.Profil.eigenestellen()"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
     case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
@@ -233,11 +233,28 @@ class Routes(
     )
   )
 
-  // @LINE:28
-  private[this] lazy val controllers_Registrierung_registrierung9_route = Route("POST",
+  // @LINE:27
+  private[this] lazy val controllers_Profil_eigenestellen9_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("eigeneStellen")))
+  )
+  private[this] lazy val controllers_Profil_eigenestellen9_invoker = createInvoker(
+    Profil_2.eigenestellen(),
+    HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.Profil",
+      "eigenestellen",
+      Nil,
+      "GET",
+      """""",
+      this.prefix + """eigeneStellen"""
+    )
+  )
+
+  // @LINE:31
+  private[this] lazy val controllers_Registrierung_registrierung10_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("registrierung")))
   )
-  private[this] lazy val controllers_Registrierung_registrierung9_invoker = createInvoker(
+  private[this] lazy val controllers_Registrierung_registrierung10_invoker = createInvoker(
     Registrierung_1.registrierung(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -250,11 +267,11 @@ class Routes(
     )
   )
 
-  // @LINE:29
-  private[this] lazy val controllers_Login_login10_route = Route("POST",
+  // @LINE:32
+  private[this] lazy val controllers_Login_login11_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("login")))
   )
-  private[this] lazy val controllers_Login_login10_invoker = createInvoker(
+  private[this] lazy val controllers_Login_login11_invoker = createInvoker(
     Login_3.login(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -267,11 +284,11 @@ class Routes(
     )
   )
 
-  // @LINE:30
-  private[this] lazy val controllers_Login_logout11_route = Route("POST",
+  // @LINE:33
+  private[this] lazy val controllers_Login_logout12_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("logout")))
   )
-  private[this] lazy val controllers_Login_logout11_invoker = createInvoker(
+  private[this] lazy val controllers_Login_logout12_invoker = createInvoker(
     Login_3.logout(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -284,11 +301,11 @@ class Routes(
     )
   )
 
-  // @LINE:31
-  private[this] lazy val controllers_Upload_upload12_route = Route("POST",
+  // @LINE:34
+  private[this] lazy val controllers_Upload_upload13_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("upload")))
   )
-  private[this] lazy val controllers_Upload_upload12_invoker = createInvoker(
+  private[this] lazy val controllers_Upload_upload13_invoker = createInvoker(
     Upload_0.upload(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -298,23 +315,6 @@ class Routes(
       "POST",
       """""",
       this.prefix + """upload"""
-    )
-  )
-
-  // @LINE:35
-  private[this] lazy val controllers_Profil_eigenestellen13_route = Route("GET",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("eigeneStellen")))
-  )
-  private[this] lazy val controllers_Profil_eigenestellen13_invoker = createInvoker(
-    Profil_2.eigenestellen(),
-    HandlerDef(this.getClass.getClassLoader,
-      "router",
-      "controllers.Profil",
-      "eigenestellen",
-      Nil,
-      "GET",
-      """""",
-      this.prefix + """eigeneStellen"""
     )
   )
 
@@ -375,34 +375,34 @@ class Routes(
         controllers_Assets_versioned8_invoker.call(Assets_4.versioned(path, file))
       }
   
-    // @LINE:28
-    case controllers_Registrierung_registrierung9_route(params) =>
+    // @LINE:27
+    case controllers_Profil_eigenestellen9_route(params) =>
       call { 
-        controllers_Registrierung_registrierung9_invoker.call(Registrierung_1.registrierung())
-      }
-  
-    // @LINE:29
-    case controllers_Login_login10_route(params) =>
-      call { 
-        controllers_Login_login10_invoker.call(Login_3.login())
-      }
-  
-    // @LINE:30
-    case controllers_Login_logout11_route(params) =>
-      call { 
-        controllers_Login_logout11_invoker.call(Login_3.logout())
+        controllers_Profil_eigenestellen9_invoker.call(Profil_2.eigenestellen())
       }
   
     // @LINE:31
-    case controllers_Upload_upload12_route(params) =>
+    case controllers_Registrierung_registrierung10_route(params) =>
       call { 
-        controllers_Upload_upload12_invoker.call(Upload_0.upload())
+        controllers_Registrierung_registrierung10_invoker.call(Registrierung_1.registrierung())
       }
   
-    // @LINE:35
-    case controllers_Profil_eigenestellen13_route(params) =>
+    // @LINE:32
+    case controllers_Login_login11_route(params) =>
       call { 
-        controllers_Profil_eigenestellen13_invoker.call(Profil_2.eigenestellen())
+        controllers_Login_login11_invoker.call(Login_3.login())
+      }
+  
+    // @LINE:33
+    case controllers_Login_logout12_route(params) =>
+      call { 
+        controllers_Login_logout12_invoker.call(Login_3.logout())
+      }
+  
+    // @LINE:34
+    case controllers_Upload_upload13_route(params) =>
+      call { 
+        controllers_Upload_upload13_invoker.call(Upload_0.upload())
       }
   }
 }

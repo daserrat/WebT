@@ -3,6 +3,7 @@ package controllers;
 import java.util.Map;
 
 import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import play.*;
@@ -15,14 +16,16 @@ import views.html.*;
 
 public class Profil extends Controller {
 	
-	@BodyParser.Of(BodyParser.Json.class)
+	//@BodyParser.Of(BodyParser.Json.class)
 	public Result eigenestellen() {
+		
+		System.out.println("Ich war im Controller");
 		
 		String emailCookie = request().cookies().get("data").value();
 		
-		ObjectNode result = Json.newObject();
+		ArrayNode result = model.Model.getInstance().getProfil().eigenestellenholen(emailCookie);
 		
-		return ok();
+		return ok(result);
 	}
 
 }

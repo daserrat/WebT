@@ -15,6 +15,8 @@
 		<script src="@routes.Assets.versioned("javascripts/angular.js")"></script>
 		<script src="@routes.Assets.versioned("javascripts/startseite.js")"></script>
 		<script src="@routes.Assets.versioned("javascripts/header.js")"></script>
+		<script src="@routes.Assets.versioned("javascripts/profil.js")"></script>
+		
 	</head>
 	<body>
 		<div id="background">
@@ -90,20 +92,15 @@
 		</div>
 
 		<!-- Navigation - Ende----------------------------------------------------------------------------------------------------------------------------------- -->
-		<div class="profilBody" ng-app="profil">
+		<div id="profilBody" ng-app="profil" ng-controller="profilCtrl">
 			<div class="col-md-1"></div>
-			<div class="col-md-10" class="maindiv" ng-controller="profilCtrl">
+			<div class="col-md-10" class="maindiv">
 				<div class="maintextdiv">
 					<h1 id="titel2">StaJ</h1>
 					
 					<h3>Profil</h3>
 					<p>
 						<h4><i>Ihre Stellenangebote:</i></h4>
-					</p>
-					<p>
-						<button type="button" class="btn btn-info buttons" data-toggle="modal" data-target="#modal_registrierung" id="startseitebutton2">
-							Registrieren <span class="glyphicon glyphicon-list-alt"></span>
-						</button>
 					</p>
 
 				</div>
