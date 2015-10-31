@@ -13,8 +13,15 @@ profil.controller('profilCtrl', function($scope,$http) {
 		}).then(function(data){
 			
 			console.log(data.data);
+			$scope.stellen = data.data;
 			
 		});
+	
+	$scope.stelleLoeschen = function(idpra) {
+		
+		//$http.delete();
+		
+	}
 		
 	
 });

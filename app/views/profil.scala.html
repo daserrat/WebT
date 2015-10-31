@@ -11,6 +11,7 @@
 		<script src="@routes.Assets.versioned("javascripts/jquery.js")"></script>
 		<script src="@routes.Assets.versioned("javascripts/bootstrap.js")"></script>
 		<link href="@routes.Assets.versioned("stylesheets/index.css")" rel="stylesheet" />
+		<link href="@routes.Assets.versioned("stylesheets/stellenangebot.css")" rel="stylesheet" />
 		<link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
 		<script src="@routes.Assets.versioned("javascripts/angular.js")"></script>
 		<script src="@routes.Assets.versioned("javascripts/startseite.js")"></script>
@@ -102,6 +103,35 @@
 					<p>
 						<h4><i>Ihre Stellenangebote:</i></h4>
 					</p>
+		<div class="col-md-10 col-md-offset-1 maindiv" id="maindiv">
+			<div class="maintextdiv" style="padding-top: 2%;">
+					<h3 style="margin-bottom: 3%; top: 2%;">Stellenangebot</h3>
+					<div style="text-align: right;">
+						<a href="/suche"><i class="fa fa-chevron-circle-left"></i> zurück zur Suche</a>
+					</div>
+					<div style="max-height:500px; overflow-y: scroll;">
+						<div class="listing listing-default" ng-repeat="stelle in stellen">
+							<div class="listing-content">
+								<h3 class="lead">{{stelle.titel}}</h3>
+								<p>
+									{{stelle.beschreibung}}
+								</p>
+							</div>
+							<div class="listingfooter">
+								<button class="btn btn-primary details" data-toggle="modal" data-target="#detailsmodal">
+									Bearbeiten
+								</button>
+							</div>
+							<div class="listingfooter">
+								<button class="btn btn-primary details" ng-click="stelleLoeschen(stelle.id_pra)"data-toggle="modal" data-target="#detailsmodal">
+									Löschen
+								</button>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
 
 				</div>
 			</div>
