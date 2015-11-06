@@ -27,5 +27,40 @@ public class Profil extends Controller {
 		
 		return ok(result);
 	}
+	
+	public Result loeschen(int id_pra) {
+		
+		//id_pra = request().getQueryString("id_pra");
+		
+		ObjectNode result = Json.newObject();
+		
+		System.out.println("Delete id_pra: " + id_pra);
+		
+		String emailCookie = request().cookies().get("data").value();
+		
+		boolean ergebnis = model.Model.getInstance().getProfil().stelleLoeschen(emailCookie, id_pra);
+
+		String fehler = "Fehler, E-Mail existiert schon";
+		String erfolg = "Stelle erfolgreich gelöscht";
+		
+		if (ergebnis == true) {
+
+			result.put("status", "ok");
+			result.put("message", erfolg);
+			
+			System.out.println(result);
+			
+			return ok(result);
+			
+		} else {
+			
+			result.put("status", "error");
+			result.put("message", fehler);
+
+			return ok(result);
+		}
+		
+		
+	}
 
 }

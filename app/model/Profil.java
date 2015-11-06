@@ -92,4 +92,65 @@ public class Profil {
 		
 	}
 	
+	public boolean stelleLoeschen(String emailCookie, int id_pra) {
+		
+		ResultSet rs;
+		Connection con;
+		PreparedStatement ps;
+		int id_unt_db = 0;
+				
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			con = DriverManager.getConnection(
+					"jdbc:mysql://localhost:3306/staj_db", "root", "root");
+			
+			System.out.println("Datenbankverbindung hergestellt");
+			
+			con.setAutoCommit(false);
+			
+			System.out.println("Emailcookie: " + emailCookie);
+			
+			ps = con.prepareStatement("select id_unt from staj_db.unternehmen where email = ?");
+			
+			ps.setString(1, emailCookie);
+			
+			rs = ps.executeQuery();
+	
+			while(rs.next()){
+			
+				id_unt_db = rs.getInt("id_unt");
+				System.out.println("Unt db: " + id_unt_db);
+			}
+		
+		//return;
+		
+		ps = con.prepareStatement("delete from staj_db.praktikumsangebot where id_unt = ? and id_pra = ?;");
+		
+		ps.setInt(1, id_unt_db);
+		ps.setInt(2, id_pra);
+		
+		ps.executeUpdate();
+		
+		con.commit();
+		
+		System.out.println("------------Stelle gelöscht------------");
+		
+		return true;
+	
+	} catch (ClassNotFoundException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		
+		System.out.println("Dieser Fehler ist aufgetreten: " + e.getMessage());
+		e.printStackTrace();
+		
+		return false;
+	}
+	
+	return false;
+
+	}
+	
 }

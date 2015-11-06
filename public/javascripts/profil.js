@@ -17,9 +17,23 @@ profil.controller('profilCtrl', function($scope,$http) {
 			
 		});
 	
+	var idpra_loeschen;
+	
 	$scope.stelleLoeschen = function(idpra) {
 		
 		//$http.delete();
+		idpra_loeschen = idpra;
+		
+	}
+	
+	$scope.ngStelleLoeschen = function() {
+		
+		$http.delete(host + "/stelleLoeschen/" + idpra_loeschen).then(function(data) {
+			
+			console.log(data);
+			
+			location.reload();
+		});
 		
 	}
 		

@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/keremuyanik/Documents/WebT/play-java/conf/routes
-// @DATE:Fri Oct 30 17:20:42 CET 2015
+// @DATE:Fri Nov 06 17:48:18 CET 2015
 
 package router
 
@@ -73,6 +73,7 @@ class Routes(
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """login""", """controllers.Login.login()"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """logout""", """controllers.Login.logout()"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """upload""", """controllers.Upload.upload()"""),
+    ("""DELETE""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """stelleLoeschen/$id_pra<[^/]+>""", """controllers.Profil.loeschen(id_pra:Integer)"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
     case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
@@ -318,6 +319,23 @@ class Routes(
     )
   )
 
+  // @LINE:39
+  private[this] lazy val controllers_Profil_loeschen14_route = Route("DELETE",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("stelleLoeschen/"), DynamicPart("id_pra", """[^/]+""",true)))
+  )
+  private[this] lazy val controllers_Profil_loeschen14_invoker = createInvoker(
+    Profil_2.loeschen(fakeValue[Integer]),
+    HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.Profil",
+      "loeschen",
+      Seq(classOf[Integer]),
+      "DELETE",
+      """""",
+      this.prefix + """stelleLoeschen/$id_pra<[^/]+>"""
+    )
+  )
+
 
   def routes: PartialFunction[RequestHeader, Handler] = {
   
@@ -403,6 +421,12 @@ class Routes(
     case controllers_Upload_upload13_route(params) =>
       call { 
         controllers_Upload_upload13_invoker.call(Upload_0.upload())
+      }
+  
+    // @LINE:39
+    case controllers_Profil_loeschen14_route(params) =>
+      call(params.fromPath[Integer]("id_pra", None)) { (id_pra) =>
+        controllers_Profil_loeschen14_invoker.call(Profil_2.loeschen(id_pra))
       }
   }
 }

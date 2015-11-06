@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/keremuyanik/Documents/WebT/play-java/conf/routes
-// @DATE:Fri Oct 30 17:20:42 CET 2015
+// @DATE:Fri Nov 06 17:48:18 CET 2015
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -62,6 +62,16 @@ package controllers.javascript {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
+  
+    // @LINE:39
+    def loeschen: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Profil.loeschen",
+      """
+        function(id_pra) {
+          return _wA({method:"DELETE", url:"""" + _prefix + { _defaultPrefix } + """" + "stelleLoeschen/" + (""" + implicitly[PathBindable[Integer]].javascriptUnbind + """)("id_pra", id_pra)})
+        }
+      """
+    )
   
     // @LINE:27
     def eigenestellen: JavaScriptReverseRoute = JavaScriptReverseRoute(
