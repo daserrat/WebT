@@ -16,6 +16,7 @@
 		<script src="@routes.Assets.versioned("javascripts/angular.js")"></script>
 		<script src="@routes.Assets.versioned("javascripts/startseite.js")"></script>
 		<script src="@routes.Assets.versioned("javascripts/header.js")"></script>
+		<script src="@routes.Assets.versioned("javascripts/suche.js")"></script>
 	</head>
 	<body>
 		<div id="background">
@@ -106,7 +107,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="mainbody">
+		<div class="mainbody" id="sucheDiv" ng-app="suche" ng-controller="suchenCtrl" >
 			<div class="col-md-1"></div>
 			<div class="col-md-10" class="maindiv">
 				<div class="maintextdiv" style="padding-top: 2%;">
@@ -146,7 +147,7 @@
 										<input type="text" placeholder="Nach was suchen Sie?" id="wasinput" />
 									</p>
 									<p>
-										<select id="selectstudi">
+										<select id="selectstudi" ng-model="studiengang">
 											<option value="">Studiengang</option>
 											<option value="inf">Informatik</option>
 											<option value="bwl">BWL</option>
@@ -158,7 +159,7 @@
 										<input type="text" placeholder="Stadt/PLZ" id="stadt" />
 									</p>
 									<p>
-										<select id="bundesland">
+										<select id="bundesland" ng-model="bundesland">
 											<option value="">Bundesland</option>
 											<option value="inf">Bayern</option>
 											<option value="bwl">Ba-Wü</option>
@@ -170,7 +171,7 @@
 										<input type="date" id="datum" />
 									</p>
 									<p>
-										<select id="selectdauer">
+										<select id="selectdauer" ng-model="dauer">
 											<option value="">Monate</option>
 											<option value="1">1</option>
 											<option value="2">2</option>
@@ -180,7 +181,7 @@
 							</div>
 						</div>
 					</div>
-					<button type="button" class="btn btn-primary buttons" id="suchestarten">
+					<button ng-click="ngSuchen()" type="button" class="btn btn-primary buttons" id="suchestarten">
 							Suche starten <span class="glyphicon glyphicon-search"></span>
 				</button>
 				</div>
