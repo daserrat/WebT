@@ -39,9 +39,10 @@ profil.controller('profilCtrl', function($scope,$http) {
 				
 				$scope.was = stellen[i].titel;
 				
-				var options;
+				$scope.studiengaenge = stellen[i].studiengang;
+				/*var options;
 				options = stellen[i].studiengang.split(",");
-				$("#selectstudiangebot :selected").val(options);
+				$("#selectstudiangebot :selected").val(options);*/
 				
 			}
 				
