@@ -1,0 +1,39 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Application.startseite()
+
+GET     /startseite                 controllers.Application.startseite()
+
+GET		/nichtangemeldet			controllers.Application.nichtangemeldet()
+
+GET		/suche						controllers.Application.suche()
+
+GET		/upload						controllers.Application.upload()
+
+GET		/stellenangebot				controllers.Application.stellenangebot()
+
+GET		/contact					controllers.Application.contact()
+
+GET		/profil						controllers.Application.profil()
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+
+# GETS
+
+GET		/eigeneStellen				controllers.Profil.eigenestellen()				
+
+# POSTS
+
+POST	/registrierung				controllers.Registrierung.registrierung()
+POST	/login						controllers.Login.login()
+POST	/logout						controllers.Login.logout()
+POST	/upload						controllers.Upload.upload()
+
+
+# DELETES
+
+DELETE	/stelleLoeschen/:id_pra		controllers.Profil.loeschen(id_pra:Integer)
