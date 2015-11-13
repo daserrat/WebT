@@ -5,6 +5,8 @@ var host = "http://" + window.location.host;
 profil.controller('profilCtrl', function($scope,$http) {
 	
 	console.log("TEST");
+	
+	var stellen;
 
 	$http({
 		  method: 'GET',
@@ -14,6 +16,7 @@ profil.controller('profilCtrl', function($scope,$http) {
 			
 			console.log(data.data);
 			$scope.stellen = data.data;
+			stellen = data.data;
 			
 		});
 	
@@ -26,6 +29,26 @@ profil.controller('profilCtrl', function($scope,$http) {
 		
 	}
 	
+	$scope.stellendatenHolen = function(idpra) {
+		
+		console.log(idpra);
+		
+		for(var i = 0; i < stellen.length; i++) {
+			
+			if(stellen[i].id_pra === idpra){
+				
+				$scope.was = stellen[i].titel;
+				
+				var options;
+				options = stellen[i].studiengang.split(",");
+				$("#selectstudiangebot :selected").val(options);
+				
+			}
+				
+		}
+		
+	}
+	
 	$scope.ngStelleLoeschen = function() {
 		
 		$http.delete(host + "/stelleLoeschen/" + idpra_loeschen).then(function(data) {
@@ -34,6 +57,11 @@ profil.controller('profilCtrl', function($scope,$http) {
 			
 			location.reload();
 		});
+		
+	}
+	
+	$scope.ngStelleBearbeiten = function() {
+		
 		
 	}
 		

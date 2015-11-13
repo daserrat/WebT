@@ -11,6 +11,7 @@
 		<script src="@routes.Assets.versioned("javascripts/jquery.js")"></script>
 		<script src="@routes.Assets.versioned("javascripts/bootstrap.js")"></script>
 		<link href="@routes.Assets.versioned("stylesheets/index.css")" rel="stylesheet" />
+		<link href="@routes.Assets.versioned("stylesheets/upload.css")" rel="stylesheet" />
 		<link href="@routes.Assets.versioned("stylesheets/stellenangebot.css")" rel="stylesheet" />
 		<link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
 		<script src="@routes.Assets.versioned("javascripts/angular.js")"></script>
@@ -118,7 +119,7 @@
 								</p>
 							</div>
 							<div class="listingfooter">
-								<button class="btn btn-primary details" data-toggle="modal" data-target="#detailsmodal">
+								<button class="btn btn-primary details" data-toggle="modal" ng-click="stellendatenHolen(stelle.id_pra)" data-target="#bearbeitenmodal">
 									Bearbeiten
 								</button>
 							</div>
@@ -136,6 +137,66 @@
 				</div>
 			</div>
 			<div class="col-md-1"></div>
+			<div class="modal fade" id="bearbeitenmodal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						<h4 class="modal-title">Bearbeiten</h4>
+					</div>
+					
+					<div class="modal-body">
+						<p>Titel
+									<input type="text" placeholder="Nach was suchen Sie?" id="wasinputangebot" ng-model="was"/>
+						</p>
+						<p>Link
+										<input type="text" placeholder="Link zur Stellenbeschreibung (Homepage)" ng-model="link" id="link" />
+									</p>
+						<p>Studiengang
+									<select id="selectstudiangebot" multiple>
+										<option value="">Studiengang</option>
+										<option value="inf">Informatik</option>
+										<option value="bwl">BWL</option>
+									</select>
+						</p>
+						<p>Stadt/PLZ
+									<input type="text" placeholder="Stadt/PLZ" id="stadtangebot" />
+								</p>
+								<p>Bundesland
+									<select id="bundeslandangebot">
+										<option value="">Bundesland</option>
+										<option value="inf">Bayern</option>
+										<option value="bwl">Ba-Wü</option>
+									</select>
+								</p>
+
+								<p>Beginn
+									<input type="date" id="datumangebot" />
+								</p>
+								<p>Dauer
+									<select id="selectdauerangebot">
+										<option value="">Monate</option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+									</select>
+								</p>	
+								<p>
+										<textarea id="desc" ng-model="beschreibung" placeholder="Beschreibung der Stelle ... "></textarea>
+								</p>				
+					</div>
+					<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal" ng-click="ngStelleBearbeiten()">
+							Ok
+						</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">
+							Abbrechen
+						</button>
+					</div>
+				</div><!-- /.modal-content -->
+				</div><!-- /.modal-dialog -->
+			</div><!-- /.modal -->
 			<div class="modal fade" id="modal_loeschen">
 			<div class="modal-dialog">
 				<div class="modal-content">
