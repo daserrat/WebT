@@ -8,8 +8,16 @@ public class Model {
 	Login login = new Login();
 	Upload upload = new Upload();
 	Profil profil = new Profil();
+	Suche suche = new Suche();
 	
-	
+	public Suche getSuche() {
+		return suche;
+	}
+
+	public void setSuche(Suche suche) {
+		this.suche = suche;
+	}
+
 	public Profil getProfil() {
 		return profil;
 	}
