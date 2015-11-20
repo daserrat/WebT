@@ -144,7 +144,7 @@
 							<div class="tab-content">
 								<div class="tab-pane fade in active" id="tab1">
 									<p>
-										<input type="text" placeholder="Nach was suchen Sie?" id="wasinput" />
+										<input type="text" placeholder="Nach was suchen Sie?" ng-model="wasinput" id="wasinput" />
 									</p>
 									<p>
 										<select id="selectstudi" ng-model="studiengang">
@@ -156,19 +156,19 @@
 								</div>
 								<div class="tab-pane fade in" id="tab2">
 									<p>
-										<input type="text" placeholder="Stadt/PLZ" id="stadt" />
+										<input type="text" placeholder="Stadt/PLZ" ng-model="plzinput" id="stadt" />
 									</p>
 									<p>
 										<select id="bundesland" ng-model="bundesland">
 											<option value="">Bundesland</option>
-											<option value="inf">Bayern</option>
-											<option value="bwl">Ba-Wü</option>
+											<option value="bayern">Bayern</option>
+											<option value="ba_wue">Ba-Wü</option>
 										</select>
 									</p>
 								</div>
 								<div class="tab-pane fade in" id="tab3">
 									<p>
-										<input type="date" id="datum" />
+										<input type="date" ng-model="datuminput" id="datum" />
 									</p>
 									<p>
 										<select id="selectdauer" ng-model="dauer">
