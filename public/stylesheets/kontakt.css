@@ -1,0 +1,9 @@
+label {
+         float: middle;;
+         text-align: middle;
+	 display: block;
+         }
+
+input[type="text"] {
+    width: 27%;
+}

@@ -3,7 +3,7 @@
  */
 var suche = angular.module('suche', []);
 var host = "http://" + window.location.host;
-suche.controller('suchenCtrl', function($scope,$http) {
+suche.controller('suchenCtrl', function($scope,$http,$filter) {
 	
 	
 	$scope.ngSuchen = function(){
@@ -11,20 +11,21 @@ suche.controller('suchenCtrl', function($scope,$http) {
 		var bundesland = $scope.bundesland;
 		var studiengang = $scope.studiengang;
 		var dauer = $scope.dauer;
+		var wasInput = $scope.wasinput;
+		var datumInput = $filter('date')($scope.datuminput, "yyyy-MM-dd");
+		var plzInput = $scope.plzinput;
 		
-		console.log(bundesland, studiengang, dauer);
-		
-		$http.get(host + "/sucheStellen?bundesland=" + bundesland + 
+		$http({
+			  method: 'GET',
+			  url: host + "/sucheStellen?bundesland=" + bundesland + 
 				"&studiengang=" + studiengang + 
-				"&dauer="+ dauer).then(function(data) {
-			
-			if(data.data.status === "ok") {
-				
-				//location.href = location.href + "?erfolg";
-
-				console.log(data);
-			}
-					
+				"&dauer="+ dauer + 
+				"&was=" + wasInput+ 
+				"&wo=" + plzInput+ 
+				"&wann=" + datumInput
+			  
+			}).then(function(data) {
+			console.log(data.data);
 		});
 	}
 	

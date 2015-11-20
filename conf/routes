@@ -24,7 +24,8 @@ GET     /assets/*file               controllers.Assets.versioned(path="/public",
 
 # GETS
 
-GET		/eigeneStellen				controllers.Profil.eigenestellen()				
+GET		/eigeneStellen				controllers.Profil.eigenestellen()	
+GET		/sucheStellen				controllers.Suche.suchen()			
 
 # POSTS
 
