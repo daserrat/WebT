@@ -21,6 +21,7 @@ profil.controller('profilCtrl', function($scope,$http) {
 		});
 	
 	var idpra_loeschen;
+	var idpra_bearbeiten;
 	
 	$scope.stelleLoeschen = function(idpra) {
 		
@@ -33,17 +34,19 @@ profil.controller('profilCtrl', function($scope,$http) {
 		
 		console.log(idpra);
 		
+		idpra_bearbeiten = idpra;
+		
 		for(var i = 0; i < stellen.length; i++) {
 			
 			if(stellen[i].id_pra === idpra){
 				
 				$scope.was = stellen[i].titel;
-				
 				$scope.studiengaenge = stellen[i].studiengang;
-				/*var options;
-				options = stellen[i].studiengang.split(",");
-				$("#selectstudiangebot :selected").val(options);*/
-				
+				$scope.link = stellen[i].link;
+				$scope.stadt = stellen[i].stadt;
+				$scope.bundesland = stellen[i].bundesland;
+				$scope.beschreibung = stellen[i].beschreibung;
+				$("#datumangebot").val(stellen[i].datum);				
 			}
 				
 		}
@@ -63,7 +66,26 @@ profil.controller('profilCtrl', function($scope,$http) {
 	
 	$scope.ngStelleBearbeiten = function() {
 		
+		var daten = {};
 		
+		daten["titel"] = $scope.was;
+		daten["link"] = $scope.link;
+		daten["studiengang"] = $("#selectstudiangebot").val();;
+		daten["beschreibung"] = $scope.beschreibung;
+		daten["stadt"] = $scope.stadt;
+		daten["bundesland"] = $scope.bundesland;
+		daten["datum"] = $("#selectdauerangebot").val();
+		daten["dauer"] = $("#datumangebot").val();
+		
+		console.log(daten);
+		
+		$http.put(host + "/stelleBearbeiten/" + idpra_bearbeiten, daten).then(function(data) {
+			
+			console.log(data.data);
+			
+			location.reload();
+			
+		});
 	}
 		
 	

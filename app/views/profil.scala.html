@@ -101,15 +101,10 @@
 					<h1 id="titel2">StaJ</h1>
 					
 					<h3>Profil</h3>
-					<p>
-						<h4><i>Ihre Stellenangebote:</i></h4>
-					</p>
+		
 			<div class="col-md-10 col-md-offset-1 maindiv" id="maindiv">
 				<div class="maintextdiv" style="padding-top: 2%;">
-					<h3 style="margin-bottom: 3%; top: 2%;">Stellenangebot</h3>
-					<div style="text-align: right;">
-						<a href="/suche"><i class="fa fa-chevron-circle-left"></i> zurück zur Suche</a>
-					</div>
+					<h3 style="margin-bottom: 3%; top: 2%;">Meine Stellenangebote</h3>
 					<div style="max-height:500px; overflow-y: scroll;">
 						<div class="listing listing-default" ng-repeat="stelle in stellen">
 							<div class="listing-content">
@@ -148,44 +143,45 @@
 					</div>
 					
 					<div class="modal-body">
-						<p>Titel
+						<p>Titel</p>
 									<input type="text" placeholder="Nach was suchen Sie?" id="wasinputangebot" ng-model="was"/>
-						</p>
-						<p>Link
-										<input type="text" placeholder="Link zur Stellenbeschreibung (Homepage)" ng-model="link" id="link" />
-									</p>
-						<p>Studiengang
-						<div>Bisher gewählte Studiengänge: {{studiengaenge}} </div>
+						
+						<p>Link</p>
+									<input type="text" placeholder="Link zur Stellenbeschreibung (Homepage)" ng-model="link" id="link" />
+									
+						<p>Studiengang</p>
+						<div class="kleineschrift">Bisher gewählte Studiengänge: {{studiengaenge}} </div>
 									<select id="selectstudiangebot" multiple>
-										<option value="">Studiengang</option>
-										<option value="inf">Informatik</option>
-										<option value="bwl">BWL</option>
+										<option value="Informatik">Informatik</option>
+										<option value="BWL">BWL</option>
+										<option value="Maschinenbau">Maschinenbau</option>
 									</select>
-						</p>
-						<p>Stadt/PLZ
-									<input type="text" placeholder="Stadt/PLZ" id="stadtangebot" />
-								</p>
-								<p>Bundesland
+					
+						<p>Stadt/PLZ</p>
+									<input type="text" placeholder="Stadt/PLZ" id="stadtangebot" ng-model="stadt"/>
+								
+								<p>Bundesland</p>
+								<div class="kleineschrift">Bisher gewähltes Bundesland: {{bundesland}}</div>
 									<select id="bundeslandangebot">
 										<option value="">Bundesland</option>
-										<option value="inf">Bayern</option>
-										<option value="bwl">Ba-Wü</option>
+										<option value="bayern">Bayern</option>
+										<option value="bawü">Ba-Wü</option>
 									</select>
-								</p>
+								
 
-								<p>Beginn
-									<input type="date" id="datumangebot" />
-								</p>
-								<p>Dauer
+								<p>Beginn</p>
+									<input type="date" id="datumangebot"/>
+								
+								<p>Dauer</p>	
 									<select id="selectdauerangebot">
 										<option value="">Monate</option>
 										<option value="1">1</option>
 										<option value="2">2</option>
 									</select>
-								</p>	
-								<p>
+								
+								<p>Beschreibung</p>
 										<textarea id="desc" ng-model="beschreibung" placeholder="Beschreibung der Stelle ... "></textarea>
-								</p>				
+										
 					</div>
 					<div class="modal-footer">
 					<button type="button" class="btn btn-default" data-dismiss="modal" ng-click="ngStelleBearbeiten()">

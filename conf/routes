@@ -33,6 +33,9 @@ POST	/login						controllers.Login.login()
 POST	/logout						controllers.Login.logout()
 POST	/upload						controllers.Upload.upload()
 
+# PUTS
+
+PUT		/stelleBearbeiten/:id_pra	controllers.Profil.bearbeiten(id_pra:Integer)
 
 # DELETES
 

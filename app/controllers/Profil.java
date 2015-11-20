@@ -59,6 +59,50 @@ public class Profil extends Controller {
 
 			return ok(result);
 		}
+			
+	}
+	
+	public Result bearbeiten(int id_pra) {
+		
+		JsonNode bearbeiten = request().body().asJson();
+		
+		String titel = bearbeiten.get("titel").asText();
+		String beschreibung = bearbeiten.get("beschreibung").asText();
+		String stadt = bearbeiten.get("stadt").asText();
+		String bundesland = bearbeiten.get("bundesland").asText();
+		String link = bearbeiten.get("link").asText();
+		String studiengang = bearbeiten.get("studiengang").asText();
+		int dauer = bearbeiten.get("dauer").asInt();
+		String datum = bearbeiten.get("datum").asText();
+
+		ObjectNode result = Json.newObject();
+		
+		System.out.println("Bearbeite id_pra: " + id_pra);
+		
+		String emailCookie = request().cookies().get("data").value();
+		
+		boolean ergebnis = model.Model.getInstance().getProfil().stelleBearbeiten(emailCookie, id_pra,
+				titel, beschreibung, stadt, bundesland, link, studiengang, dauer, datum);
+
+		String fehler = "Fehler";
+		String erfolg = "Stelle erfolgreich upgedated";
+		
+		if (ergebnis == true) {
+
+			result.put("status", "ok");
+			result.put("message", erfolg);
+			
+			System.out.println(result);
+			
+			return ok(result);
+			
+		} else {
+			
+			result.put("status", "error");
+			result.put("message", fehler);
+
+			return ok(result);
+		}
 		
 		
 	}

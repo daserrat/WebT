@@ -153,4 +153,83 @@ public class Profil {
 
 	}
 	
+	
+public boolean stelleBearbeiten(String emailCookie, int id_pra, String titel, String beschreibung, String stadt,
+		String bundesland, String link, String studiengang, int dauer, String datum) {
+		
+		ResultSet rs;
+		Connection con;
+		PreparedStatement ps;
+		int id_unt_db = 0;
+				
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			con = DriverManager.getConnection(
+					"jdbc:mysql://localhost:3306/staj_db", "root", "root");
+			
+			System.out.println("Datenbankverbindung hergestellt");
+			
+			con.setAutoCommit(false);
+			
+			System.out.println("Emailcookie: " + emailCookie);
+			
+			ps = con.prepareStatement("select id_unt from staj_db.unternehmen where email = ?");
+			
+			ps.setString(1, emailCookie);
+			
+			rs = ps.executeQuery();
+	
+			while(rs.next()){
+			
+				id_unt_db = rs.getInt("id_unt");
+				System.out.println("Unt db: " + id_unt_db);
+			}
+		
+		//return;
+		
+		ps = con.prepareStatement("update staj_db.praktikumsangebot set titel = ? "
+				+ ", beschreibung = ?"
+				+ ", stadt = ?"
+				+ ", bundesland = ?"
+				+ ", link = ?"
+				+ ", studiengang = ?"
+				+ ", dauer = ?"
+				+ ", datum = ?"
+				+ "where id_unt = ? and id_pra = ?;");
+		
+		ps.setString(1, titel);
+		ps.setString(2, beschreibung);
+		ps.setString(3, stadt);
+		ps.setString(4, bundesland);
+		ps.setString(5, link);
+		ps.setString(6, studiengang);
+		ps.setInt(7, dauer);
+		ps.setString(8, datum);
+		ps.setInt(9, id_unt_db);
+		ps.setInt(10, id_pra);
+		
+		ps.executeUpdate();
+		
+		con.commit();
+		
+		System.out.println("------------Stelle upgedated------------");
+		
+		return true;
+	
+	} catch (ClassNotFoundException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		
+		System.out.println("Dieser Fehler ist aufgetreten: " + e.getMessage());
+		e.printStackTrace();
+		
+		return false;
+	}
+	
+	return false;
+
+	}
+	
 }
