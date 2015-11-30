@@ -97,12 +97,42 @@
 		<div id="profilBody" ng-app="profil" ng-controller="profilCtrl">
 			<div class="col-md-1"></div>
 			<div class="col-md-10" class="maindiv">
-				<div class="maintextdiv">
-					<h1 id="titel2">StaJ</h1>
+			<div class="maintextdiv">
 					
 					<h3>Profil</h3>
+					
+				<div class = "divProfildaten">
+					<h4>Daten bearbeiten</h4>
+						<div id="emailTeil">
+						<p>E-Mail: {{aktEmail}}
+						<button class="btn btn-primary details" onclick="toggler('hiddenEmail')">
+								<span class="glyphicon glyphicon-pencil"></span> Bearbeiten
+						</button>
+						<div id="hiddenEmail" class="divHidden">
+							Aktuelles Passwort:  <input type="password" class="profildaten" ng-model="aktPasswort" /> </br>
+							Geben Sie eine neue E-Mail Adresse ein: <input type="email" class="profildaten" ng-model="neueEmail" /> </br>
+							Neue E-Mail Adresse wiederholen: <input type="email" class="profildaten" ng-model="neueEmailW" />
+							<button class="btn" ng-click = "updateEmail()"><span class="glyphicon glyphicon-ok"></span>	
+							</button>
+							<p class="clientFehler">{{falscheEingabeMail}}</p> 
+						</div>
+						</p>
+						</div>
+						<div id="passwortTeil">
+						<p>Passwort: **********
+						<button class="btn btn-primary details" onclick="toggler('hiddenPw')">
+								<span class="glyphicon glyphicon-pencil"></span> Bearbeiten
+						</button>
+						<div id="hiddenPw" class="divHidden">
+						Aktuelles Passwort:  <input type="password" class="profildaten" ng-model="aktPasswort" /> </br>
+						Passwort eingeben: <input type="password" class="profildaten" ng-model="neuesPasswort"/>
+						<p>Passwort wiederholen: <input type="password" class="profildaten" ng-model="neuesPasswortw"/>
+						<button class="btn" ng-click="updatePasswort()"><span class="glyphicon glyphicon-ok"></span>	
+						</button></p></div>
+						</div>
+				</div>
 		
-			<div class="col-md-10 col-md-offset-1 maindiv" id="maindiv">
+				<div class="col-md-10 col-md-offset-1 maindiv" id="maindiv">
 				<div class="maintextdiv" style="padding-top: 2%;">
 					<h3 style="margin-bottom: 3%; top: 2%;">Meine Stellenangebote</h3>
 					<div style="max-height:500px; overflow-y: scroll;">
@@ -110,27 +140,28 @@
 							<div class="listing-content">
 								<h3 class="lead">{{stelle.titel}}</h3>
 								<p>
-									{{stelle.beschreibung}}
+									{{stelle.stadt}}, {{stelle.datum}}
 								</p>
 							</div>
 							<div class="listingfooter">
 								<button class="btn btn-primary details" data-toggle="modal" ng-click="stellendatenHolen(stelle.id_pra)" data-target="#bearbeitenmodal">
-									Bearbeiten
+									<span class="glyphicon glyphicon-pencil"></span> Bearbeiten
 								</button>
 							</div>
 							<div class="listingfooter">
 								<button class="btn btn-primary details" ng-click="stelleLoeschen(stelle.id_pra)"data-toggle="modal" data-target="#modal_loeschen">
-									Löschen
+									<span class="glyphicon glyphicon-trash"></span> Löschen
 								</button>
 							</div>
 						</div>
 					</div>
 
 				</div>
-			</div>
+				</div>
 
 				</div>
 			</div>
+			
 			<div class="col-md-1"></div>
 			<div class="modal fade" id="bearbeitenmodal">
 			<div class="modal-dialog">
@@ -150,7 +181,7 @@
 									<input type="text" placeholder="Link zur Stellenbeschreibung (Homepage)" ng-model="link" id="link" />
 									
 						<p>Studiengang</p>
-						<div class="kleineschrift">Bisher gewählte Studiengänge: {{studiengaenge}} </div>
+						
 									<select id="selectstudiangebot" multiple>
 										<option value="Informatik">Informatik</option>
 										<option value="BWL">BWL</option>
@@ -161,11 +192,11 @@
 									<input type="text" placeholder="Stadt/PLZ" id="stadtangebot" ng-model="stadt"/>
 								
 								<p>Bundesland</p>
-								<div class="kleineschrift">Bisher gewähltes Bundesland: {{bundesland}}</div>
+								
 									<select id="bundeslandangebot">
 										<option value="">Bundesland</option>
-										<option value="bayern">Bayern</option>
-										<option value="bawü">Ba-Wü</option>
+										<option value="Bayern">Bayern</option>
+										<option value="Ba-Wü">Ba-Wü</option>
 									</select>
 								
 
@@ -331,6 +362,10 @@
 			});
 		});
 
+		function toggler(divId) {
+		    $("#" + divId).toggle();
+		}
+		
 		function nextTab(elem) {
 			$(elem).next().find('a[data-toggle="tab"]').click();
 		}

@@ -7,7 +7,6 @@ upload.controller('uploadCtrl', function($scope,$http) {
 	var titel;
 	var link;
 	var studiengang;
-	var neuStudiengang = {};
 	var beschreibung;
 	var stadt;
 	var bundesland;
@@ -32,14 +31,7 @@ upload.controller('uploadCtrl', function($scope,$http) {
 		beschreibung = $scope.beschreibung;	
 		
 		studiengang = $("#selectstudi2").val();
-		
-		/*j=0;
-		for(var i = 0; i < studiengang.length; i++) {
-			
-			neuStudiengang[i.toString()] = studiengang[i];
-			
-		}*/
-					
+				
 	}
 	
 	$scope.ngWeiter2 = function() {

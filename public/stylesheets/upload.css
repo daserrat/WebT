@@ -1,6 +1,17 @@
 /*
  * Standard CSS
  */
+ 
+.divProfildaten {
+	
+	padding-top: 5px;
+	padding-bottom: 5px;
+} 
+
+.divHidden {
+	
+	display:none;
+}
 
 #background {
 	position: fixed;
@@ -287,6 +298,15 @@ a.dropdown-toggle {
 #link{
 	width: 280px;
 	height: 45px;
+	border-radius: 0px;
+	border-color: #111111;
+	padding-left:2%;
+	padding-right:2%;
+}
+
+.profildaten{
+	width: 250px;
+	height: 30px;
 	border-radius: 0px;
 	border-color: #111111;
 	padding-left:2%;

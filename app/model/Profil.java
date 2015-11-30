@@ -92,6 +92,60 @@ public class Profil {
 		
 	}
 	
+	public ObjectNode eigenedatenholen(String emailCookie) {
+		
+		ResultSet rs;
+		Connection con;
+		PreparedStatement ps;
+		String email_db = "";
+		
+		ObjectNode result = Json.newObject();
+		
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			con = DriverManager.getConnection(
+					"jdbc:mysql://localhost:3306/staj_db", "root", "root");
+			
+			System.out.println("Datenbankverbindung hergestellt");
+			
+			con.setAutoCommit(false);
+			
+			System.out.println("Emailcookie: " + emailCookie);
+			
+			ps = con.prepareStatement("select email from staj_db.unternehmen where email = ?");
+			
+			ps.setString(1, emailCookie);
+			
+			rs = ps.executeQuery();
+	
+			while(rs.next()){
+			
+				email_db = rs.getString("email");
+
+			}
+				
+		result.put("email", email_db);
+		
+		return result;
+	
+	
+	} catch (ClassNotFoundException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		
+		System.out.println("Dieser Fehler ist aufgetreten: " + e.getMessage());
+		e.printStackTrace();
+		
+		return null;
+	}
+		
+		
+		return null;
+	}
+	
+	
 	public boolean stelleLoeschen(String emailCookie, int id_pra) {
 		
 		ResultSet rs;
@@ -153,8 +207,79 @@ public class Profil {
 
 	}
 	
+	public boolean emailBearbeiten(String email, String emailCookie, String aktPasswort) {
+		
+		ResultSet rs;
+		Connection con;
+		PreparedStatement ps;
+		String passwort_db = "";
+				
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			con = DriverManager.getConnection(
+					"jdbc:mysql://localhost:3306/staj_db", "root", "root");
+			
+			System.out.println("Datenbankverbindung hergestellt");
+			
+			con.setAutoCommit(false);
+			
+			System.out.println("Emailcookie: " + emailCookie);
+			
+			String hashpw = DigestUtils.md5Hex(aktPasswort);
+			
+			ps = con.prepareStatement("select passwort from staj_db.unternehmen where email = ?");
+			
+			ps.setString(1, emailCookie);
+			
+			rs = ps.executeQuery();
+			
+			while(rs.next()){
+				
+				passwort_db = rs.getString("passwort");
+			}
+			
+			if(passwort_db.equals(hashpw)) {
+				
+				ps = con.prepareStatement("update staj_db.unternehmen set email = ? where email = ?");
+				ps.setString(1, email);
+				ps.setString(2, emailCookie);
+				
+				ps.executeUpdate();
+				con.commit();
+				
+				System.out.println("------------Email upgedated------------");
+				
+				return true;
+
+			} else {
+				
+				System.out.println("---------Passwort falsch eingegeben----------");
+				
+				return false;
+				
+			}
+			
+	} catch (ClassNotFoundException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		
+		System.out.println("Dieser Fehler ist aufgetreten: " + e.getMessage());
+		e.printStackTrace();
+		
+		return false;
+	}
 	
-public boolean stelleBearbeiten(String emailCookie, int id_pra, String titel, String beschreibung, String stadt,
+	return false;
+
+	}
+		
+		
+	
+	
+	
+	public boolean stelleBearbeiten(String emailCookie, int id_pra, String titel, String beschreibung, String stadt,
 		String bundesland, String link, String studiengang, int dauer, String datum) {
 		
 		ResultSet rs;

@@ -20,8 +20,60 @@ profil.controller('profilCtrl', function($scope,$http) {
 			
 		});
 	
+	var cookieSplit = document.cookie.split("=");
+	var cookieEmail = cookieSplit[1];
+	
+	$scope.aktEmail = cookieEmail;
+	
 	var idpra_loeschen;
 	var idpra_bearbeiten;
+	
+	$scope.updateEmail = function() {
+		
+		var neueEmail = {};
+		
+		if($scope.neueEmail === $scope.neueEmailW) {
+			
+			neueEmail["email"] = $scope.neueEmail;
+			neueEmail["aktPasswort"] = $scope.aktPasswort;
+		
+			$http.put(host + "/emailBearbeiten", neueEmail).then(function(data){
+				
+				if(status === "ok") {
+				
+					console.log(data.data);
+					
+					//location.reload();
+					
+				} else {
+					
+					$scope.falscheEingabeMail = "Passwort falsch"
+					
+				}
+				
+			});
+		
+		} else {
+			
+			$scope.falscheEingabeMail = "E-Mail nicht gleich"
+			
+		}
+				
+		
+	}
+	
+	$scope.updatePasswort = function() {
+		
+		var neuesPasswort;
+		
+		if($scope.neuesPasswort === $scope.neuesPasswortw) {
+			
+			
+			
+		}
+		
+		
+	}
 	
 	$scope.stelleLoeschen = function(idpra) {
 		
@@ -36,15 +88,20 @@ profil.controller('profilCtrl', function($scope,$http) {
 		
 		idpra_bearbeiten = idpra;
 		
+		var stgangarray = [];
+		
 		for(var i = 0; i < stellen.length; i++) {
 			
 			if(stellen[i].id_pra === idpra){
 				
+				stgangarray = stellen[i].studiengang.split(",");
+				
 				$scope.was = stellen[i].titel;
-				$scope.studiengaenge = stellen[i].studiengang;
+				$("#selectstudiangebot").val(stgangarray);
 				$scope.link = stellen[i].link;
-				$scope.stadt = stellen[i].stadt;
-				$scope.bundesland = stellen[i].bundesland;
+				$scope.stadt = stellen[i].stadt;				
+				$("#bundeslandangebot").val(stellen[i].bundesland);
+				$("#selectdauerangebot").val(stellen[i].dauer);
 				$scope.beschreibung = stellen[i].beschreibung;
 				$("#datumangebot").val(stellen[i].datum);				
 			}
@@ -64,18 +121,23 @@ profil.controller('profilCtrl', function($scope,$http) {
 		
 	}
 	
+	var studiengang;
+	
 	$scope.ngStelleBearbeiten = function() {
 		
 		var daten = {};
 		
+		studiengang = $("#selectstudiangebot").val();
+		
 		daten["titel"] = $scope.was;
 		daten["link"] = $scope.link;
-		daten["studiengang"] = $("#selectstudiangebot").val();;
+		daten["studiengang"] = studiengang;
 		daten["beschreibung"] = $scope.beschreibung;
 		daten["stadt"] = $scope.stadt;
-		daten["bundesland"] = $scope.bundesland;
-		daten["datum"] = $("#selectdauerangebot").val();
-		daten["dauer"] = $("#datumangebot").val();
+		daten["bundesland"] = $("#bundeslandangebot").val();
+		daten["datum"] = $("#datumangebot").val();
+		daten["dauer"] =$("#selectdauerangebot").val();
+		
 		
 		console.log(daten);
 		

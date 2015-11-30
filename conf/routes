@@ -25,7 +25,8 @@ GET     /assets/*file               controllers.Assets.versioned(path="/public",
 # GETS
 
 GET		/eigeneStellen				controllers.Profil.eigenestellen()	
-GET		/sucheStellen				controllers.Suche.suchen()			
+GET		/sucheStellen				controllers.Suche.suchen()	
+GET		/eigeneDaten				controllers.Profil.eigenedaten()		
 
 # POSTS
 
@@ -37,6 +38,7 @@ POST	/upload						controllers.Upload.upload()
 # PUTS
 
 PUT		/stelleBearbeiten/:id_pra	controllers.Profil.bearbeiten(id_pra:Integer)
+PUT		/emailBearbeiten			controllers.Profil.emailBearbeiten()
 
 # DELETES
 

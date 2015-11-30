@@ -28,6 +28,15 @@ public class Profil extends Controller {
 		return ok(result);
 	}
 	
+	public Result eigenedaten() {
+		
+		String emailCookie = request().cookies().get("data").value();
+
+		ObjectNode result = model.Model.getInstance().getProfil().eigenedatenholen(emailCookie);
+
+		return ok(result);
+	}
+	
 	public Result loeschen(int id_pra) {
 		
 		//id_pra = request().getQueryString("id_pra");
@@ -62,6 +71,40 @@ public class Profil extends Controller {
 			
 	}
 	
+	public Result emailBearbeiten() {
+		
+		JsonNode emailBearbeiten = request().body().asJson();
+		ObjectNode result = Json.newObject();
+		
+		String email = emailBearbeiten.get("email").asText();
+		String aktPasswort = emailBearbeiten.get("aktPasswort").asText();
+		String emailCookie = request().cookies().get("data").value();
+		
+		boolean ergebnis = model.Model.getInstance().getProfil().emailBearbeiten(email, emailCookie, aktPasswort);
+		
+		String fehler = "Fehler, E-Mail existiert schon";
+		
+		if(ergebnis == true) {
+			
+			response().setCookie("data", email);
+			session("a", email);
+			String user = session("a");
+			
+			result.put("status", "ok");
+			result.put("message", email);
+			
+			System.out.println(result);
+			
+			return ok(result);
+		} else {
+			result.put("status", "error");
+			result.put("message", fehler);
+
+			return ok(fehler);
+		}
+		
+	}
+	
 	public Result bearbeiten(int id_pra) {
 		
 		JsonNode bearbeiten = request().body().asJson();
@@ -71,9 +114,29 @@ public class Profil extends Controller {
 		String stadt = bearbeiten.get("stadt").asText();
 		String bundesland = bearbeiten.get("bundesland").asText();
 		String link = bearbeiten.get("link").asText();
-		String studiengang = bearbeiten.get("studiengang").asText();
 		int dauer = bearbeiten.get("dauer").asInt();
 		String datum = bearbeiten.get("datum").asText();
+		
+		String studiengang = "";
+		
+		for(int i = 0; i < bearbeiten.get("studiengang").size(); i++) {
+			
+			//studiengang[i] = upload.findPath("studiengang").get(i).asText();	
+			studiengang += bearbeiten.findPath("studiengang").get(i).asText() + ",";
+		}
+		
+		studiengang = studiengang.substring(0, studiengang.length()-1);
+		
+		System.out.println("Titel: " + titel);
+		System.out.println("Besch: " + beschreibung);
+		System.out.println("stadt: " + stadt);
+		System.out.println("bundesland: " + bundesland);
+		System.out.println("link: " + link);
+		System.out.println("studiengang: " + studiengang);
+		System.out.println("dauer: " + dauer);
+		System.out.println("datum: " + datum);
+
+
 
 		ObjectNode result = Json.newObject();
 		
