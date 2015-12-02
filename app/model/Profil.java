@@ -276,7 +276,75 @@ public class Profil {
 	}
 		
 		
+public boolean passwortBearbeiten(String passwort, String emailCookie, String aktPasswort) {
+		
+		ResultSet rs;
+		Connection con;
+		PreparedStatement ps;
+		String passwort_db = "";
+				
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			con = DriverManager.getConnection(
+					"jdbc:mysql://localhost:3306/staj_db", "root", "root");
+			
+			System.out.println("Datenbankverbindung hergestellt");
+			
+			con.setAutoCommit(false);
+			
+			System.out.println("Emailcookie: " + emailCookie);
+			
+			String hashpw = DigestUtils.md5Hex(aktPasswort);
+			
+			ps = con.prepareStatement("select passwort from staj_db.unternehmen where email = ?");
+			
+			ps.setString(1, emailCookie);
+			
+			rs = ps.executeQuery();
+			
+			while(rs.next()){
+				
+				passwort_db = rs.getString("passwort");
+			}
+						
+			if(passwort_db.equals(hashpw)) {
+				
+				String hashpw2 = DigestUtils.md5Hex(passwort);
+				
+				ps = con.prepareStatement("update staj_db.unternehmen set passwort = ? where email = ?");
+				ps.setString(1, hashpw2);
+				ps.setString(2, emailCookie);
+				
+				ps.executeUpdate();
+				con.commit();
+				
+				System.out.println("------------Passwort upgedated------------");
+				
+				return true;
+
+			} else {
+				
+				System.out.println("---------Passwort falsch eingegeben----------");
+				
+				return false;
+				
+			}
+			
+	} catch (ClassNotFoundException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		
+		System.out.println("Dieser Fehler ist aufgetreten: " + e.getMessage());
+		e.printStackTrace();
+		
+		return false;
+	}
 	
+	return false;
+
+	}
 	
 	
 	public boolean stelleBearbeiten(String emailCookie, int id_pra, String titel, String beschreibung, String stadt,

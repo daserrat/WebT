@@ -105,6 +105,36 @@ public class Profil extends Controller {
 		
 	}
 	
+	public Result passwortBearbeiten() {
+		
+		JsonNode passwortBearbeiten = request().body().asJson();
+		ObjectNode result = Json.newObject();
+		
+		String passwort = passwortBearbeiten.get("passwort").asText();
+		String aktPasswort = passwortBearbeiten.get("aktPasswort").asText();
+		String emailCookie = request().cookies().get("data").value();
+		
+		boolean ergebnis = model.Model.getInstance().getProfil().passwortBearbeiten(passwort, emailCookie, aktPasswort);
+		
+		String fehler = "Fehler, Passwort konnte nicht geändert werden";
+		
+		if(ergebnis == true) {
+			
+			result.put("status", "ok");
+			result.put("message", "Passwort erfolgreich gespeichert");
+			
+			System.out.println(result);
+			
+			return ok(result);
+		} else {
+			result.put("status", "error");
+			result.put("message", fehler);
+
+			return ok(fehler);
+		}
+		
+	}
+	
 	public Result bearbeiten(int id_pra) {
 		
 		JsonNode bearbeiten = request().body().asJson();

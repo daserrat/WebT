@@ -109,7 +109,7 @@
 								<span class="glyphicon glyphicon-pencil"></span> Bearbeiten
 						</button>
 						<div id="hiddenEmail" class="divHidden">
-							Aktuelles Passwort:  <input type="password" class="profildaten" ng-model="aktPasswort" /> </br>
+							Aktuelles Passwort:  <input type="password" class="profildaten" ng-model="aktPasswort1" /> </br>
 							Geben Sie eine neue E-Mail Adresse ein: <input type="email" class="profildaten" ng-model="neueEmail" /> </br>
 							Neue E-Mail Adresse wiederholen: <input type="email" class="profildaten" ng-model="neueEmailW" />
 							<button class="btn" ng-click = "updateEmail()"><span class="glyphicon glyphicon-ok"></span>	
@@ -124,11 +124,13 @@
 								<span class="glyphicon glyphicon-pencil"></span> Bearbeiten
 						</button>
 						<div id="hiddenPw" class="divHidden">
-						Aktuelles Passwort:  <input type="password" class="profildaten" ng-model="aktPasswort" /> </br>
+						Aktuelles Passwort:  <input type="password" class="profildaten" ng-model="aktPasswort2" /> </br>
 						Passwort eingeben: <input type="password" class="profildaten" ng-model="neuesPasswort"/>
 						<p>Passwort wiederholen: <input type="password" class="profildaten" ng-model="neuesPasswortw"/>
 						<button class="btn" ng-click="updatePasswort()"><span class="glyphicon glyphicon-ok"></span>	
-						</button></p></div>
+						</button></p>
+						<p class="clientFehler">{{falscheEingabePasswort}}</p>
+						</div>
 						</div>
 				</div>
 		

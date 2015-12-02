@@ -39,6 +39,7 @@ POST	/upload						controllers.Upload.upload()
 
 PUT		/stelleBearbeiten/:id_pra	controllers.Profil.bearbeiten(id_pra:Integer)
 PUT		/emailBearbeiten			controllers.Profil.emailBearbeiten()
+PUT		/passwortBearbeiten			controllers.Profil.passwortBearbeiten()
 
 # DELETES
 

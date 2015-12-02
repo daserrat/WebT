@@ -35,15 +35,15 @@ profil.controller('profilCtrl', function($scope,$http) {
 		if($scope.neueEmail === $scope.neueEmailW) {
 			
 			neueEmail["email"] = $scope.neueEmail;
-			neueEmail["aktPasswort"] = $scope.aktPasswort;
+			neueEmail["aktPasswort"] = $scope.aktPasswort1;
 		
 			$http.put(host + "/emailBearbeiten", neueEmail).then(function(data){
 				
-				if(status === "ok") {
+				if(data.data.status === "ok") {
 				
 					console.log(data.data);
 					
-					//location.reload();
+					location.reload();
 					
 				} else {
 					
@@ -64,11 +64,32 @@ profil.controller('profilCtrl', function($scope,$http) {
 	
 	$scope.updatePasswort = function() {
 		
-		var neuesPasswort;
+		var neuesPasswort = {};
 		
 		if($scope.neuesPasswort === $scope.neuesPasswortw) {
 			
+			neuesPasswort["passwort"] = $scope.neuesPasswort;
+			neuesPasswort["aktPasswort"] = $scope.aktPasswort2;
+		
+			$http.put(host + "/passwortBearbeiten", neuesPasswort).then(function(data){
+				
+				if(data.data.status === "ok") {
+				
+					console.log(data.data);
+					
+					location.reload();
+					
+				} else {
+					
+					$scope.falscheEingabePasswort = "Passwort falsch"
+					
+				}
+				
+			});
 			
+		} else {
+			
+			$scope.falscheEingabePasswort = "Passwörter nicht gleich"
 			
 		}
 		
