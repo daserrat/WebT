@@ -8,6 +8,7 @@ bin/
 /project/project
 /project/target
 /project/.sbtserver
+/project/
 /target
 tmp/
 test-result
