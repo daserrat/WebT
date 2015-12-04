@@ -2,6 +2,8 @@ var profil = angular.module('profil', []);
 
 var host = "http://" + window.location.host;
 
+console.log("Test");
+
 profil.controller('profilCtrl', function($scope,$http) {
 	
 	console.log("TEST");
