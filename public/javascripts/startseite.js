@@ -2,6 +2,8 @@ var registr = angular.module('registr', []);
 
 var host = "http://" + window.location.host;
 
+console.log("Hat geklappt");
+
 registr.controller('registrierungCtrl', function($scope,$http) {
 	
 	var email;
