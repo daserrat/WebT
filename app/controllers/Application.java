@@ -12,10 +12,6 @@ public class Application extends Controller {
         return ok(startseite.render());
     }
     
-    public Result google() {
-    	return ok(googleb7bd20474590acf5.render());
-    }
-    
     public Result nichtangemeldet() {
     	return ok(nichtangemeldet.render());
     }
